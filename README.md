@@ -56,7 +56,7 @@ Uppdatera firmware till version 1.4.4 eller högre. Äldre versioner stöds inte
 4. Gå till Settings -> Location and Time, välj tidszon Europe/Stockholm och klicka på Save Settings.
 5. Öppna länken till skriptet på GitHub:
 👉 [shelly-elprisSE_3.1.1se-rc.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE_3.1.1se-rc.js)
-Välj Download eller kopiera råfilen. Spara filen i Notepad eller på dsken.
+Välj Download eller kopiera råfilen. Spara filen i Notepad eller på disken.
 6. Gå till Scripts -> Create script och skriv ElprisetSE som Script name.
 7. Klistra in skriptets text, klicka på Save och sedan Start.
 
