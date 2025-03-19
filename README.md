@@ -42,8 +42,8 @@ Observera att inga globala ändringar har gjorts i funktionaliteten jämfört me
   ## 📷 Inställningsvy
 Här är en illustration av info (status) och konfigurationsvyn:
 <table><tr>
-      <td><img src="https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/main/Status_scr.jpg" width="480"></td>
-      <td><img src="https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/main/Setup_scr.jpg" width="480"></td>
+      <td><img src="https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/main/StatP.jpg" width="480"></td>
+      <td><img src="https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/main/SetP.jpg" width="480"></td>
     </tr>
 </table>
 
