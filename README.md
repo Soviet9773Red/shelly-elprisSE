@@ -35,7 +35,7 @@ Observera att inga globala ändringar har gjorts i funktionaliteten jämfört me
 - **Regioner:**  
   Stöd för svenska elområden SE1-SE4 har lagts till, medan Finland och Baltikum har tagits bort.  
 - **Design:**  
-  Justeringar av färgschema och rubriker i flikarna *Status* och *Setup* för att bättre passa den svenska marknaden.
+  Justeringar av färgschema och rubriker i flikarna *Status* och *Settings* för att bättre passa den svenska marknaden.
 
 För att ändra prisförfrågan till den svenska API:n har jag lagt till två nya funktioner: bldU och pTimeL, samt ändrat den befintliga funktionen getPrices.
 I HTTP-serverns endpoint har vissa delar modifierats, förutom den femte och sjätte delen.  
