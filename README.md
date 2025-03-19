@@ -46,4 +46,41 @@ Här är en illustration av info (status) och konfigurationsvyn:
     </tr>
 </table>
 
+## Komma igång:
+1. Installera Shelly och anslut den till WiFi.
+2. Öppna Shelly Web UI i en webbläsare via din lokala nätverksadress.
+3. Gå till Scripts-sidan och öppna Settings -> Firmware -> Update.
+Uppdatera firmware till version 1.4.4 eller högre. Äldre versioner stöds inte.
+4. Gå till Settings -> Location and Time, välj tidszon Europe/Stockholm och klicka på Save Settings.
+5. Öppna länken till skriptet på GitHub:
+👉 [shelly-elprisSE_3.1.1se-rc.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE_3.1.1se-rc.js)
+Välj Download eller kopiera råfilen. Spara filen i Notepad eller på dsken.
+6. Gå till Scripts -> Create script och skriv ElprisetSE som Script name.
+7. Klistra in skriptets text, klicka på Save och sedan Start.
 
+I konsolen kommer du att se skriptets resultat, ungefär så här:
+
+elpris-SE: v.3.1.1SE-rc<br>
+elpris-SE: URL: http://192.168.8.136/script/1<br>
+elpris-SE: Getting prices for day 0<br> 
+elpris-SE: Getting prices for day 1<br> 
+elpris-SE: config for #1 read, enabled: 1  
+elpris-SE: config for #2 read, enabled: 0  
+elpris-SE: config for #3 read, enabled: 0  
+elpris-SE: logic for #1 done, cmd: true -> output: true  
+
+8. Öppna skriptets HTTP-endpoint<br>
+   Kopiera HTTP-adressen från konsolen, exempelvis http://192.168.8.136/script/1<br>
+   Öppna länken i en ny flik i din webbläsare.<br>
+   Adressen kan skilja sig, men strukturen är: http://xxx.xxx.x.xxx/script/N där N är skriptets ID-nummer.<br>
+   Och /script/N är på slutet.
+   
+10. Konfigurera skriptets parametrar enligt [manualen](https://github.com/jisotalo/shelly-porssisahko-en) 
+   
+### Om du har problem med att spara eller starta skriptet:
+Stoppa alla skript. Avmarkera Run on startup.<br>
+Gå till Settings -> Reboot Device.<br>
+Markera Run on startup igen.<br>
+Om du har andra aktiva skript – stoppa dem.<br>
+Radera stora skript om du redan har flera stora sparade i enheten.<br>
+Rensa KVS och ta bort onödiga nycklar.
