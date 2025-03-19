@@ -23,7 +23,7 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med kärlek och 
 ---
 
 ## Viktig information  
-**shelly-elprisSE** är en svensk anpassning av det finska projektet **Shelly Porssisahko**, ursprungligen utvecklat för Finland och Baltikum.  
+**[shelly-elprisSE](https://github.com/Soviet9773Red/shelly-elprisSE)** är en svensk anpassning av det finska projektet **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen utvecklat för Finland och Baltikum.  
 Denna version använder det svenska elpris-API:t [Elprisetjustnu.se](https://www.elprisetjustnu.se/) istället för Nordpools standarddata.
 
 Observera att inga globala ändringar har gjorts i funktionaliteten jämfört med originalkoden från [shelly-porssisahko-en](https://github.com/jisotalo/shelly-porssisahko-en) (basversion 3.1.1).  
