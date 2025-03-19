@@ -23,7 +23,9 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med kärlek och 
 ---
 
 ## Viktig information  
-**Shelly Porssisahko** är ett projekt för att styra Shelly-enheter.  
+**shelly-elprisSE** är en svensk anpassning av det finska projektet **Shelly Porssisahko**, ursprungligen utvecklat för Finland och Baltikum.  
+Denna version använder det svenska elpris-API:t [Elprisetjustnu.se](https://www.elprisetjustnu.se/) istället för Nordpools standarddata.
+
 Observera att inga globala ändringar har gjorts i funktionaliteten jämfört med originalkoden från  
 [shelly-porssisahko-en](https://github.com/jisotalo/shelly-porssisahko-en) (basversion 3.1.1).  
 📌 **För en fullständig beskrivning av funktionaliteten, se originalkällan:**  
