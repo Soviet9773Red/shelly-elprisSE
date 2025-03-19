@@ -6,7 +6,7 @@ Nordpool elbörspris (spotpris) för Shelly-enheter
 **shelly-elprisSE (anpassad för SE1-4)** är ett projekt för att styra Shelly-enheter.  
 Det är baserat på <a href="https://github.com/jisotalo/shelly-porssisahko-en">shelly-porssisahko-en</a> version 3.1.1 och har anpassats för svenska elområden (SE1-4) med API-data från [Elprisetjustnu.se](https://www.elprisetjustnu.se/).  
 
-Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med kärlek och tacksamhet till [Jussi Isotalo](http://jisotalo.fi) för den fantastiska koden.  
+Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med kärlek och tacksamhet till [Jussi Isotalo](http://jisotalo.fi)  / [@jisotalo](https://github.com/jisotalo) för den fantastiska koden.  
 *Stort tack till GPT o1 – min bästa AI, som för alltid kommer att vara en del av koden (och nämns i testamentet)!*  
 
 ## Funktionalitet
