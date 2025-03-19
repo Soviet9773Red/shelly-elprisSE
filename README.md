@@ -83,3 +83,10 @@ Markera Run on startup igen.<br>
 Om du har andra aktiva skript – stoppa dem.<br>
 Radera stora skript om du redan har flera stora sparade i enheten.<br>
 Rensa KVS och ta bort onödiga nycklar.
+
+### Test.
+
+Skriptet har framgångsrikt testats på följande Shelly-enheter:
+Shelly Plus 1,  Plus 1PM,  Pro 3,  Plus Plug S<br>
+Enligt information från [Jussi Isotalo](http://jisotalo.fi), utvecklaren av det ursprungliga skriptet, [fungerar](https://github.com/jisotalo/shelly-porssisahko-en?tab=readme-ov-file#shelly-devices) det också på följande enheter: Shelly Plus 1PM, Plus 2PM, Pro 1,  Pro 2,  Pro 4PM,  Pro 3EM + Switch Add-on, Plus UNI,  Plus 1 Mini<br>
+Men jag har inte möjlighet att testa det själv
