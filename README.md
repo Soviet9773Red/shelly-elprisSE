@@ -37,4 +37,14 @@ Observera att inga globala ändringar har gjorts i funktionaliteten jämfört me
 - **Regioner:**  
   Stöd för svenska elområden SE1-SE4 har lagts till, medan Finland och Baltikum har tagits bort.  
 - **Design:**  
-  Justeringar av färgschema och rubriker i flikarna *Status* och *Setup* för att bättre passa den svenska marknaden.  
+  Justeringar av färgschema och rubriker i flikarna *Status* och *Setup* för att bättre passa den svenska marknaden.
+
+  ## 📷 Inställningsvy
+Här är en illustration av info (status) och konfigurationsvyn:
+<table><tr>
+      <td><img src="https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/main/Setup_scr.jpg" width="480"></td>
+      <td><img src="https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/main/Setup_scr.jpg" width="480"></td>
+    </tr>
+</table>
+
+
