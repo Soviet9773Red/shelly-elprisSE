@@ -52,7 +52,7 @@ Här är en illustration av info (status) och konfigurationsvyn:
 1. Installera Shelly och anslut den till WiFi.
 2. Öppna Shelly Web UI i en webbläsare via din lokala nätverksadress.
 3. Gå till Scripts-sidan och öppna Settings -> Firmware -> Update.
-Uppdatera firmware till version 1.4.4 eller högre. Äldre versioner stöds inte.
+Uppdatera firmware till version 1.4.4 eller högre "stable". Äldre versioner stöds inte.
 4. Gå till Settings -> Location and Time, välj tidszon Europe/Stockholm och klicka på Save Settings.
 5. Gå till Settings → Device Name. Sätt ett namn på din enhet. Klicka sedan på "Save".
 6. Öppna länken till skriptet på GitHub:
