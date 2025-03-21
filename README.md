@@ -95,3 +95,12 @@ Skriptet har framgångsrikt testats på följande Shelly-enheter:
 Enligt information från [Jussi Isotalo](http://jisotalo.fi), utvecklaren av det ursprungliga skriptet, [fungerar](https://github.com/jisotalo/shelly-porssisahko-en?tab=readme-ov-file#shelly-devices) det också på följande enheter:<br>
 **Shelly Plus 2PM, Pro 1,  Pro 2,  Pro 4PM,  Pro 3EM + Switch Add-on, Plus UNI,  Plus 1 Mini**<br>
 Men jag har inte möjlighet att testa det själv eftersom jag inte har dessa enheter tillgängliga för testning.
+
+
+
+Jag är ofta hungrig när jag kodar – 🍔 [bjud mig på en Big Mac och kafe](https://buymeacoffee.com/soviet9773red)
+
+[![Big Mac](https://img.shields.io/badge/Buy%20me%20a%20🍔-Big%20Mac-yellow?style=for-the-badge)](https://buymeacoffee.com/soviet9773red)
+
+Tack!
+
