@@ -97,8 +97,8 @@ Enligt information från [Jussi Isotalo](http://jisotalo.fi), utvecklaren av det
 Men jag har inte möjlighet att testa det själv eftersom jag inte har dessa enheter tillgängliga för testning.
 
 
-
-Jag är ofta hungrig när jag kodar – 🍔 [bjud mig på en Big Mac och kafe](https://buymeacoffee.com/soviet9773red)
+### Stöd projektet!
+Jag är ofta hungrig när jag kodar – 🍔 [bjud mig på en Big Mac och kaffe](https://buymeacoffee.com/soviet9773red)
 
 [![Big Mac](https://img.shields.io/badge/Buy%20me%20a%20🍔-Big%20Mac-yellow?style=for-the-badge)](https://buymeacoffee.com/soviet9773red)
 
