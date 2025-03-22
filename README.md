@@ -1,4 +1,4 @@
-# shelly-elprisSE
+de# shelly-elprisSE
 Nordpool elbörspris (spotpris) för Shelly-enheter
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
@@ -95,6 +95,12 @@ Skriptet har testats på följande Shelly-enheter:
 Enligt information från [Jussi Isotalo](http://jisotalo.fi), utvecklaren av det ursprungliga skriptet, [fungerar](https://github.com/jisotalo/shelly-porssisahko-en?tab=readme-ov-file#shelly-devices) det också på följande enheter:<br>
 **Shelly Plus 2PM, Pro 1,  Pro 2,  Pro 4PM,  Pro 3EM + Switch Add-on, Plus UNI,  Plus 1 Mini**<br>
 Men jag har inte möjlighet att testa det själv eftersom jag inte har dessa enheter tillgängliga för testning.
+
+Jag har testat skriptet på mina egna enheter och märkt att det inte alltid är stabilt vid prisförfrågningar – det kan ibland stoppas på grund av minnesöverflöd.
+
+Därför är jag tacksam till alla som kan hjälpa till med testning och buggrapportering.
+
+Just av denna anledning har versionsnumret tillägget rc (release candidate).
 
 
 ### Stöd projektet!
