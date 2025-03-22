@@ -96,7 +96,7 @@ Enligt information från [Jussi Isotalo](http://jisotalo.fi), utvecklaren av det
 **Shelly Plus 2PM, Pro 1,  Pro 2,  Pro 4PM,  Pro 3EM + Switch Add-on, Plus UNI,  Plus 1 Mini**<br>
 Men jag har inte möjlighet att testa det själv eftersom jag inte har dessa enheter tillgängliga för testning.
 
-Jag har testat skriptet på mina egna enheter och märkt att det inte alltid är stabilt vid prisförfrågningar – det kan ibland stoppas på grund av minnesöverflöd.
+Vid egna tester har jag märkt att skriptet inte alltid är helt stabilt vid prisförfrågningar – det kan i vissa fall stoppas på grund av minnesöverflöd.
 
 Därför är jag tacksam till alla som kan hjälpa till med testning och buggrapportering.
 
