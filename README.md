@@ -17,7 +17,7 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med kärlek och 
 
 ## Egenskaper
 - Optimerad och minifierad kod för Shelly-enheter.  
-- Anpassad för Shelly 1.5.0 och 1.4.4 med beaktande av begränsningar (inga arrow-funktioner, mallsträngar etc.).  
+- Anpassad för Shelly fw. 1.4.4 med beaktande av begränsningar (inga arrow-funktioner, mallsträngar etc.).  
 - Enkel HTTP-integration för att hämta status, konfiguration och historik.  
 
 ---
