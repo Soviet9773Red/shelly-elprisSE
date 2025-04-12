@@ -1,0 +1,6 @@
+// Checks used memory per script and indicates high usage.
+// @license https://github.com/Soviet9773Red 
+// Big thx 2 GPT4o
+// License: GNU AGPL v3.0
+
+function memReport(){Shelly.call("HTTP.GET",{url:"http://localhost/rpc/Shelly.GetStatus"},function(resp,code,msg){if(resp&&resp.body){let data=JSON.parse(resp.body);let report={};for(let i=1;i<=10;i++){let key="script:"+i;if(key in data){let s=data[key];let memUsed=s.mem_used??null;let memPeak=s.mem_peak??null;let memFree=s.mem_free??null;let freeAtPeak=null;let isLow=false;if(memUsed!==null&&memFree!==null&&memPeak!==null){let total=memUsed+memFree;freeAtPeak=total-memPeak;if(freeAtPeak/total<.05){isLow=true}}report[key]={running:!!s.running,mem_used:memUsed,mem_peak:memPeak,mem_free:memFree,free_at_peak:freeAtPeak,warn:isLow?"⚠️ LOW":""}}}for(let key in report){let s=report[key];print(key+": "+(s.running?"RUN":"stop")+", used="+s.mem_used+", peak="+s.mem_peak+", free="+s.mem_free+", freeAtPeak ="+s.free_at_peak+(s.warn?" "+s.warn:""))}report=null;let myId=Shelly.getCurrentScriptId();print("Stopping self: script #"+myId);Shelly.call("Script.Stop",{id:myId})}else{print("Error: "+msg)}})}memReport();
