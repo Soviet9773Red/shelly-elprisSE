@@ -55,7 +55,8 @@ Här är en illustration av info (status) och konfigurationsvyn:
 
 ---
 
-## Huvudsakliga ändringar [CHANGELOG.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md): 
+## Huvudsakliga ändringar:
+
 - **API-anrop:**  
   Ändrat från den estniska API-adressen i `.csv`-format ([Elering](https://elering.ee/)) till den svenska i JSON-format ([Elprisetjustnu.se](https://www.elprisetjustnu.se/)).  
 - **Regioner:**  
