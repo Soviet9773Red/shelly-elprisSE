@@ -9,7 +9,7 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 
 ---
 
-## Funktionalitet i version [3.1.1SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.1SE.js)
+## Funktionalitet i version [shelly-elpris3.1.1SE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.1SE.js)
 - Tidsintervall för "Transfer fees" ändrat till 06–22 för att spegla svenska elnätsaktörers tariffzoner.
 - Automatisk hämtning och analys av elpriser för idag och imorgon (när tillgängligt).
 - Kompatibilitet med sommar-/vintertid (24 datapunkter behålls genom förenklad hantering).
@@ -43,7 +43,7 @@ För en fullständig manual, se [originalkällan.](https://github.com/jisotalo/s
 1. Anslut din Shelly-enhet till nätverket.
 2. Uppgradera firmware till senaste **stable** version ≥ 1.5.1.
 3. Välj tidszon: **Europe/Stockholm** (viktigt för rätt prislogik).
-4. Skapa nytt script i Shelly Web UI, klistra in senaste version [3.1.1SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.1SE.js).
+4. Skapa nytt script i Shelly Web UI, klistra in senaste version [shelly-elpris3.1.1SE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.1SE.js).
 5. Starta scriptet och öppna konsolen för att se resultat och HTTP-länk.
 6. Oppna länken från konsolen. I konsolen kommer du att se skriptets resultat, ungefär så här:
 
