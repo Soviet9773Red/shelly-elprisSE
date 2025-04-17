@@ -48,12 +48,12 @@ För en fullständig manual, se [originalkällan.](https://github.com/jisotalo/s
 6. Oppna länken från konsolen. I konsolen kommer du att se skriptets resultat, ungefär så här:
 
 elpris-SE: v.3.1.1SE<br>
-elpris-SE: URL: http://192.168.8.200/script/1<br>
+elpris-SE: URL: http://192.168.8.200/script/2<br>
 
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/consol.png?raw=true" width="500">
 
 7. Öppna skriptets HTTP-endpoint<br>
-Kopiera HTTP-adressen från konsolen, exempelvis http://192.168.8.200/script/1<br>
+Kopiera HTTP-adressen från konsolen.
 Öppna länken i en ny flik i din webbläsare.<br>
 Adressen kan skilja sig, se exact i din consol
    
