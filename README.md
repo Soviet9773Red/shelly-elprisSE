@@ -44,6 +44,19 @@ Observera att inga globala ändringar har gjorts i funktionaliteten jämfört me
 3. Välj tidszon: **Europe/Stockholm** (viktigt för rätt prislogik).
 4. Skapa nytt script i Shelly Web UI, klistra in senaste version [3.1.1SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.1SE.js).
 5. Starta scriptet och öppna konsolen för att se resultat och HTTP-länk.
+6. Oppna länken från konsolen. I konsolen kommer du att se skriptets resultat, ungefär så här:
+
+elpris-SE: v.3.1.1SE<br>
+elpris-SE: URL: http://192.168.8.136/script/1<br>
+
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/consol.png?raw=true" width="450">
+
+7. Öppna skriptets HTTP-endpoint<br>
+Kopiera HTTP-adressen från konsolen, exempelvis http://192.168.8.136/script/1<br>
+Öppna länken i en ny flik i din webbläsare.<br>
+Adressen kan skilja sig, se exact i din consol
+   
+8. Konfigurera skriptets parametrar enligt [manualen](https://github.com/jisotalo/shelly-porssisahko-en)
 
   ## 📷 Inställningsvy
 Här är en illustration av info (status) och konfigurationsvyn:
@@ -64,7 +77,7 @@ Här är en illustration av info (status) och konfigurationsvyn:
 - **Design:**  
   Justeringar av färgschema och rubriker i flikarna *Status* och *Settings* för att bättre passa den svenska marknaden.
 
- Mer information: [CHANGELOG.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md).
+ Mer information finns i [changelog.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md).
 
 För detaljerad dokumentation om originalfunktioner hänvisas till [jisotalos README](https://github.com/jisotalo/shelly-porssisahko-en).
 
