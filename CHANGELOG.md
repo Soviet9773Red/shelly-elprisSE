@@ -4,7 +4,7 @@ Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE
 
 ---
 
-## Version 3.1.1SE (2025-04-17)
+## Version [3.1.1SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/3.1.1SE.js) (2025-04-17)
 
 **Stabil version baserad på tidigare 3.1.1SE-rc, med omfattande förbättringar i stabilitet och kompatibilitet.**
 
@@ -16,6 +16,8 @@ Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE
 - **Stöd för sommar-/vintertid:** Konsolmeddelande visas vid skifte. För enkelhetens skull används alltid 24 datapunkter – en timme dupliceras eller hoppas över.
 - **API-hämtningens klockslag:** Standardtid för hämtning är nu definierad som variabel `ah` (standard = 14). Minut randomiseras en gång för att minska simultan belastning.
 - **Endpoint-förbättringar:** Menylista `Control` har bytt namn till `Config`.
+-  **Tidsintervall för "Transfer fees"** har ändrats till 06–22 för att spegla svenska elnätsaktörers tariffzoner.
+
 
 ---
 
