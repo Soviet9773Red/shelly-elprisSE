@@ -4,14 +4,14 @@ Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE
 
 ---
 
-## Version 3.1.1SE (2025-04)
+## Version 3.1.1SE (2025-04-17)
 
 **Stabil version baserad på tidigare 3.1.1SE-rc, med omfattande förbättringar i stabilitet och kompatibilitet.**
 
 ### ✅ Förbättringar:
 
-- **Nytt parsersystem:** Funktionen `pTime` har tagits bort. Ny parsning i `getPrices()` använder enklare, effektivare metod inspirerad av Mikael Ulvesjo.
-- **Endimensionell struktur:** Prislistan `p[r]` är nu en enkel array med `[epoch, pris]`, vilket sparar minne.
+- **Nytt parsersystem:** Funktionen `pTime` har tagits bort. Ny parsning i `getPrices()` använder enklare, effektivare metod inspirerad av [@MikaelUlvesjo](https://github.com/MikaelUlvesjo)
+- **Endimensionell struktur:** Prislistan `p[r]` är nu en enkel array  `[pris]` istället av originala varianten med `[epoch, pris]`, vilket sparar minne.
 - **Omskrivning av logik:** Funktion `logic()` och tillhörande endpoint-delar har anpassats till den nya datamodellen.
 - **Stöd för sommar-/vintertid:** Konsolmeddelande visas vid skifte. För enkelhetens skull används alltid 24 datapunkter – en timme dupliceras eller hoppas över.
 - **API-hämtningens klockslag:** Standardtid för hämtning är nu definierad som variabel `ah` (standard = 14). Minut randomiseras en gång för att minska simultan belastning.
