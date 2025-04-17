@@ -9,7 +9,8 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 
 ---
 
-## Funktionalitet i version 3.1.1SE
+## Funktionalitet i version [3.1.1SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/3.1.1SE.js)
+- Tidsintervall för "Transfer fees" ändrat till 06–22 för att spegla svenska elnätsaktörers tariffzoner.
 - Automatisk hämtning och analys av elpriser för idag och imorgon (när tillgängligt).
 - Kompatibilitet med sommar-/vintertid (24 datapunkter behålls genom förenklad hantering).
 - För varje instans analyseras lägsta, högsta, genomsnittligt elpris samt aktuell timme.
@@ -20,7 +21,7 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 - Endpoint-meny för visning och styrning via webbläsare.
 
 ## Tekniska egenskaper
-- Kräver firmware **v1.5.1 eller nyare**.
+- Kräver firmware **v1.5.1** eller nyare.
 - Kompatibel med Shelly Plus 1 / 1PM / Plug S / Pro 3 m.fl.
 - Kod optimerad för enheter med begränsat RAM (inga arrow-funktioner, minimalt minnesavtryck).
 - JSON-API används istället för CSV (till skillnad från Elering).
