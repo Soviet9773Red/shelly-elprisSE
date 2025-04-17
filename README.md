@@ -9,7 +9,7 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 
 ---
 
-## Funktionalitet i version [3.1.1SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/3.1.1SE.js)
+## Funktionalitet i version [3.1.1SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.1SE.js)
 - Tidsintervall för "Transfer fees" ändrat till 06–22 för att spegla svenska elnätsaktörers tariffzoner.
 - Automatisk hämtning och analys av elpriser för idag och imorgon (när tillgängligt).
 - Kompatibilitet med sommar-/vintertid (24 datapunkter behålls genom förenklad hantering).
@@ -32,7 +32,7 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 ---
 
 ## Viktig information  
-**[shelly-elprisSE](https://github.com/Soviet9773Red/shelly-elprisSE)** är en svensk anpassning av det finska projektet **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen utvecklat för Finland och Baltikum.  Denna version använder det svenska elpris-API:t [Elprisetjustnu.se](https://www.elprisetjustnu.se/) istället för [Elering](https://elering.ee/) standarddata.
+**shelly-elprisSE** är en svensk anpassning av det finska projektet **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen utvecklat för Finland och Baltikum.  Denna version använder det svenska elpris-API:t [Elprisetjustnu.se](https://www.elprisetjustnu.se/) istället för [Elering](https://elering.ee/) standarddata.
 
 Observera att inga globala ändringar har gjorts i funktionaliteten jämfört med originalkoden från [shelly-porssisahko-en](https://github.com/jisotalo/shelly-porssisahko-en) (ver. 3.1.1). För en fullständig manual, se [originalkällan.](https://github.com/jisotalo/shelly-porssisahko-en)  
 
@@ -42,7 +42,7 @@ Observera att inga globala ändringar har gjorts i funktionaliteten jämfört me
 1. Anslut din Shelly-enhet till nätverket.
 2. Uppgradera firmware till senaste **stable** version ≥ 1.5.1.
 3. Välj tidszon: **Europe/Stockholm** (viktigt för rätt prislogik).
-4. Skapa nytt script i Shelly Web UI, klistra in senaste version [3.1.1SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/3.1.1SE.js).
+4. Skapa nytt script i Shelly Web UI, klistra in senaste version [3.1.1SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.1SE.js).
 5. Starta scriptet och öppna konsolen för att se resultat och HTTP-länk.
 
   ## 📷 Inställningsvy
@@ -55,7 +55,7 @@ Här är en illustration av info (status) och konfigurationsvyn:
 
 ---
 
-## Huvudsakliga ändringar (changelog): 
+## Huvudsakliga ändringar [CHANGELOG.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md): 
 - **API-anrop:**  
   Ändrat från den estniska API-adressen i `.csv`-format ([Elering](https://elering.ee/)) till den svenska i JSON-format ([Elprisetjustnu.se](https://www.elprisetjustnu.se/)).  
 - **Regioner:**  
@@ -63,8 +63,7 @@ Här är en illustration av info (status) och konfigurationsvyn:
 - **Design:**  
   Justeringar av färgschema och rubriker i flikarna *Status* och *Settings* för att bättre passa den svenska marknaden.
 
-## Mer information
-Alla större ändringar mellan versioner finns beskrivna i [CHANGELOG.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md).
+ Mer information: [CHANGELOG.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md).
 
 För detaljerad dokumentation om originalfunktioner hänvisas till [jisotalos README](https://github.com/jisotalo/shelly-porssisahko-en).
 
