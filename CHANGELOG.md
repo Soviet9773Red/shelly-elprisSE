@@ -16,8 +16,10 @@ Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE
 - **Stöd för sommar-/vintertid:** Konsolmeddelande visas vid skifte. För enkelhetens skull används alltid 24 datapunkter – en timme dupliceras eller hoppas över.
 - **API-hämtningens klockslag:** Standardtid för hämtning är nu definierad som variabel `ah` (standard = 14). Minut randomiseras en gång för att minska simultan belastning.
 - **Endpoint-förbättringar:** Menylista `Control` har bytt namn till `Config`.
--  **Tidsintervall för "Transfer fees"** har ändrats till 06–22 för att spegla svenska elnätsaktörers tariffzoner.
-
+- **Tidsintervall för "Transfer fees"** har ändrats till 06–22 för att spegla svenska elnätsaktörers tariffzoner.
+- **Förkortad historik:** Antalet historikposter per instans har minskats från 24 till 12 för att minska minnesbelastning.
+- **Ny standard för loggning:** Logging sker nu som standard endast vid ändring av utgång (On-Change).
+- **Skydd mot API-loopar:** Om priser för imorgon saknas, visas ett konsolmeddelande och nästa försök förskjuts med 1 timme.
 
 ---
 
