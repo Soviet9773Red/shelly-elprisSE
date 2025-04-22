@@ -15,7 +15,7 @@ Om du upplever problem med att spara, starta eller köra skriptet korrekt, följ
     - Gå till **Settings → Reboot Device**.
 
 4. **Aktivera "Run on startup" igen**
-    - Efter omstart, markera **Run on startup** endast för det skript du vill köra.
+    - Efter omstart, markera **Run on startup** endast för det skript du vill köra ( shelly-elprisSE ). Undvik att aktivera denna inställning för andra skript samtidigt.
 
 5. **Rensa upp gamla skript och data**
     - Radera skript som inte längre används.
