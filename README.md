@@ -1,5 +1,4 @@
-### shelly-elprisSE
-SE1-4 Nordpool elbörspris (spotpris) för Shelly-enheter
+SE1-4 Nordpool elbörspris (spotpris) för Shelly-enheter: **shelly-elprisSE**
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
@@ -10,7 +9,6 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 ---
 
 ## Funktionalitet i version [shelly-elpris3.1.1SE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.1SE.js)
-- Tidsintervall för "Transfer fees" ändrat till 06–22 för att spegla svenska elnätsaktörers tariffzoner.
 - Automatisk hämtning och analys av elpriser för idag och imorgon (när tillgängligt).
 - Kompatibilitet med sommar-/vintertid (24 datapunkter behålls genom förenklad hantering).
 - För varje instans analyseras lägsta, högsta, genomsnittligt elpris samt aktuell timme.
@@ -19,6 +17,7 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 - Full historik för varje instans (max 24 datapunkter).
 - Inställningarna sparas lokalt i KVS.
 - Endpoint-meny för visning och styrning via webbläsare.
+- Tidsintervall för "Transfer fees" ändrat till 06–22 för att spegla svenska elnätsaktörers tariffzoner.
 
 ## Tekniska egenskaper
 - Kräver firmware **v1.5.1** eller nyare.
@@ -58,6 +57,8 @@ Kopiera HTTP-adressen från konsolen.
 Adressen kan skilja sig, se exact i din consol
    
 8. Konfigurera skriptets parametrar enligt [manualen](https://github.com/jisotalo/shelly-porssisahko-en)
+
+### ? 🔧 →  [Felsökning. ](./Felsokning.md)
 
   ## 📷 Inställningsvy
 Här är en illustration av info (status) och konfigurationsvyn:
