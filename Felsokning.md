@@ -22,7 +22,7 @@ Om du upplever problem med att spara, starta eller köra skriptet korrekt, följ
     - Ta bort eventuella stora skript som tar upp för mycket minne.
 
 6. **Töm KVS-lagringen**
-    - Gå till **http://<enhetens IP>/rpc/KVS.List** för att visa nycklar
+    - Gå till KVS i Shelly GUI
     - Ta bort onödiga nycklar manuellt.
 
 7. **Starta skriptet på nytt**
