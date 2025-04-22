@@ -32,4 +32,4 @@ Om du upplever problem med att spara, starta eller köra skriptet korrekt, följ
 
 > 💡 Tips: Kontrollera alltid konsolen för loggutskrifter. Använd `print()` i skriptet för felsökning vid behov.
 
-Om problemet kvarstår kan du skapa ett nytt issue i [GitHub-projektet](https://github.com/Soviet9773Red/shelly-elprisSE) eller kontakta utvecklaren.
+Om problemet kvarstår kan du skapa ett nytt issue i [GitHub-projektet](https://github.com/Soviet9773Red/shelly-elprisSE/issues) eller kontakta utvecklaren.
