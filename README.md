@@ -6,7 +6,8 @@ SE1-4 Nordpool elbörspris (spotpris) för Shelly-enheter: **shelly-elprisSE**
 
 Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för den ursprungliga logiken, till [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idén till effektiv prisparsning, samt till GPT4o/o1 för flerstegsutveckling, refaktorering och testning.
 
----
+### Version [3.1.2SE] [kommer strax](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md)
+
 
 ## Funktionalitet i version [shelly-elpris3.1.1SE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.1SE.js)
 - Automatisk hämtning och analys av elpriser för idag och imorgon (när tillgängligt).
