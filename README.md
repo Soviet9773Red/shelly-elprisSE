@@ -2,7 +2,7 @@ SE1-4 Nordpool elbörspris (spotpris) för Shelly-enheter: **shelly-elprisSE**
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-**shelly-elprisSE** är ett script för Shelly-enheter (Plus / Pro / Plug S) som styr utgångar baserat på Nordpools timpriser i svenska elområden SE1–SE4. Priser hämtas från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras öppna JSON-API.
+**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools timpriser i svenska elområden SE1–SE4. Priser hämtas från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras öppna JSON-API.
 
 Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för den ursprungliga logiken, till [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idén till effektiv prisparsning, samt till GPT4o/o1 för flerstegsutveckling, refaktorering och testning.
 
@@ -33,8 +33,7 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 ## Viktig information  
 **shelly-elprisSE** är en svensk anpassning av det finska projektet **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen utvecklat för Finland och Baltikum.  Denna version använder det svenska elpris-API:t [Elprisetjustnu.se](https://www.elprisetjustnu.se/) istället för [Elering](https://elering.ee/) standarddata.
 
-Observera att inga globala ändringar har gjorts i funktionaliteten jämfört med originalkoden från [shelly-porssisahko-en](https://github.com/jisotalo/shelly-porssisahko-en) (v. 3.1.1). <br>
-För en fullständig manual, se [originalkällan.](https://github.com/jisotalo/shelly-porssisahko-en)  
+Observera att inga globala ändringar har gjorts i funktionaliteten jämfört med originalkoden från [shelly-porssisahko-en (3.1.1)](https://github.com/jisotalo/shelly-porssisahko-en) För en fullständig manual, se [originalkällan.](https://github.com/jisotalo/shelly-porssisahko-en)  
 
 ---
 
@@ -59,6 +58,8 @@ Adressen kan skilja sig, se exact i din consol
 8. Konfigurera skriptets parametrar enligt [manualen](https://github.com/jisotalo/shelly-porssisahko-en)
 
 ### ? 🔧 →  [Felsökning. ](./Felsokning.md)
+
+<br>
 
   ## 📷 Inställningsvy
 Här är en illustration av info (status) och konfigurationsvyn:
