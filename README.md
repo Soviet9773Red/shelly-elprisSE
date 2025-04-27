@@ -51,7 +51,7 @@ Tills dess rekommenderas 3.1.2SE som stabil version för alla användare.
 5. Starta scriptet och öppna konsolen för att se resultat och HTTP-länk.
 6. Oppna länken från konsolen. I konsolen kommer du att se skriptets resultat, ungefär så här:
 
-elpris-SE: v.3.1.1SE<br>
+elpris-SE: v.3.1.2SE<br>
 elpris-SE: URL: http://192.168.8.200/script/2<br>
 
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="500">
