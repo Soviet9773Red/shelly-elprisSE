@@ -6,18 +6,16 @@ SE1-4 Nordpool elbörspris (spotpris) för Shelly-enheter: **shelly-elprisSE**
 
 Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för den ursprungliga logiken, till [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idén till effektiv prisparsning, samt till GPT4o/o1 för flerstegsutveckling, refaktorering och testning.
 
-### Version [3.1.2SE] [kommer strax](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md)
-
-
-## Funktionalitet i version [shelly-elpris3.1.1SE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.1SE.js)
+## Funktionalitet i version [shelly-elpris3.1.2SE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SE.js)
 - Automatisk hämtning och analys av elpriser för idag och imorgon (när tillgängligt).
+- Centraliserad tidshantering med gemensam epoch-referens (`_.s.now`).
 - Kompatibilitet med sommar-/vintertid (24 datapunkter behålls genom förenklad hantering).
 - För varje instans analyseras lägsta, högsta, genomsnittligt elpris samt aktuell timme.
 - Anpassningsbar logik för att slå på utgångar under billigaste timmarna, eller enligt tröskelvärden.
 - Utgångarna styrs enligt konfiguration via GUI eller HTTP API.
-- Full historik för varje instans (max 24 datapunkter).
+- Full historik för varje instans (max 12 datapunkter för minnesoptimering).
 - Inställningarna sparas lokalt i KVS.
-- Endpoint-meny för visning och styrning via webbläsare.
+- Endpoint-meny för visning och styrning via webbläsare, med förfinade beskrivningar (ex: "High price interval").
 - Tidsintervall för "Transfer fees" ändrat till 06–22 för att spegla svenska elnätsaktörers tariffzoner.
 
 ## Tekniska egenskaper
@@ -31,10 +29,17 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 
 ---
 
-## Viktig information  
+## 📢 Viktigt meddelande om 3.1.2SE-versionen
 **shelly-elprisSE** är en svensk anpassning av det finska projektet **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen utvecklat för Finland och Baltikum.  Denna version använder det svenska elpris-API:t [Elprisetjustnu.se](https://www.elprisetjustnu.se/) istället för [Elering](https://elering.ee/) standarddata.
 
-Observera att inga globala ändringar har gjorts i funktionaliteten jämfört med originalkoden från [shelly-porssisahko-en (3.1.1)](https://github.com/jisotalo/shelly-porssisahko-en) För en fullständig manual, se [originalkällan.](https://github.com/jisotalo/shelly-porssisahko-en)  
+Observera att inga globala ändringar har gjorts i funktionaliteten jämfört med originalkoden från [shelly-porssisahko-en (3.1.1)](https://github.com/jisotalo/shelly-porssisahko-en) För en fullständig manual, se [originalkällan.](https://github.com/jisotalo/shelly-porssisahko-en)
+
+
+Observera att version 3.1.2SE är avsedd för användning med nuvarande API-struktur fram till **11 juni 2025**, då Elprisetjustnu.se planerar att ändra sitt timprisformat. Efter detta datum kommer skriptet i sin nuvarande form inte att kunna fungera korrekt utan uppdateringar.
+
+➡️ Vid förändring av API-strukturen är vidare utveckling och anpassning av `shelly-elprisSE` planerad. Ny version kommer att släppas efter övergången.
+
+Tills dess rekommenderas 3.1.2SE som stabil version för alla användare.
 
 ---
 
@@ -42,14 +47,14 @@ Observera att inga globala ändringar har gjorts i funktionaliteten jämfört me
 1. Anslut din Shelly-enhet till nätverket.
 2. Uppgradera firmware till senaste **stable** version ≥ 1.5.1.
 3. Välj tidszon: **Europe/Stockholm** (viktigt för rätt prislogik).
-4. Skapa nytt script i Shelly Web UI, klistra in senaste version [shelly-elpris3.1.1SE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.1SE.js).
+4. Skapa nytt script i Shelly Web UI, klistra in senaste version [shelly-elpris3.1.2SE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SE.js).
 5. Starta scriptet och öppna konsolen för att se resultat och HTTP-länk.
 6. Oppna länken från konsolen. I konsolen kommer du att se skriptets resultat, ungefär så här:
 
 elpris-SE: v.3.1.1SE<br>
 elpris-SE: URL: http://192.168.8.200/script/2<br>
 
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/consol.png?raw=true" width="500">
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="500">
 
 7. Öppna skriptets HTTP-endpoint<br>
 Kopiera HTTP-adressen från konsolen.
