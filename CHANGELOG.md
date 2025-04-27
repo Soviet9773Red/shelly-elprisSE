@@ -2,28 +2,65 @@
 
 Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE`, från release candidate till stabila utgåvor.
 
----
+## Version [3.1.2SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SE.js)
 
-## Version 3.1.1SE (2025-04)
+**Stabil version baserad på tidigare 3.1.1SE, med förfinade förbättringar för tillförlitlighet, tidshantering och konsolloggning.**
+
+#### ✅ Förbättringar:
+
+- **Centraliserad tidshantering (`_.s.now`):**  
+  Alla delar av systemet använder nu en gemensam tidsreferens från `updateState()`. Detta förbättrar synkronisering, minskar risk för tidsavvikelser mellan olika moduler och möjliggör framtida testlägen.
+
+- **Smartare hantering av API-förfrågningar:**  
+  Om morgondagens priser ännu inte finns tillgängliga efter den schemalagda tiden (`14:MM`), väntar systemet automatiskt i 60 minuter innan nästa försök görs. Ett tydligt konsolmeddelande visas vid 404-svar.
+
+- **00:00 - midnattshantering utan onödig API-belastning:**  
+  Inga nya API-förfrågningar görs vid midnatt. Om priser för morgondagen (`p[1]`) redan är tillgängliga, kopieras de direkt till dagens array (`p[0]`). Detta minskar risken för samtidig belastning på API:et runt 00:00.
+
+- **Ny skyddsflagga `dayUpdated`:**  
+  Systemet markerar när prisdata har kopierats vid midnatt och förhindrar onödiga ytterligare hämtningar under samma dag. Flaggan återställs automatiskt vid dagsskifte.
+
+- **Förbättrade konsolloggar och endpoint-meddelanden:**  
+  Viktiga status- och felmeddelanden har skrivits om för att vara tydligare och mindre alarmistiska. Exempelvis ersattes "Time changed 5 min+ -> refresh" med "Time sync detected -> refreshing data". Även endpoint-fält som beskriver priskontroll (t.ex. "High price interval", "Low price interval") har harmoniserats.
+
+- **Optimerad historikhantering för minnessnålt arbete:** 
+  Historik för utgångar (`_.h`) skrivs nu alltid baserat på förändringar i tillstånd (On-change). Vid aktivering av "Detailed console log" kan även stabila tillstånd registreras i konsollen för mer detaljerad överblick.
+
+
+- **Förbättrad stabilitet i tidslogik:**  
+  Synkronisering mellan datumkontroller och interna epoch-värden har förbättrats för att minimera risken för oönskade upprepade `logic()`-körningar.
+
+#### 🔧 Övriga mindre justeringar:
+
+- Terminologi i Settings (`Log outputs`) har förfinats: "On-change", "Detailed console log".
+- Smärre grammatiska och stilistiska förbättringar i interna och externa texter.
+- Ingen ändring av baslogik i styrning eller API-hantering sedan 3.1.1SE — endast förbättringar i stabilitet, presentation och testbarhet.
+
+
+## Version [3.1.1SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/arch/shelly-elpris3.1.1SE.js) (2025-04-17)
 
 **Stabil version baserad på tidigare 3.1.1SE-rc, med omfattande förbättringar i stabilitet och kompatibilitet.**
 
-### ✅ Förbättringar:
+#### ✅ Förbättringar:
 
-- **Nytt parsersystem:** Funktionen `pTime` har tagits bort. Ny parsning i `getPrices()` använder enklare, effektivare metod inspirerad av Mikael Ulvesjo.
-- **Endimensionell struktur:** Prislistan `p[r]` är nu en enkel array med `[epoch, pris]`, vilket sparar minne.
+- **Nytt parsersystem:** Funktionen `pTime` har tagits bort. Ny parsning i `getPrices()` använder enklare, effektivare metod inspirerad av [@MikaelUlvesjo](https://github.com/MikaelUlvesjo)
+- **Endimensionell struktur:** Prislistan `p[r]` är nu en enkel array  `[pris]` istället av originala varianten med `[epoch, pris]`, vilket sparar minne.
 - **Omskrivning av logik:** Funktion `logic()` och tillhörande endpoint-delar har anpassats till den nya datamodellen.
 - **Stöd för sommar-/vintertid:** Konsolmeddelande visas vid skifte. För enkelhetens skull används alltid 24 datapunkter – en timme dupliceras eller hoppas över.
 - **API-hämtningens klockslag:** Standardtid för hämtning är nu definierad som variabel `ah` (standard = 14). Minut randomiseras en gång för att minska simultan belastning.
-- **Endpoint-förbättringar:** Menyfliken `Outputs` har bytt namn till `Config`.
+- **Endpoint-förbättringar:** Menylista `Control` har bytt namn till `Config`.
+- **Tidsintervall för "Transfer fees"** har ändrats till 06–22 för att spegla svenska elnätsaktörers tariffzoner.
+- **Förkortad historik:** Antalet historikposter per instans har minskats från 24 till 12 för att minska minnesbelastning.
+- **Ny standard för loggning:** Logging sker nu som standard endast vid ändring av utgång (On-Change).
+- **Skydd mot API-loopar:** Om priser för imorgon saknas, visas ett konsolmeddelande och nästa försök förskjuts med 1 timme.
 
 ---
 
-## Version 3.1.1SE-rc (2025-03-20)
+## Version [3.1.1SE-rc](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/arch/shelly-elprisSE_3.1.1se-rc.js) (2025-03-20)
 
 **Första svenska testanpassade versionen av shelly-porssisahko för SE1–SE4.**
 
-### 🚧 Förändringar jämfört med original (jisotalo):
+#### 🚧 Förändringar jämfört med original (jisotalo):
 - API-adress ändrad från `elering.ee (.csv)` till `elprisetjustnu.se (.json)`.
 - Funktionerna `bldU()` och `pTimeL()` introducerades för svensk JSON-struktur.
 - Stöd för elområden SE1–SE4. Baltikum och Finland togs bort.
