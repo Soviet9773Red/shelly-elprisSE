@@ -2,7 +2,7 @@
 
 Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE`, från release candidate till stabila utgåvor.
 
-## Version [3.1.2SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SE.js)
+## Version [3.1.2SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SE.js) (2025-04-27)
 
 **Stabil version baserad på tidigare 3.1.1SE, med förfinade förbättringar för tillförlitlighet, tidshantering och konsolloggning.**
 
