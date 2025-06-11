@@ -34,9 +34,14 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 Observera att inga globala ändringar har gjorts i funktionaliteten jämfört med originalkoden från [shelly-porssisahko-en (3.1.1)](https://github.com/jisotalo/shelly-porssisahko-en) För en fullständig manual, se [originalkällan.](https://github.com/jisotalo/shelly-porssisahko-en)
 
 ### 📢 Viktigt meddelande om 3.1.2SE-versionen
-Observera att version 3.1.2SE är avsedd för användning med nuvarande API-struktur fram till **11 juni 2025**, då Elprisetjustnu.se planerar att ändra sitt timprisformat. Efter detta datum kommer skriptet i sin nuvarande form inte att kunna fungera korrekt utan uppdateringar. ➡️ Vid förändring av API-strukturen är vidare utveckling och anpassning av `shelly-elprisSE` planerad. Ny version kommer att släppas efter övergången.
 
-Tills dess rekommenderas 3.1.2SE som stabil version för alla användare.
+Observera att version 3.1.2SE är avsedd för användning med nuvarande API-struktur med timpriser (24 timmar).  
+Elprisetjustnu.se planerade att införa 15-minutersprisformat från och med 12 juni 2025, men detta är nu framflyttat till **30 september 2025**, med första leveransdag **1 oktober 2025**.
+
+➡️ Vid förändring av API-strukturen är vidare utveckling och anpassning av **shelly-elprisSE** planerad.  
+En ny version kommer att släppas i god tid före den planerade övergången.
+
+Tills dess rekommenderas version **3.1.2SE** som stabil version för alla användare.
 
 ---
 
