@@ -38,8 +38,8 @@ Observera att inga globala ändringar har gjorts i funktionaliteten jämfört me
 Observera att version 3.1.2SE är avsedd för användning med nuvarande API-struktur med timpriser (24 timmar).  
 Elprisetjustnu.se planerade att införa 15-minutersprisformat från och med 12 juni 2025, men detta är nu framflyttat till **30 september 2025**, med första leveransdag **1 oktober 2025**.
 
-➡️ Vid förändring av API-strukturen är vidare utveckling och anpassning av **shelly-elprisSE** planerad.  
-En ny version kommer att släppas i god tid före den planerade övergången.
+➡️ Vid förändring av API-strukturen kommer shelly-elprisSE att anpassas efter de nya formaten när dessa är kända och tillgängliga.  
+Uppdateringar av skriptet planeras att göras i takt med att förändringarna genomförs i praktiken.
 
 Tills dess rekommenderas version **3.1.2SE** som stabil version för alla användare.
 
