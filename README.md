@@ -72,7 +72,7 @@ Adressen kan skilja sig, se exact i din consol
   ## 📷 Inställningsvy
 Här är en illustration av info (status) och konfigurationsvyn:
 <table><tr>
-      <td><img src="https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/main/StatP.jpg" width="500"></td>
+      <td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/StatP.jpg" width="500"></td>
       <td><img src="https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/main/SetP.jpg" width="500"></td>
     </tr>
 </table>
