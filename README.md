@@ -2,12 +2,13 @@ SE1-4 Nordpool elbörspris (spotpris) för Shelly-enheter: **shelly-elprisSE**
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools timpriser i svenska elområden SE1–SE4. Priser hämtas från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras öppna JSON-API.
+**shelly-elprisSEgit** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools timpriser i svenska elområden SE1–SE4. Priser hämtas från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras öppna JSON-API.
 
-Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för den ursprungliga logiken, till [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idén till effektiv prisparsning, samt till GPT4o/o1 för flerstegsutveckling, refaktorering och testning.
+Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för den ursprungliga logiken, till [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idén till effektiv prisparsning, samt till GPT4o/o1/5 för flerstegsutveckling, refaktorering och testning.
 
-## Funktionalitet i version [shelly-elpris3.1.2SE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SE.js)
+## Funktionalitet i version [shelly-elpris3.1.2SEgit.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEgit.js)
 - Automatisk hämtning och analys av elpriser för idag och imorgon (när tillgängligt).
+- Hantering av det nya 15-minutersformatet genom aggregering (96 → 24).
 - Centraliserad tidshantering med gemensam epoch-referens (`_.s.now`).
 - Kompatibilitet med sommar-/vintertid (24 datapunkter behålls genom förenklad hantering).
 - För varje instans analyseras lägsta, högsta, genomsnittligt elpris samt aktuell timme.
@@ -33,15 +34,19 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 
 Observera att inga globala ändringar har gjorts i funktionaliteten jämfört med originalkoden från [shelly-porssisahko-en (3.1.1)](https://github.com/jisotalo/shelly-porssisahko-en) För en fullständig manual, se [originalkällan.](https://github.com/jisotalo/shelly-porssisahko-en)
 
-### 📢 Viktigt meddelande om 3.1.2SE-versionen
+---
 
-Observera att version 3.1.2SE är avsedd för användning med nuvarande API-struktur med timpriser (24 timmar).  
-Elprisetjustnu.se planerade att införa 15-minutersprisformat från och med 12 juni 2025, men detta är nu framflyttat till **30 september 2025**, med första leveransdag **1 oktober 2025**.
+## 📢 Viktigt meddelande
 
-➡️ Vid förändring av API-strukturen kommer shelly-elprisSE att anpassas efter de nya formaten när dessa är kända och tillgängliga.  
-Uppdateringar av skriptet planeras att göras i takt med att förändringarna genomförs i praktiken.
+Från och med **1 oktober 2025** levererar [elprisetjustnu.se](https://www.elprisetjustnu.se/) priser i **15-minutersintervall (96 datapunkter per dygn)** i stället för 24 timpriser.  
+Det innebär att den tidigare versionen **3.1.2SE.js** inte längre fungerar.
 
-Tills dess rekommenderas version **3.1.2SE** som stabil version för alla användare.
+Den nya versionen **3.1.2SE.git.js** är anpassad för det nya formatet.  
+Skriptet hämtar **day0.json** (idag) och **day1.json** (imorgon) direkt från detta GitHub-repo. Dessa filer uppdateras automatiskt via min privata Raspberry Pi 3. Små fördröjningar kan förekomma vid elavbrott eller problem med internetanslutningen, men data uppdateras normalt i tid.
+
+För att Shelly-enheter med begränsat minne ska kunna hantera informationen, aggregerar skriptet automatiskt 96 kvartstimmar till 24 hela timmar.  
+
+Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framtiden stödja 96-intervall mer direkt.
 
 ---
 
@@ -49,7 +54,7 @@ Tills dess rekommenderas version **3.1.2SE** som stabil version för alla använ
 1. Anslut din Shelly-enhet till nätverket.
 2. Uppgradera firmware till senaste **stable** version ≥ 1.5.1.
 3. Välj tidszon: **Europe/Stockholm** (viktigt för rätt prislogik).
-4. Skapa nytt script i Shelly Web UI, klistra in senaste version [shelly-elpris3.1.2SE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SE.js).
+4. Skapa nytt script i Shelly Web UI, klistra in senaste version [shelly-elpris3.1.2SEgit.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEgit.js).
 5. Starta scriptet och öppna konsolen för att se resultat och HTTP-länk.
 6. Oppna länken från konsolen. I konsolen kommer du att se skriptets resultat, ungefär så här:
 
