@@ -2,7 +2,7 @@ SE1-4 Nordpool elbörspris (spotpris) för Shelly-enheter: **shelly-elprisSE**
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-**shelly-elprisSEgit** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools timpriser i svenska elområden SE1–SE4. Priser hämtas från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras öppna JSON-API.
+**shelly-elprisSEgit** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools timpriser i svenska elområden SE1–SE4. I tidigare versioner hämtades priserna från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras öppna JSON-API. I den aktuella versionen hämtar skriptet **day0.json** (idag) och **day1.json** (imorgon) direkt från detta GitHub-repo.
 
 Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för den ursprungliga logiken, till [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idén till effektiv prisparsning, samt till GPT4o/o1/5 för flerstegsutveckling, refaktorering och testning.
 
