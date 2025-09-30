@@ -2,6 +2,25 @@
 
 Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE`, från release candidate till stabila utgåvor.
 
+## Version [3.1.2SEgit](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEgit.js) (2025-10-01)
+
+**Anpassad version för övergången till 15-minuterspriser (96 punkter per dygn).**  
+Tidigare hämtades data direkt från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras JSON-API.  
+Nu hämtas färdigbehandlade filer **day0.json** (idag) och **day1.json** (imorgon) direkt från detta GitHub-repo.
+
+#### ✅ Förbättringar:
+
+- Stöd för det nya 15-minutersformatet: data aggregeras externt (privat Raspberry Pi 3) från 96 kvartstimmar till 24 hela timmar.
+- Stabil hämtning av day0/day1 från GitHub i stället för direkt från API:t.
+- Förbättrad kompatibilitet med Shelly-enheter med begränsat minne (optimerad datahantering).
+- Tydligare README med information om den nya datakällan och övergångslösningen.
+
+#### ⚠️ Noteringar:
+
+- **day1.json** kan saknas en stund efter midnatt fram till nästa uppdatering.
+- Detta är en tillfällig lösning. Utvecklingen fortsätter för att i framtiden stödja 96-intervall mer direkt.
+
+
 ## Version [3.1.2SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SE.js) (2025-04-27)
 
 **Stabil version baserad på tidigare 3.1.1SE, med förfinade förbättringar för tillförlitlighet, tidshantering och konsolloggning.**
