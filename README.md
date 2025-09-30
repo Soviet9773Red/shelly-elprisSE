@@ -42,7 +42,8 @@ Från och med **1 oktober 2025** levererar [elprisetjustnu.se](https://www.elpri
 Det innebär att den tidigare versionen **3.1.2SE.js** inte längre fungerar.
 
 Den nya versionen **3.1.2SE.git.js** är anpassad för det nya formatet.  
-Skriptet hämtar **day0.json** (idag) och **day1.json** (imorgon) direkt från detta GitHub-repo. Dessa filer uppdateras automatiskt via min privata Raspberry Pi 3. Små fördröjningar kan förekomma vid elavbrott eller problem med internetanslutningen, men data uppdateras normalt i tid.
+
+Skriptet hämtar [**day0.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day0.json) (idag) och [**day1.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day1.json) (imorgon) direkt från detta GitHub-repo. Dessa filer uppdateras automatiskt via min privata Raspberry Pi 3. Små fördröjningar kan förekomma vid elavbrott eller problem med internetanslutningen, men data uppdateras normalt i tid. Observera att **day1.json** kan saknas efter midnatt fram till nästa uppdatering.
 
 För att Shelly-enheter med begränsat minne ska kunna hantera informationen, aggregerar skriptet automatiskt 96 kvartstimmar till 24 hela timmar.  
 
