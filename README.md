@@ -8,7 +8,7 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 
 ## Funktionalitet i version [shelly-elpris3.1.2SEgit.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEgit.js)
 - Automatisk hämtning och analys av elpriser för idag och imorgon (när tillgängligt).
-- Hantering av det nya 15-minutersformatet genom aggregering (96 → 24).
+- Det nya 15-minutersformatet aggregeras externt (Raspberry Pi 3) till 24 timmar. Skriptet använder de färdigbehandlade filerna (day0/day1).
 - Centraliserad tidshantering med gemensam epoch-referens (`_.s.now`).
 - Kompatibilitet med sommar-/vintertid (24 datapunkter behålls genom förenklad hantering).
 - För varje instans analyseras lägsta, högsta, genomsnittligt elpris samt aktuell timme.
