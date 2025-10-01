@@ -21,7 +21,7 @@ Nu hämtas färdigbehandlade filer **day0.json** (idag) och **day1.json** (imorg
 - Detta är en tillfällig lösning. Utvecklingen fortsätter för att i framtiden stödja 96-intervall mer direkt.
 
 
-## Version [3.1.2SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SE.js) (2025-04-27)
+## Version [3.1.2SE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/arch/shelly-elpris3.1.2SE.js) (2025-04-27)
 
 **Stabil version baserad på tidigare 3.1.1SE, med förfinade förbättringar för tillförlitlighet, tidshantering och konsolloggning.**
 
