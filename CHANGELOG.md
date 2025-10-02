@@ -2,6 +2,23 @@
 
 Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE`, från release candidate till stabila utgåvor.
 
+## Version [3.1.2SEg](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEg.js) (2025-10-02)
+
+**Utökad version med fullt stöd för alla elområden SE1–SE4.**  
+Tidigare hämtades endast SE3 via aliasfiler `day0.json` / `day1.json`.  
+Nu hämtas zon-specifika filer direkt från GitHub: `day0_SE1.json`, `day0_SE2.json`, `day0_SE3.json`, `day0_SE4.json` (samt motsvarande `day1_*`).  
+
+#### ✅ Förbättringar:
+- Fullt stöd för samtliga svenska elområden (SE1–SE4).
+- Nytt `bldU()` som bygger länk direkt mot zonens fil (`day0_SEx` / `day1_SEx`).
+- Aliasfilerna `day0.json` / `day1.json` tas bort och stöds inte längre.
+
+#### ⚠️ Noteringar:
+- **day1_SEx.json** kan saknas en stund efter midnatt fram till nästa uppdatering.
+- Detta är fortsatt en övergångslösning, där GitHub fungerar som cache mellan API och Shelly-enheter.
+
+---
+
 ## Version [3.1.2SEgit](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEgit.js) (2025-10-01)
 
 **Anpassad version för övergången till 15-minuterspriser (96 punkter per dygn).**  
