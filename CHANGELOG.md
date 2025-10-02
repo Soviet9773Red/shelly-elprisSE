@@ -10,7 +10,7 @@ Nu hämtas zon-specifika filer direkt från GitHub: `day0_SE1.json`, `day0_SE2.j
 
 #### ✅ Förbättringar:
 - Fullt stöd för samtliga svenska elområden (SE1–SE4).
-- Nytt `bldU()` som bygger länk direkt mot zonens fil (`day0_SEx` / `day1_SEx`).
+- Nytt `bldU()` som bygger länk direkt mot zonens fil (`day0_SE*` / `day1_SE*`).
 - Aliasfilerna `day0.json` / `day1.json` tas bort och stöds inte längre.
 
 #### ⚠️ Noteringar:
