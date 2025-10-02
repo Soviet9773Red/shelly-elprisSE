@@ -2,13 +2,14 @@ SE1-4 Nordpool elbörspris (spotpris) för Shelly-enheter: **shelly-elprisSE**
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools timpriser i svenska elområden SE1–SE4. I tidigare versioner hämtades priserna från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras öppna JSON-API. I den aktuella versionen hämtar skriptet **day0.json** (idag) och **day1.json** (imorgon) direkt från detta GitHub-repo.
+**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools timpriser i svenska elområden SE1–SE4. I tidigare versioner hämtades priserna från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras öppna JSON-API. I den aktuella versionen hämtar skriptet **`day0_SE*.json`** (idag) och **`day1_SE*.json`** (imorgon) direkt från detta GitHub-repo.
 
 Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för den ursprungliga logiken, till [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idén till effektiv prisparsning, samt till GPT4o/o1/5 för flerstegsutveckling, refaktorering och testning.
 
-## Funktionalitet i version [shelly-elpris3.1.2SEgit.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEgit.js)
+## Funktionalitet i version [shelly-elpris3.1.2SEg.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEg.js)
 - Automatisk hämtning och analys av elpriser för idag och imorgon (när tillgängligt).
-- Det nya 15-minutersformatet aggregeras externt (Raspberry Pi 3) till 24 timmar. Skriptet använder de färdigbehandlade filerna (day0/day1).
+- Det nya 15-minutersformatet aggregeras externt (Raspberry Pi 3) till 24 timmar.  
+  Skriptet använder de färdigbehandlade filerna `day0_SE*.json` / `day1_SE*.json` direkt från GitHub (SE1–SE4).
 - Centraliserad tidshantering med gemensam epoch-referens (`_.s.now`).
 - Kompatibilitet med sommar-/vintertid (24 datapunkter behålls genom förenklad hantering).
 - För varje instans analyseras lägsta, högsta, genomsnittligt elpris samt aktuell timme.
@@ -18,6 +19,7 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack 
 - Inställningarna sparas lokalt i KVS.
 - Endpoint-meny för visning och styrning via webbläsare, med förfinade beskrivningar (ex: "High price interval").
 - Tidsintervall för "Transfer fees" ändrat till 06–22 för att spegla svenska elnätsaktörers tariffzoner.
+
 
 ## Tekniska egenskaper
 - Kräver firmware **v1.5.1** eller nyare.
@@ -41,9 +43,15 @@ Observera att inga globala ändringar har gjorts i funktionaliteten jämfört me
 Från och med **1 oktober 2025** levererar [elprisetjustnu.se](https://www.elprisetjustnu.se/) priser i **15-minutersintervall (96 datapunkter per dygn)** i stället för 24 timpriser.  
 Det innebär att den tidigare versionen **3.1.2SE.js** inte längre fungerar.
 
-Den nya versionen **3.1.2SE.git.js** är anpassad för det nya formatet.  
+Den nya versionen **3.1.2SEg.js** är anpassad för det nya formatet.  
 
-Skriptet hämtar [**day0.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day0.json) (idag) och [**day1.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day1.json) (imorgon) direkt från detta GitHub-repo. Dessa filer uppdateras automatiskt via min privata Raspberry Pi 3. Små fördröjningar kan förekomma vid elavbrott eller problem med internetanslutningen, men data uppdateras normalt i tid. Observera att **day1.json** kan saknas efter midnatt fram till nästa uppdatering.
+Skriptet hämtar zon-specifika filer direkt från detta GitHub-repo:  
+- [**day0_SE1.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day0_SE1.json) / [**day1_SE1.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day1_SE1.json)  
+- [**day0_SE2.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day0_SE2.json) / [**day1_SE2.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day1_SE2.json)  
+- [**day0_SE3.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day0_SE3.json) / [**day1_SE3.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day1_SE3.json)  
+- [**day0_SE4.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day0_SE4.json) / [**day1_SE4.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day1_SE4.json)  
+
+Filerna uppdateras automatiskt via min privata Raspberry Pi 3. Små fördröjningar kan förekomma vid elavbrott eller problem med internetanslutningen, men data uppdateras normalt i tid. Observera att **day1_SE*.json** kan saknas en stund efter midnatt fram till nästa uppdatering.
 
 För att Shelly-enheter med begränsat minne ska kunna hantera informationen, aggregerar skriptet automatiskt 96 kvartstimmar till 24 hela timmar.  
 
@@ -55,7 +63,7 @@ Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framti
 1. Anslut din Shelly-enhet till nätverket.
 2. Uppgradera firmware till senaste **stable** version ≥ 1.5.1.
 3. Välj tidszon: **Europe/Stockholm** (viktigt för rätt prislogik).
-4. Skapa nytt script i Shelly Web UI, klistra in senaste version [shelly-elpris3.1.2SEgit.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEgit.js).
+4. Skapa nytt script i Shelly Web UI, klistra in senaste version [shelly-elpris3.1.2SEg.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEg.js).
 5. Starta scriptet och öppna konsolen för att se resultat och HTTP-länk.
 6. Oppna länken från konsolen. I konsolen kommer du att se skriptets resultat, ungefär så här:
 
@@ -85,7 +93,7 @@ Här är en illustration av info (status) och konfigurationsvyn:
 
 ---
 
-## Huvudsakliga [ändringar](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md):
+## Huvudsakliga ändringar finns i [changelog.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md):
 
 - **API-anrop:**  
   Ändrat från den estniska API-adressen i `.csv`-format ([Elering](https://elering.ee/)) till den svenska i JSON-format ([Elprisetjustnu.se](https://www.elprisetjustnu.se/)).  
@@ -93,8 +101,6 @@ Här är en illustration av info (status) och konfigurationsvyn:
   Stöd för svenska elområden SE1-SE4 har lagts till, medan Finland och Baltikum har tagits bort.  
 - **Design:**  
   Justeringar av färgschema och rubriker i flikarna *Status* och *Settings* för att bättre passa den svenska marknaden.
-
- Mer information finns i [changelog.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md).
 
 För detaljerad dokumentation om originalfunktioner hänvisas till [jisotalos README](https://github.com/jisotalo/shelly-porssisahko-en).
 
