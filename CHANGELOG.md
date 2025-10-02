@@ -19,7 +19,7 @@ Nu hämtas zon-specifika filer direkt från GitHub: `day0_SE1.json`, `day0_SE2.j
 
 ---
 
-## Version [3.1.2SEgit](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEgit.js) (2025-10-01)
+## Version [3.1.2SEgit](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/arch/shelly-elpris3.1.2SEgit.js) (2025-10-01)
 
 **Anpassad version för övergången till 15-minuterspriser (96 punkter per dygn).**  
 Tidigare hämtades data direkt från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras JSON-API.  
