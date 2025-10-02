@@ -6,7 +6,7 @@ SE1-4 Nordpool elbörspris (spotpris) för Shelly-enheter: **shelly-elprisSE**
 
 Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red), med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för den ursprungliga logiken, till [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idén till effektiv prisparsning, samt till GPT4o/o1/5 för flerstegsutveckling, refaktorering och testning.
 
-## Funktionalitet i version [shelly-elpris3.1.2SEg.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEg.js)
+## Funktionalitet i version [shelly-elpris3.1.2SEg](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEg.js)
 - Automatisk hämtning och analys av elpriser för idag och imorgon (när tillgängligt).
 - Det nya 15-minutersformatet aggregeras externt (Raspberry Pi 3) till 24 timmar.  
   Skriptet använder de färdigbehandlade filerna `day0_SE*.json` / `day1_SE*.json` direkt från GitHub (SE1–SE4).
@@ -41,9 +41,9 @@ Observera att inga globala ändringar har gjorts i funktionaliteten jämfört me
 ## 📢 Viktigt meddelande
 
 Från och med **1 oktober 2025** levererar [elprisetjustnu.se](https://www.elprisetjustnu.se/) priser i **15-minutersintervall (96 datapunkter per dygn)** i stället för 24 timpriser.  
-Det innebär att den tidigare versionen **3.1.2SE.js** inte längre fungerar.
+Det innebär att den tidigare versionen **3.1.2SE** inte längre fungerar.
 
-Den nya versionen **3.1.2SEg.js** är anpassad för det nya formatet.  
+Den nya versionen **shelly-elpris3.1.2SEg** är anpassad för det nya formatet.  
 
 Skriptet hämtar zon-specifika filer direkt från detta GitHub-repo:  
 - [**day0_SE1.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day0_SE1.json) / [**day1_SE1.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day1_SE1.json)  
@@ -51,7 +51,7 @@ Skriptet hämtar zon-specifika filer direkt från detta GitHub-repo:
 - [**day0_SE3.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day0_SE3.json) / [**day1_SE3.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day1_SE3.json)  
 - [**day0_SE4.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day0_SE4.json) / [**day1_SE4.json**](https://raw.githubusercontent.com/Soviet9773Red/shelly-elprisSE/refs/heads/main/day1_SE4.json)  
 
-Filerna uppdateras automatiskt via min privata Raspberry Pi 3. Små fördröjningar kan förekomma vid elavbrott eller problem med internetanslutningen, men data uppdateras normalt i tid. Observera att **day1_SE*.json** kan saknas en stund efter midnatt fram till nästa uppdatering.
+Filerna uppdateras automatiskt via min privata Raspberry Pi 3. Små fördröjningar kan förekomma vid elavbrott eller problem med internetanslutningen, men data uppdateras normalt i tid. Observera att **`day1_SE*.json`** kan saknas en stund efter midnatt fram till nästa uppdatering.
 
 För att Shelly-enheter med begränsat minne ska kunna hantera informationen, aggregerar skriptet automatiskt 96 kvartstimmar till 24 hela timmar.  
 
@@ -67,7 +67,7 @@ Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framti
 5. Starta scriptet och öppna konsolen för att se resultat och HTTP-länk.
 6. Oppna länken från konsolen. I konsolen kommer du att se skriptets resultat, ungefär så här:
 
-elpris-SE: v.3.1.2SE<br>
+elpris-SE: v.3.1.2SEg<br>
 elpris-SE: URL: http://192.168.8.200/script/2<br>
 
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="500">
