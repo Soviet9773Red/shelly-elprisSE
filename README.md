@@ -68,7 +68,7 @@ Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framti
 6. Oppna länken från konsolen. I konsolen kommer du att se skriptets resultat, ungefär så här:
 
 elpris-SE: v.3.1.2SEg<br>
-elpris-SE: URL: http://192.168.8.200/script/2<br>
+elpris-SE: URL: http://192.168.8.200/script/1<br>
 
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="317">
 
