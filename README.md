@@ -70,7 +70,7 @@ Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framti
 elpris-SE: v.3.1.2SEg<br>
 elpris-SE: URL: http://192.168.8.200/script/2<br>
 
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="520">
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="317">
 
 7. Öppna skriptets HTTP-endpoint<br>
 Kopiera HTTP-adressen från konsolen.
