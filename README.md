@@ -54,7 +54,7 @@ Ett exempel på den nya strukturen:
   "nightw": 0.214              // Nattavgift för helg
 }
 ```
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="317">
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="397">
 
 7. Öppna skriptets HTTP-endpoint.  
 Kopiera HTTP-adressen från konsolen och öppna länken i en ny flik i din webbläsare.  
@@ -69,7 +69,7 @@ Adressen kan skilja sig – se den exakta adressen i konsolen.
 ## Inställningsvy
 Här är en illustration av informations- (status) och konfigurationsvyn:
 <table><tr>
-<td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/Stat_P.jpg" width="500"></td>
+<td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/StatP.jpg" width="500"></td>
 </tr></table>
 
 ---
