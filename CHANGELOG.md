@@ -2,6 +2,30 @@
 
 Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE`, från release candidate till stabila utgåvor.
 
+## Version [3.1.3](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js) (2025-11-04)
+
+**Ny huvudversion med proxykälla, förbättrad tariffhantering och ny KVS-struktur.**
+
+#### ✅ Förbättringar:
+- Ny datakälla: priser hämtas nu direkt från **se.elpris.eu/api/v1/prices/** i `avg24`-formatet (96→24 aggregerat).
+- Inbyggd hantering av nätavgifter (grid fees) med separata nivåer för vardag / helg och dag / natt (06–22 / 22–06).
+- Utökad tariffmodell med stöd för operatörens helgtariffer (`dayw`, `nightw`).
+- Ny struktur för KVS-nycklar (`LPRIS`), med tillagda fält för helgtariffer.
+- Den tredje konfigurationen har tagits bort för att minska minnesanvändningen och frigöra resurser för framtida stöd av 15-minutersintervall.
+- Förbättrad prislogik och stabil hantering av `avg24` även vid DST-dygn (23/25 timmar).
+- Ny inbyggd flik **Help** i webgränssnittet med förklaringar och instruktioner.
+- Förnyat webbgränssnitt – tydligare tabeller, uppdelning mellan idag / imorgon och bättre mobilstöd.
+- Förbättrad visning i fliken *Status* med sammanfattning av dagens och morgondagens medelvärden.
+- Diverse buggfixar från version 3.1.2SEg, inklusive korrigerad midnattshantering och stabilare override-funktion.
+
+#### ⚠️ Noteringar:
+- Äldre KVS-nycklar är inte kompatibla med denna version och måste raderas innan start.
+- Stödet för version **3.1.2SEg** avslutas den **15 december 2025**.  
+  Uppdatera till den senaste versionen **3.1.3** via GitHub.
+- Utvecklingen fortsätter mot direkt stöd för 96-intervall utan aggregering.
+
+---
+
 ## Version [3.1.2SEg](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEg.js) (2025-10-02)
 
 **Utökad version med fullt stöd för alla elområden SE1–SE4.**  
