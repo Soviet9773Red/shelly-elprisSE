@@ -42,7 +42,7 @@ Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom �
 Den första nyckeln `Elpris` har utökats med nya fält som lagrar operatörens helgtariffer.  
 Ett exempel på den nya strukturen:
 
-```json
+```javascript
 {
   "g": "SE3",                  // Elområde (SE1–SE4)
   "vat": 0,                    // Moms (0 = av)
