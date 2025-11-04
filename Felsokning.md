@@ -23,7 +23,7 @@ Om du upplever problem med att spara, starta eller köra skriptet korrekt, följ
 
 6. **Töm KVS-lagringen**
     - Gå till KVS i Shelly GUI
-    - Ta bort onödiga nycklar manuellt.
+    - Ta bort onödiga/gamla nycklar manuellt.
 
 7. **Starta skriptet på nytt**
     - Gå till "Scripts" → klicka på "Start" vid ditt aktiva skript.
