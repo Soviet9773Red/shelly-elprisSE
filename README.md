@@ -17,7 +17,6 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med stort tack t
 🪄 Redesigned interface — clearer tables, refined layout, and responsive design for mobile use.  
 🔧 Improved price handling — stable avg24 format parsing with validation for DST (23/25-hour days).  
 🧩 Bug fixes: corrected midnight rollover logic, VAT calculation rounding, and restored override persistence.  
-💾 Backward compatible with all previous 3.x configs and KVS storage layout.
 
 **shelly-elprisSE** är en svensk anpassning av det finska projektet **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen utvecklat för Finland och Baltikum. Denna version använder det svenska elpris-API:t [elpris.eu](https://elpris.eu/) istället för [Elering](https://elering.ee/) standarddata.
 
