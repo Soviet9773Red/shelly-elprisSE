@@ -31,6 +31,7 @@ elpris-SE: v.3.1.3SE
 elpris-SE: URL: http://192.168.8.119/script/1
 ```
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="397">
+
 **Viktigt:**  
 I version 3.1.3 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
 Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
