@@ -50,8 +50,8 @@ Ett exempel på den nya strukturen:
   "day": 0.536,                // Dagavgift (vardagar kl. 06–22).
   "night": 0.214,              // Nattavgift (vardagar kl. 22–06).
   "names": ["-", "-"],         // Namn på konfigurationer 
-  "dayw": 0.214, - day helg    // Dagavgift för helg
-  "nightw": 0.214 - natt helg  // Nattavgift för helg
+  "dayw": 0.214,               // Dagavgift för helg
+  "nightw": 0.214              // Nattavgift för helg
 }
 ```
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="317">
