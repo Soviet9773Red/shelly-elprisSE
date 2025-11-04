@@ -2,18 +2,18 @@
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1–SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras öppna JSON-API, men från och med version **3.1.3** används nu en egen proxykälla — **[se.elpris.eu](https://se.elpris.eu)** — för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
+**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1–SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från elprisetjustnu.se via deras öppna JSON-API, men från och med version **3.1.3** används nu en egen proxykälla - **[se.elpris.eu](https://se.elpris.eu)** - för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
 
 **Shelly-elprisSE 3.1.3 Release Notes**
 
 **Highlights**  
-⚡ 15-minute data support — automatic aggregation (96→24) for compatibility with 1-hour logic.  
+⚡ 15-minute data support - automatic aggregation (96→24) for compatibility with 1-hour logic.  
 ⚙️ Improved setup interface: support for multiple outputs and custom hour ranges.  
 🧮 Updated status view with summary tables for prices and outputs (today / tomorrow).  
-💰 Extended grid-fee model — new weekday/weekend differentiation and dynamic fee detection based on time of day.  
+💰 Extended grid-fee model - new weekday/weekend differentiation and dynamic fee detection based on time of day.  
 🆘 Integrated Help tab with built-in documentation, accessible directly via the web UI.  
-🪄 Redesigned interface — clearer tables, refined layout, and responsive design for mobile use.  
-🔧 Improved price handling — stable avg24 format parsing with validation for DST (23/25-hour days).  
+🪄 Redesigned interface - clearer tables, refined layout, and responsive design for mobile use.  
+🔧 Improved price handling - stable avg24 format parsing with validation for DST (23/25-hour days).  
 🧩 Bug fixes: corrected midnight rollover logic, VAT calculation rounding, and restored override persistence.  
 
 ---
