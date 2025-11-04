@@ -2,9 +2,7 @@
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools timpriser i svenska elområden SE1–SE4. I tidigare versioner hämtades priserna från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras öppna JSON-API. Version 3.1.3 använder nu en egen proxykälla — **[se.elpris.eu](https://se.elpris.eu)** — för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
-
-Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för originalkoden och [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idéer kring JSON-optimering.
+**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1–SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från [elprisetjustnu.se](https://www.elprisetjustnu.se/) via deras öppna JSON-API, men från och med version **3.1.3** används nu en egen proxykälla — **[se.elpris.eu](https://se.elpris.eu)** — för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
 
 **Shelly-elprisSE 3.1.3 Release Notes**
 
@@ -17,8 +15,6 @@ Utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med stort tack t
 🪄 Redesigned interface — clearer tables, refined layout, and responsive design for mobile use.  
 🔧 Improved price handling — stable avg24 format parsing with validation for DST (23/25-hour days).  
 🧩 Bug fixes: corrected midnight rollover logic, VAT calculation rounding, and restored override persistence.  
-
-**shelly-elprisSE** är en svensk anpassning av det finska projektet **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen utvecklat för Finland och Baltikum. Denna version använder det svenska elpris-API:t [elpris.eu](https://elpris.eu/) istället för [Elering](https://elering.ee/) standarddata.
 
 ---
 
@@ -125,6 +121,7 @@ Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framti
   Justeringar av färgscheman och rubriker i flikarna *Status* och *Settings* för att bättre passa den svenska marknaden.
 
 ---
+Skriptet utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för originalkoden och [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idéer kring JSON-optimering.
 
 ## Stöd projektet
 Jag är ofta hungrig när jag kodar – 🍔 [bjud mig på en Big Mac och kaffe](https://buymeacoffee.com/soviet9773red)
