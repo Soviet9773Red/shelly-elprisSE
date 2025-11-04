@@ -54,7 +54,7 @@ Ett exempel på den nya strukturen:
   "nightw": 0.214              // Nattavgift för helg
 }
 ```
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="317">
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console1.png?raw=true" width="317">
 
 7. Öppna skriptets HTTP-endpoint.  
 Kopiera HTTP-adressen från konsolen och öppna länken i en ny flik i din webbläsare.  
