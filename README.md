@@ -104,9 +104,9 @@ Den inbyggda HTTP-servern på Shelly-enheten ger tillgång till fyra flikar:
 ---
 
 ## 📢 API på GitHub för version shelly-elpris3.1.2SEg
-Stödet för denna version avslutas den 15 december. Vänligen uppdatera till den senaste versionen [shelly-elprisSE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).
+Stödet för denna version avslutas den 15 december 2025. Vänligen uppdatera till den senaste versionen [shelly-elprisSE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).
 
-## 📢 Kvartspriser från API och version shelly-elpris3.1.2SEg
+## 📢 Kvartspriser från API
 Från och med **1 oktober 2025** levererar [elprisetjustnu.se](https://www.elprisetjustnu.se/) priser i **15-minutersintervall (96 datapunkter per dygn)** i stället för 24 timpriser.  
 Det innebär att de tidigare versionerna inte längre fungerar.  
 Den nya versionen **shelly-elprisSE (3.1.3)** är anpassad till det nya formatet.  
