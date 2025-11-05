@@ -45,13 +45,13 @@ Ett exempel på den nya strukturen:
 
 ```javascript
 {
-  "g": "SE3",                  // Elområde (SE1–SE4)
-  "vat": 0,                    // Moms (0 = av)
-  "day": 0.536,                // Dagavgift (vardagar kl. 06–22).
-  "night": 0.214,              // Nattavgift (vardagar kl. 22–06).
-  "names": ["-", "-"],         // Namn på konfigurationer 
-  "dayw": 0.214,               // Dagavgift för helg
-  "nightw": 0.214              // Nattavgift för helg
+  "g": "SE3",          // Elområde (SE1–SE4)
+  "vat": 0,            // Moms (0 = av)
+  "day": 0.536,        // Dagavgift (vardagar kl. 06–22).
+  "night": 0.214,      // Nattavgift (vardagar kl. 22–06).
+  "names": ["-", "-"], // Namn på konfigurationer 
+  "dayw": 0.214,       // Dagavgift för helg
+  "nightw": 0.214      // Nattavgift för helg
 }
 ```
 
