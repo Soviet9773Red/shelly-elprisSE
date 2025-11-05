@@ -32,6 +32,10 @@ elpris-SE: URL: http://192.168.8.119/script/1
 ```
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="397">
 
+7. Öppna skriptets HTTP-endpoint.  
+Kopiera HTTP-adressen från konsolen och öppna länken i en ny flik i din webbläsare.  
+Adressen kan skilja sig – se den exakta adressen i konsolen.
+
 **Viktigt:**  
 I version 3.1.3 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
 Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
@@ -51,17 +55,13 @@ Ett exempel på den nya strukturen:
 }
 ```
 
-7. Öppna skriptets HTTP-endpoint.  
-Kopiera HTTP-adressen från konsolen och öppna länken i en ny flik i din webbläsare.  
-Adressen kan skilja sig – se den exakta adressen i konsolen.  
-
 8. Konfigurera skriptets parametrar. Konfigurationshjälp finns inne i skriptet.
 
 ### 🔧 → [Felsökning](./Felsokning.md)
 
 
 ## Inställningsvy
-Här är en illustration av informations- (status) och konfigurationsvyn:
+Här är en illustration av UI (status):
 <table><tr>
 <td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/StatP.jpg" width="500"></td>
 </tr></table>
