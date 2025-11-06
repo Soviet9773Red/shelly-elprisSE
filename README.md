@@ -59,8 +59,7 @@ Ett exempel på den nya strukturen:
 
 ### 🔧 → [Felsökning](./Felsokning.md)
 
-
-## Inställningsvy
+## Exempel på huvudgränssnitt
 Här är en illustration av UI (status):
 <table><tr>
 <td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/StatP.jpg" width="500"></td>
