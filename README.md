@@ -2,7 +2,7 @@
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1-SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från elprisetjustnu.se via deras öppna JSON-API, men från och med version **3.1.3** används nu en proxykälla **[elpris.eu](https://elpris.eu)** - för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
+**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1-SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från elprisetjustnu.se via deras öppna JSON-API, men från och med version **3.1.3** används nu en proxykälla [elpris.eu](https://elpris.eu) - för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
 
 **Shelly-elprisSE 3.1.3 Release Notes**
 
@@ -28,7 +28,7 @@
 
 ```
 elpris-SE: v.3.1.3SE
-elpris-SE: URL: http://192.168.8.119/script/1
+elpris-SE: URL http://192.168.8.119/script/1
 ```
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="397">
 
@@ -85,7 +85,7 @@ Den inbyggda HTTP-servern på Shelly-enheten ger tillgång till fyra flikar:
 - Automatisk uppdatering av priser för idag och imorgon (om tillgängligt).  
 - Slumpmässig minutfördröjning (20–50 min) sprider nätbelastningen mellan enheter.  
 - Skriptet hämtar data direkt från proxyservern se.elpris.eu/api/v1/prices/ i det kompakta avg24-formatet, som redan sammanställer 96 kvartstimmar till 24 timmar.  
-- Inbyggd hantering av nätavgifter (grid fees) med separata nivåer för vardag / helg och dag / natt (06–22 / 22–06).  
+- Inbyggd hantering av nätavgifter (grid fees) med separata nivåer för vardag/helg och dag/natt (06–22 / 22–06).  
 - Automatisk tillämpning av moms (VAT) och aktuell nättariff på varje prisintervall.  
 - Centraliserad tidshantering med gemensam epoch-referens (_.s.now) och verifierad systemtid.  
 - Full kompatibilitet med sommar- och vintertid (23 / 25-timmarsdygn identifieras och loggas korrekt).  
@@ -97,7 +97,7 @@ Den inbyggda HTTP-servern på Shelly-enheten ger tillgång till fyra flikar:
 - Konfigurationer sparas lokalt i KVS och kan uppdateras dynamiskt via fliken Setup.  
 - Förbättrat webbgränssnitt med flikar Status, History, Setup och Help, tillgängligt direkt via enhetens IP-adress.  
 - Tidsintervall och beräkningar av "Grid fees" följer svenska elnätsmodeller med tydlig skillnad mellan vardag och helg.  
-- Tid för API-hämtning konfigureras via variabel `ah` (standard kl. 14).  
+- Tid för API-hämtning konfigureras via variabel `ah` (standard kl. 15).  
 - Minut för förfrågan väljs slumpmässigt vid första uppstart för att sprida nätbelastningen mellan enheter.
 
 ---
@@ -124,8 +124,10 @@ Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framti
 Skriptet utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för originalkoden och [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idéer kring JSON-optimering.
 
 ## Stöd projektet
-Jag är ofta hungrig när jag kodar – 🍔 [bjud mig på en Big Mac och kaffe](https://buymeacoffee.com/soviet9773red)
+Ditt stöd ger mig inte bara kaffe i koppen –  
+det hjälper också till att hålla [elpris.eu](https://elpris.eu) och dess proxy-tjänster online,  
+så att Shelly-skripten kan fortsätta få uppdaterade elprisdata.
 
-[![Big Mac](https://img.shields.io/badge/Buy%20me%20a%20🍔-Big%20Mac-yellow?style=for-the-badge)](https://buymeacoffee.com/soviet9773red)
+[![Support Project](https://img.shields.io/badge/Stöd%20projektet-%F0%9F%8D%94%20Buy%20Me%20a%20Coffee-yellow?style=for-the-badge)](https://buymeacoffee.com/soviet9773red)
 
 Tack!
