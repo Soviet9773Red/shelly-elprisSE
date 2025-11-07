@@ -2,7 +2,7 @@
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1-SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från elprisetjustnu.se via deras öppna JSON-API, men från och med version **3.1.3** används nu en egen proxykälla - **[elpris.eu](https://elpris.eu)** - för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
+**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1-SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från elprisetjustnu.se via deras öppna JSON-API, men från och med version **3.1.3** används nu en proxykälla **[elpris.eu](https://elpris.eu)** - för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
 
 **Shelly-elprisSE 3.1.3 Release Notes**
 
