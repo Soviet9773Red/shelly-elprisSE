@@ -1,98 +1,98 @@
 [
   {
-    "time_start": "2025-11-17T00:00:00",
-    "SEK_per_kWh": 0.49864
+    "time_start": "2025-11-18T00:00:00",
+    "SEK_per_kWh": 0.91648
   },
   {
-    "time_start": "2025-11-17T01:00:00",
-    "SEK_per_kWh": 0.504
+    "time_start": "2025-11-18T01:00:00",
+    "SEK_per_kWh": 0.88776
   },
   {
-    "time_start": "2025-11-17T02:00:00",
-    "SEK_per_kWh": 0.50479
+    "time_start": "2025-11-18T02:00:00",
+    "SEK_per_kWh": 0.84921
   },
   {
-    "time_start": "2025-11-17T03:00:00",
-    "SEK_per_kWh": 0.49812
+    "time_start": "2025-11-18T03:00:00",
+    "SEK_per_kWh": 0.83492
   },
   {
-    "time_start": "2025-11-17T04:00:00",
-    "SEK_per_kWh": 0.51424
+    "time_start": "2025-11-18T04:00:00",
+    "SEK_per_kWh": 0.86276
   },
   {
-    "time_start": "2025-11-17T05:00:00",
-    "SEK_per_kWh": 0.60153
+    "time_start": "2025-11-18T05:00:00",
+    "SEK_per_kWh": 0.90944
   },
   {
-    "time_start": "2025-11-17T06:00:00",
-    "SEK_per_kWh": 0.79949
+    "time_start": "2025-11-18T06:00:00",
+    "SEK_per_kWh": 1.0052
   },
   {
-    "time_start": "2025-11-17T07:00:00",
-    "SEK_per_kWh": 1.06826
+    "time_start": "2025-11-18T07:00:00",
+    "SEK_per_kWh": 1.21139
   },
   {
-    "time_start": "2025-11-17T08:00:00",
-    "SEK_per_kWh": 1.33491
+    "time_start": "2025-11-18T08:00:00",
+    "SEK_per_kWh": 1.3455
   },
   {
-    "time_start": "2025-11-17T09:00:00",
-    "SEK_per_kWh": 1.20966
+    "time_start": "2025-11-18T09:00:00",
+    "SEK_per_kWh": 1.20972
   },
   {
-    "time_start": "2025-11-17T10:00:00",
-    "SEK_per_kWh": 1.09446
+    "time_start": "2025-11-18T10:00:00",
+    "SEK_per_kWh": 1.03444
   },
   {
-    "time_start": "2025-11-17T11:00:00",
-    "SEK_per_kWh": 0.92353
+    "time_start": "2025-11-18T11:00:00",
+    "SEK_per_kWh": 0.99707
   },
   {
-    "time_start": "2025-11-17T12:00:00",
-    "SEK_per_kWh": 0.85371
+    "time_start": "2025-11-18T12:00:00",
+    "SEK_per_kWh": 1.02332
   },
   {
-    "time_start": "2025-11-17T13:00:00",
-    "SEK_per_kWh": 0.85374
+    "time_start": "2025-11-18T13:00:00",
+    "SEK_per_kWh": 1.18111
   },
   {
-    "time_start": "2025-11-17T14:00:00",
-    "SEK_per_kWh": 0.95455
+    "time_start": "2025-11-18T14:00:00",
+    "SEK_per_kWh": 1.37192
   },
   {
-    "time_start": "2025-11-17T15:00:00",
-    "SEK_per_kWh": 1.0682
+    "time_start": "2025-11-18T15:00:00",
+    "SEK_per_kWh": 1.46327
   },
   {
-    "time_start": "2025-11-17T16:00:00",
-    "SEK_per_kWh": 1.16481
+    "time_start": "2025-11-18T16:00:00",
+    "SEK_per_kWh": 1.7716
   },
   {
-    "time_start": "2025-11-17T17:00:00",
-    "SEK_per_kWh": 1.27253
+    "time_start": "2025-11-18T17:00:00",
+    "SEK_per_kWh": 1.7169
   },
   {
-    "time_start": "2025-11-17T18:00:00",
-    "SEK_per_kWh": 1.22694
+    "time_start": "2025-11-18T18:00:00",
+    "SEK_per_kWh": 1.82523
   },
   {
-    "time_start": "2025-11-17T19:00:00",
-    "SEK_per_kWh": 1.17176
+    "time_start": "2025-11-18T19:00:00",
+    "SEK_per_kWh": 1.52399
   },
   {
-    "time_start": "2025-11-17T20:00:00",
-    "SEK_per_kWh": 1.09169
+    "time_start": "2025-11-18T20:00:00",
+    "SEK_per_kWh": 1.21889
   },
   {
-    "time_start": "2025-11-17T21:00:00",
-    "SEK_per_kWh": 1.01577
+    "time_start": "2025-11-18T21:00:00",
+    "SEK_per_kWh": 1.06268
   },
   {
-    "time_start": "2025-11-17T22:00:00",
-    "SEK_per_kWh": 0.95243
+    "time_start": "2025-11-18T22:00:00",
+    "SEK_per_kWh": 1.07435
   },
   {
-    "time_start": "2025-11-17T23:00:00",
-    "SEK_per_kWh": 0.8642
+    "time_start": "2025-11-18T23:00:00",
+    "SEK_per_kWh": 0.98511
   }
 ]
