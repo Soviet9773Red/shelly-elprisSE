@@ -136,6 +136,12 @@ Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framti
 ---
 Skriptet utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för originalkoden och [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idéer kring JSON-optimering.
 
+### Källkod och byggsystem
+
+För närvarande är källkoden, relaterade projekt samt bygg- och npm-baserad arbetsmiljö
+inte publikt tillgängliga. Vid intresse för fork, anpassningar eller vidareutveckling kan dessa göras tillgängliga vid behov.    
+Kontakta mig gärna via GitHub Issues eller via projektets kontaktytor.
+
 ## Stöd projektet
 Ditt stöd ger mig inte bara kaffe i koppen –  
 det hjälper också till att hålla [elpris.eu](https://elpris.eu) och dess proxy-tjänster online,  
