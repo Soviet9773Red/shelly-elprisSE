@@ -33,6 +33,7 @@ Shelly Gen 3-4:
 🔧 Förbättrad prishantering - stabil tolkning av avg24-formatet med validering för sommar- och vintertid (23/25-timmarsdygn).  
 🧩 Buggrättningar: korrigerad logik vid dygnsbyte, avrundning av momsberäkning, återställd override-persistens samt korrekt visning av aktuellt spotpris.
 🌡️ Stöd för H&T-temperatursensor via addon-skript för dynamisk justering av billigaste timmar.
+
 ---
 
 ##Komma igång
