@@ -54,7 +54,7 @@ elpris-SE: URL http://192.168.8.119/script/1
 Kopiera HTTP-adressen från konsolen och öppna länken i en ny flik i din webbläsare.  
 Adressen kan skilja sig – se den exakta adressen i konsolen.
 
-Observera att ciffra efter script/ visar script nummer och kan varieras, till exempel: /script/2 eller /script/3 osv., se aktuell nummer for dit skript
+Observera att siffran efter script/ visar skriptnumret och kan variera, till exempel /script/2 eller /script/3 osv. Se aktuellt nummer för ditt skript.
 
 **Viktigt:**  
 I version 3.1.5 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
