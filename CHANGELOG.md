@@ -2,7 +2,7 @@
 
 Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE`, från release candidate till stabila utgåvor.
 
-## Version [3.1.3](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js) (2025-11-04)
+## Version [3.1.3](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/arch/shelly-elprisSE3.1.3.js) (2025-11-04)
 
 **Ny huvudversion med proxykälla, förbättrad tariffhantering och ny KVS-struktur.**
 
