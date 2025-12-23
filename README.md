@@ -40,7 +40,7 @@ Shelly Gen 3-4:
 1. Anslut din Shelly-enhet till nätverket.  
 2. Uppgradera firmware till senaste **stable** version ≥ 1.7.1.  
 3. Välj tidszon: **Europe/Stockholm** (viktigt för korrekt prislogik).  
-4. Skapa ett nytt script i Shelly Web UI och klistra in den senaste versionen [shelly-elprisSE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).  
+4. Skapa ett nytt script i Shelly Web UI och klistra in den senaste [3.1.5 build 04] versionen [shelly-elprisSE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).  
 5. Starta scriptet och öppna konsolen för att se resultatet och HTTP-länken.  
 6. Öppna länken från konsolen. Du ser något i stil med:  
 
