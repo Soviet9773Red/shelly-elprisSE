@@ -100,18 +100,12 @@ Den inbyggda HTTP-servern på Shelly-enheten ger tillgång till fyra flikar:
 
 ### **Funktionalitet i version 3.1.5** [shelly-elprisSE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js)
 
-- Stöd för Shelly Gen2-enheter (Plus 1 / Plus 1PM / Plug S / Pro-serien m.fl.)
-- Hämtar elpriser via JSON-API från se.elpris.eu
-- Anpassad för 15-minuterspriser genom användning av det kompakta avg24-formatet (96 -> 24 intervall)
-- Automatisk uppdatering av priser för idag och imorgon när data finns tillgängligt
-- Slumpmässig fördröjning av API-anrop (10-55 min) för att minska belastning på nätet och proxyservern
-
-- Inbyggd hantering av nätavgifter (grid fees) med separata nivåer för vardag/helg och dag/natt (06-22 / 22-06)
-- Stöd för aktuell nättariff per prisintervall
-
-- För varje instans beräknas lägsta, högsta, genomsnittligt samt aktuellt pris
-- Konfiguration lagras lokalt i KVS och kan ändras dynamiskt via fliken Setup
-- Inbyggt webbgränssnitt med flikarna Status, History, Setup och Help, tillgängligt direkt via enhetens IP-adress
+-Förbättrad intern stabilitet genom flera riktade patchar i kärnlogiken<br>
+-Utökad History-funktion med datumvisning för tydligare tidskontext<br>
+-Förfinat användargränssnitt i samtliga flikar med fokus på läsbarhet och visuell konsekvens<br>
+-Stabilare hantering av tillstånd och prisdata vid uppdateringar och dygnsövergångar<br>
+-Förbättrad samverkan mellan Status- och Setup-vyer utan förändring av grundläggande beteende<br>
+-Stöd för H&T-temperatursensor via addon-skript för dynamisk justering av billigaste timmar<br>
 
 ---
 
