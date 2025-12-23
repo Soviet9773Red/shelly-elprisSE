@@ -81,7 +81,7 @@ Ett exempel på den nya strukturen:
 ### Exempel på huvudgränssnitt
 Här är en illustration av UI (status):
 <table><tr>
-<td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/statp.jpg?raw=true" width="500"></td>
+<td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/statp.jpg?raw=true" width="515"></td>
 </tr></table>
 
 
