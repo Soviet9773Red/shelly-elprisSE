@@ -2,36 +2,40 @@
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-**shelly-elprisSE** är ett script för Shelly-enheter (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1-SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från elprisetjustnu.se via deras öppna JSON-API, men från och med version **3.1.3** används nu en proxykälla [elpris.eu](https://elpris.eu) - för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
+**shelly-elprisSE** är ett script för Shelly-enheter Gen 2 (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1-SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko](https://github.com/jisotalo/shelly-porssisahko)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från elprisetjustnu.se via deras öppna JSON-API, men ny används en proxykälla [elpris.eu](https://elpris.eu) - för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
 
-### Primary supported Shelly platform is Gen2
+### **Version 3.1.5 primary supports Shelly platform Gen2**
 ```
-- Pro 3 Gen2
-- Plus1 Gen2
-- Plus1 PM Gen2
-- Plug S Gen2
-```
+|   Device  | Gen 2      | Gen 3:            |
+|-----------|------------|-------------------|
+| Plus1     | OK         | Not tested        |
+| Plus1 PM  | OK         | Not tested        |
+| Plus2 PM  | OK         | Not tested        |
+| Pro 2     | OK         | Not tested        |
+| Pro 3     | OK         | Not tested        |
+| Plug S    | OK         | Shows instability |
+| Mini PM   | Not tested | Shows instability |
+
 Shelly Gen 3-4:
-```
 - may work
 - not fully tested
 - memory constraints may cause instability
 ```
-**Shelly-elprisSE 3.1.3 Release Notes**
 
-**Highlights**  
-⚡ 15-minute data support - automatic aggregation (96→24) for compatibility with 1-hour logic.  
-⚙️ Improved setup interface: support for multiple outputs and custom hour ranges.  
-🧮 Updated status view with summary tables for prices and outputs (today / tomorrow).  
-💰 Extended grid-fee model - new weekday/weekend differentiation and dynamic fee detection based on time of day.  
-🆘 Integrated Help tab with built-in documentation, accessible directly via the web UI.  
-🪄 Redesigned interface - clearer tables, refined layout, and responsive design for mobile use.  
-🔧 Improved price handling - stable avg24 format parsing with validation for DST (23/25-hour days).  
-🧩 Bug fixes: corrected midnight rollover logic, VAT calculation rounding, and restored override persistence.  
+**Shelly-elprisSE 3.1.5 Release Notes**
 
+**Höjdpunkter**  
+⚡ Stöd för 15-minutersdata - automatisk aggregering (96 → 24) för kompatibilitet med timbaserad logik.  
+⚙️ Förbättrade gränssnitt för Status och Setup.  
+💰 Modell för nätavgifter - tydlig vardag/helg-separation samt dynamisk avgiftsdetektering beroende på tid på dygnet, inklusive buggfixar.  
+🆘 Integrerad Help-flik med inbyggd dokumentation, direkt tillgänglig via webbgränssnittet.  
+🪄 Ombyggt användargränssnitt - tydligare tabeller, förbättrad layout och responsiv design för mobil användning.  
+🔧 Förbättrad prishantering - stabil tolkning av avg24-formatet med validering för sommar- och vintertid (23/25-timmarsdygn).  
+🧩 Buggrättningar: korrigerad logik vid dygnsbyte, avrundning av momsberäkning, återställd override-persistens samt korrekt visning av aktuellt spotpris.
+- Stöd för H&T-temperatursensor via addon-skript
 ---
 
-## Komma igång
+##Komma igång
 1. Anslut din Shelly-enhet till nätverket.  
 2. Uppgradera firmware till senaste **stable** version ≥ 1.7.1.  
 3. Välj tidszon: **Europe/Stockholm** (viktigt för korrekt prislogik).  
@@ -40,17 +44,19 @@ Shelly Gen 3-4:
 6. Öppna länken från konsolen. Du ser något i stil med:  
 
 ```
-elpris-SE: v.3.1.3SE
+elpris-SE: v.3.1.5_04
 elpris-SE: URL http://192.168.8.119/script/1
 ```
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.png?raw=true" width="397">
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.jpg?raw=true" width="426">
 
 7. Öppna skriptets HTTP-endpoint.  
 Kopiera HTTP-adressen från konsolen och öppna länken i en ny flik i din webbläsare.  
 Adressen kan skilja sig – se den exakta adressen i konsolen.
 
+Observera att ciffra efter script/ visar script nummer och kan varieras, till exempel: /script/2 eller /script/3 osv., se aktuell nummer for dit skript
+
 **Viktigt:**  
-I version 3.1.3 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
+I version 3.1.5 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
 Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
 
 Den första nyckeln `Elpris` har utökats med nya fält som lagrar operatörens helgtariffer.  
@@ -72,15 +78,14 @@ Ett exempel på den nya strukturen:
 
 ### 🔧 → [Felsökning](./Felsokning.md)
 
-## Exempel på huvudgränssnitt
+### Exempel på huvudgränssnitt
 Här är en illustration av UI (status):
 <table><tr>
-<td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/StatP.jpg" width="500"></td>
+<td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/StatP.jpg?raw=true" width="500"></td>
 </tr></table>
 
 
-## Gränssnitt och flikar
-
+### **Gränssnitt och flikar**
 Den inbyggda HTTP-servern på Shelly-enheten ger tillgång till fyra flikar:
 
 | Flik | Funktion |
@@ -92,42 +97,42 @@ Den inbyggda HTTP-servern på Shelly-enheten ger tillgång till fyra flikar:
 
 ---
 
-## Funktionalitet i version [shelly-elprisSE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js)
-- Kompatibel med Shelly Gen2 Plus 1 / 1PM / Plug S / Pro 3 m.fl.  
-- JSON-API används direkt från `se.elpris.eu` (ersätter elprisetjustnu.se).  
-- Automatisk uppdatering av priser för idag och imorgon (om tillgängligt).  
-- Slumpmässig minutfördröjning (20–50 min) sprider nätbelastningen mellan enheter.  
-- Skriptet hämtar data direkt från proxyservern se.elpris.eu/api/v1/prices/ i det kompakta avg24-formatet, som redan sammanställer 96 kvartstimmar till 24 timmar.  
-- Inbyggd hantering av nätavgifter (grid fees) med separata nivåer för vardag/helg och dag/natt (06–22 / 22–06).  
-- Automatisk tillämpning av moms (VAT) och aktuell nättariff på varje prisintervall.  
-- Centraliserad tidshantering med gemensam epoch-referens (_.s.now) och verifierad systemtid.  
-- Full kompatibilitet med sommar- och vintertid (23 / 25-timmarsdygn identifieras och loggas korrekt).  
-- För varje instans beräknas lägsta, högsta, genomsnittligt pris samt aktuell timme.  
-- Antalet instanser har reducerats från tre till två för att minska minnesanvändningen och frigöra resurser för framtida utveckling av stöd för 15-minutersintervall.  
-- Stöd för tre driftlägen: manuellt, tröskelvärdesstyrt och billigaste timmar per period.  
-- Utgångar kan grupperas och styras enligt konfiguration via webb-UI eller HTTP-API.  
-- Historik per instans med senaste statusändringar (upp till 12 poster för minnesoptimering).  
-- Konfigurationer sparas lokalt i KVS och kan uppdateras dynamiskt via fliken Setup.  
-- Förbättrat webbgränssnitt med flikar Status, History, Setup och Help, tillgängligt direkt via enhetens IP-adress.  
-- Tidsintervall och beräkningar av "Grid fees" följer svenska elnätsmodeller med tydlig skillnad mellan vardag och helg.  
-- Tid för API-hämtning konfigureras via variabel `ah` (standard kl. 15).  
-- Minut för förfrågan väljs slumpmässigt vid första uppstart för att sprida nätbelastningen mellan enheter.
+### **Funktionalitet i version 3.1.5** [shelly-elprisSE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js)
+
+- Stöd för Shelly Gen2-enheter (Plus 1 / Plus 1PM / Plug S / Pro-serien m.fl.)
+- Hämtar elpriser via JSON-API från se.elpris.eu
+- Anpassad för 15-minuterspriser genom användning av det kompakta avg24-formatet (96 -> 24 intervall)
+- Automatisk uppdatering av priser för idag och imorgon när data finns tillgängligt
+- Slumpmässig fördröjning av API-anrop (10-55 min) för att minska belastning på nätet och proxyservern
+
+- Inbyggd hantering av nätavgifter (grid fees) med separata nivåer för vardag/helg och dag/natt (06-22 / 22-06)
+- Stöd för aktuell nättariff per prisintervall
+
+- För varje instans beräknas lägsta, högsta, genomsnittligt samt aktuellt pris
+- Konfiguration lagras lokalt i KVS och kan ändras dynamiskt via fliken Setup
+- Inbyggt webbgränssnitt med flikarna Status, History, Setup och Help, tillgängligt direkt via enhetens IP-adress
 
 ---
 
-## 📢 API på GitHub för version shelly-elpris3.1.2SEg
-Stödet för denna version avslutas den 15 december 2025. Vänligen uppdatera till den senaste versionen [shelly-elprisSE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).
+### H&T temperature sensor support
+
+Ett tillval i form av ett addon-skript kan användas tillsammans med shelly-elprisSE.
+Addon-skriptet laddas efter huvudskriptet och använder temperaturdata från en Shelly H&T-sensor
+för att dynamiskt justera antalet billigaste timmar.
+
+Addonet finns i katalogen:
+shelly-elprisSE/addons/[ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/tree/main/addons)
 
 ## 📢 Kvartspriser från API
 Från och med **1 oktober 2025** levererar [elprisetjustnu.se](https://www.elprisetjustnu.se/) priser i **15-minutersintervall (96 datapunkter per dygn)** i stället för 24 timpriser.  
 Det innebär att de tidigare versionerna inte längre fungerar.  
-Den nya versionen **shelly-elprisSE (3.1.3)** är anpassad till det nya formatet.  
+Den nya versionen **shelly-elprisSE (3.1.5)** är anpassad till det nya formatet.  
 För att Shelly-enheter med begränsat minne ska kunna hantera informationen aggregerar API:t automatiskt 96 kvartstimmar till 24 hela timmar.  
 Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framtiden stödja 96-intervall mer direkt.
 
 ## Huvudsakliga ändringar (se mer i [changelog](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md)):
 - **API-anrop:**  
-  Ändrat från den estniska API-adressen i `.csv`-format ([Elering](https://elering.ee/)) till den svenska i JSON-format ([Elprisetjustnu.se](https://www.elprisetjustnu.se/)).  
+  Ändrat från den estniska API-adressen i `.csv`-format ([Elering](https://elering.ee/)) till den svenska i JSON-format ([elpris.eu](https://elpris.eu/)).  
 - **Regioner:**  
   Stöd för svenska elområden SE1–SE4 har lagts till, medan Finland och Baltikum har tagits bort.  
 - **Design:**  
