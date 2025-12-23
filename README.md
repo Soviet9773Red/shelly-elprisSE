@@ -36,7 +36,7 @@ Shelly Gen 3-4:
 
 ---
 
-##Komma igång
+## Komma igång
 1. Anslut din Shelly-enhet till nätverket.  
 2. Uppgradera firmware till senaste **stable** version ≥ 1.7.1.  
 3. Välj tidszon: **Europe/Stockholm** (viktigt för korrekt prislogik).  
