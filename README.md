@@ -26,12 +26,12 @@ Shelly Gen 3-4:
 
 **Höjdpunkter**  
 ⚡ Stöd för 15-minutersdata - automatisk aggregering (96 → 24) för kompatibilitet med timbaserad logik.  
-⚙️ Förbättrade gränssnitt för Status och Setup.  
+⚙️ Förbättrade gränssnitt för Status, History och Setup.  
 💰 Modell för nätavgifter - tydlig vardag/helg-separation samt dynamisk avgiftsdetektering beroende på tid på dygnet, inklusive buggfixar.  
 🆘 Integrerad Help-flik med inbyggd dokumentation, direkt tillgänglig via webbgränssnittet.  
 🪄 Ombyggt användargränssnitt - tydligare tabeller, förbättrad layout och responsiv design för mobil användning.  
 🔧 Förbättrad prishantering - stabil tolkning av avg24-formatet med validering för sommar- och vintertid (23/25-timmarsdygn).  
-🧩 Buggrättningar: korrigerad logik vid dygnsbyte, avrundning av momsberäkning, återställd override-persistens samt korrekt visning av aktuellt spotpris.
+🧩 Buggrättningar: korrigerad logik vid dygnsbyte, momsberäkning, återställd override-persistens samt korrekt visning av aktuellt spotpris.   
 🌡️ Stöd för H&T-temperatursensor via addon-skript för dynamisk justering av billigaste timmar.
 
 ---
