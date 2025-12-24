@@ -6,15 +6,15 @@
 
 ### **Version 3.1.5 primary supports Shelly platform Gen2**
 ```
-|   Device  | Gen 2      | Gen 3:            |
-|-----------|------------|-------------------|
-| Plus1     | OK         | Not tested        |
-| Plus1 PM  | OK         | Not tested        |
-| Plus2 PM  | OK         | Not tested        |
-| Pro 2     | OK         | Not tested        |
-| Pro 3     | OK         | Not tested        |
-| Plug S    | OK         | Shows instability |
-| Mini PM   | Not tested | Shows instability |
+| Device   | Gen 2      | Gen 3:            |
+|----------|------------|-------------------|
+| Plus1    | OK         | Not tested        |
+| Plus1 PM | OK         | Not tested        |
+| Plus2 PM | OK         | Not tested        |
+| Pro 2    | OK         | Not tested        |
+| Pro 3    | OK         | Not tested        |
+| Plug S   | OK         | Shows instability |
+| Mini PM  | Not tested | Shows instability |
 
 Shelly Gen 3-4:
 - may work
@@ -39,7 +39,11 @@ Shelly Gen 3-4:
 ## Komma igång
 1. Anslut din Shelly-enhet till nätverket.  
 2. Uppgradera firmware till senaste **stable** version ≥ 1.7.1.  
-3. Välj tidszon: **Europe/Stockholm** (viktigt för korrekt prislogik).  
+3. Välj tidszon: **Europe/Stockholm** (viktigt för korrekt prislogik).
+   
+   <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.jpg?raw=true" width="426"
+  align="right"
+     style="margin-right:15px; margin-bottom:10px;">
 4. Skapa ett nytt script i Shelly Web UI och klistra in den senaste [3.1.5 build 04] versionen [shelly-elprisSE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).  
 5. Starta scriptet och öppna konsolen för att se resultatet och HTTP-länken.  
 6. Öppna länken från konsolen. Du ser något i stil med:  
@@ -48,32 +52,16 @@ Shelly Gen 3-4:
 elpris-SE: v.3.1.5_04
 elpris-SE: URL http://192.168.8.119/script/1
 ```
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.jpg?raw=true" width="426">
 
 7. Öppna skriptets HTTP-endpoint.  
 Kopiera HTTP-adressen från konsolen och öppna länken i en ny flik i din webbläsare.  
 Adressen kan skilja sig – se den exakta adressen i konsolen.
 
 Observera att siffran efter script/ visar skriptnumret och kan variera, till exempel /script/2 eller /script/3 osv. Se aktuellt nummer för ditt skript.
+<br clear="all">
 
-**Viktigt:**  
-I version 3.1.5 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
+**Viktigt:** I version 3.1.5 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
 Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
-
-Den första nyckeln `Elpris` har utökats med nya fält som lagrar operatörens helgtariffer.  
-Ett exempel på den nya strukturen:
-
-```javascript
-{
-  "g": "SE3",          // Elområde (SE1–SE4)
-  "vat": 0,            // Moms (0 = av)
-  "day": 0.536,        // Dagavgift (vardagar kl. 06–22).
-  "night": 0.214,      // Nattavgift (vardagar kl. 22–06).
-  "names": ["-", "-"], // Namn på konfigurationer 
-  "dayw": 0.214,       // Dagavgift för helg
-  "nightw": 0.214      // Nattavgift för helg
-}
-```
 
 8. Konfigurera skriptets parametrar. Konfigurationshjälp finns inne i skriptet.
 
@@ -107,6 +95,22 @@ Den inbyggda HTTP-servern på Shelly-enheten ger tillgång till fyra flikar:
 -Förbättrad samverkan mellan Status- och Setup-vyer utan förändring av grundläggande beteende<br>
 -Stöd för H&T-temperatursensor via addon-skript för dynamisk justering av billigaste timmar<br>
 
+I version 3.1.5 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
+Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
+Den första nyckeln `Elpris` har utökats med nya fält som lagrar operatörens helgtariffer.  
+Ett exempel på den nya strukturen:
+
+```javascript
+{
+  "g": "SE3",          // Elområde (SE1–SE4)
+  "vat": 0,            // Moms (0 = av)
+  "day": 0.536,        // Dagavgift (vardagar kl. 06–22).
+  "night": 0.214,      // Nattavgift (vardagar kl. 22–06).
+  "names": ["-", "-"], // Namn på konfigurationer 
+  "dayw": 0.214,       // Dagavgift för helg
+  "nightw": 0.214      // Nattavgift för helg
+}
+```
 ---
 
 ### H&T temperature sensor support
