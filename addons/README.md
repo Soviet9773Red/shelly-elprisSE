@@ -43,7 +43,7 @@ där:
 - $temperature ersätts automatiskt med aktuell temperatur från sensorn.
 <br clear="all">
 
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htstatus.jpg?raw=true" width="600"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/actions.jpg?raw=true" width="600"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
 För test kan följande URL öppnas manuellt i webbläsaren:
