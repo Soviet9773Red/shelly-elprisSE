@@ -1,12 +1,11 @@
-// @license (c) Jussi isotalo - https://github.com/jisotalo/shelly-porssisahko-en
-// @license (c) SE1-4 anpassad av Alexander -  https://elpris.eu
-/** H&T addon to shelly-elprisSE ver. 1.0.4
- * Controls cheap hours and ON-time based on temperatue
- * Setup on H&T Gen2-4:
- *   Settings -> Actions -> Temperature -> Then Do:
- *     http://ip-address/script/1/update-temp?temp=$temperature
- * where: ip-address - device ip, /script/1 = shelly-elprisSE script number
- * Test: http://ip-address/script/1/update-temp?temp=18
+// @license (c) Jussi Isotalo - https://github.com/jisotalo/shelly-porssisahko-en
+// @license (c) SE1-4 anpassad av Alexander - https://elpris.eu
+/** ver. 1.0.4 H&T addon, insert directly into main script after // end shelly-elprisSE
+ * Controls cheap hours and ON-time based on temperature
+ * H&T Gen2-3: Settings -> Actions -> Temperature -> Then do:
+ * http://ip/script/1/update-temp?temp=$temperature
+ * where: ip = device IP, /script/1 = shelly-elprisSE script number
+ * Test: http://ip/script/1/update-temp?temp=18
  */
 
 let INST = 0; // 0 = config#1, 1 = config#2 etc.
@@ -34,3 +33,4 @@ function fTime(ts){let d=new Date(ts);let h=d.getHours();let m=d.getMinutes();le
 	
 let htMsg=mode===2?"H&T event updated @ "+fTime(data.ts)+" | "+tStr+"°C<br>"+"Cheapest time tuned: "+hours+"h, ON-time: "+min+" min":"H&T active ("+tStr+"°C), no effect in this mode";if(mode===2){alwaysOffOverride?htMsg+=", but overridden by Always OFF price value":alwaysOnOverride?htMsg+=", but overridden by Always ON price value":void 0}state.si[inst].str=htMsg;print("[H&T] Changed number of cheapest hours:",hours,"h and ON-time:",min,"min")}else{print("Outdated °C data -> Last Setup values applied");data.valid=false;data.temp=null;data.ts=Date.now();state.si[inst].str="Outdated °C data ("+age.toFixed(1)+" h)<br>"+"Using saved config: "+hours+" h, ON-time: "+min+" min"}}}catch(err){state.si[inst].str="Error in temp. control:"+err;print("[H&T] An error occurred in the USER_CONFIG function:",err)}config.m2.c=hours;config.m=min;RANGES&&Number(config.m2.p)===-2?config.m2.c2=hours:void 0}function parseParams(params){let res={};let splitted=params.split("&");for(let i=0;i<splitted.length;i++){let pair=splitted[i].split("=");res[pair[0]]=pair[1]}return res}function onHttpReq(req,resp){try{let params=parseParams(req.query);req=null;if(params.temp!=undefined){data={temp:Number(params.temp),ts:Date.now(),valid:true};_.si[INST].chkTs=0;resp.code=200}else{print("[H&T] Failed to update temp. data, 'temp' is missing from parameters:",params);resp.code=400}resp.send()}catch(err){print("[H&T] Error:",err)}}HTTPServer.registerEndpoint("update-temp",onHttpReq);
 //end of addon
+
