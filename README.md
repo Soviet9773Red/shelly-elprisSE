@@ -41,10 +41,11 @@ Shelly Gen 3-4:
 2. Uppgradera firmware till senaste **stable** version ≥ 1.7.1.  
 3. Välj tidszon: **Europe/Stockholm** (viktigt för korrekt prislogik).
    
-   <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.jpg?raw=true" width="426"
+4. Skapa ett nytt script i Shelly Web UI och klistra in den senaste [3.1.5 build 04] versionen [shelly-elprisSE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).  
+
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.jpg?raw=true" width="426"
   align="right"
      style="margin-right:15px; margin-bottom:10px;">
-4. Skapa ett nytt script i Shelly Web UI och klistra in den senaste [3.1.5 build 04] versionen [shelly-elprisSE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).  
 5. Starta scriptet och öppna konsolen för att se resultatet och HTTP-länken.  
 6. Öppna länken från konsolen. Du ser något i stil med:  
 
@@ -120,7 +121,7 @@ Addon-skriptet laddas efter huvudskriptet och använder temperaturdata från en 
 för att dynamiskt justera antalet billigaste timmar.
 
 Addonet finns i katalogen:
-shelly-elprisSE/addons/[ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/tree/main/addons)
+shelly-elprisSE/addons/[ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/README.md)
 
 ## 📢 Kvartspriser från API
 Från och med **1 oktober 2025** levererar [elprisetjustnu.se](https://www.elprisetjustnu.se/) priser i **15-minutersintervall (96 datapunkter per dygn)** i stället för 24 timpriser.  
