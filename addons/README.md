@@ -17,9 +17,10 @@ Add-on är avsett som ett extra skyddslager ovanpå prisstyrningen och är optim
 <br clear="all">
 
 ## Konfiguration av Shelly H&T Gen 3 och H&T add-on
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htback.jpg?raw=true" width="175"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htstate.jpg?raw=true" width="175"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htback.jpg?raw=true" width="175">
 För att konfigurera Shelly H&T Gen 3 krävs först fysisk åtkomst till enheten. Ta bort bakstycket enligt bilden och tryck kort på knappen på kretskortet. När knappen trycks visas texten **SET** på displayen. Detta innebär att sensorn har gått in i ett tillfälligt konfigurationsläge.
 
 SET-läget är endast aktivt i cirka en minut. Därefter avslutas det automatiskt och webbgränssnittet blir otillgängligt. Konfigurationen måste därför genomföras utan onödiga pauser.
