@@ -17,7 +17,7 @@ Add-on är avsett som ett extra skyddslager ovanpå prisstyrningen och är optim
 <br clear="all">
 
 ## Konfiguration av Shelly H&T Gen 3 och H&T add-on
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htback.jpg?raw=true" width="350"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htback.jpg?raw=true" width="175"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
 För att konfigurera Shelly H&T Gen 3 krävs först fysisk åtkomst till enheten. Ta bort bakstycket enligt bilden och tryck kort på knappen på kretskortet. När knappen trycks visas texten **SET** på displayen. Detta innebär att sensorn har gått in i ett tillfälligt konfigurationsläge.
@@ -28,7 +28,7 @@ När SET-läget är aktivt, öppna en webbläsare och anslut till sensorns IP-ad
 I wewbUI, gå till:  Settings -> Actions -> Temperature
 <br clear="all">
 
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htsetup.jpg?raw=true" width="350"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htsetup.jpg?raw=true" width="175"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
 Här konfigureras ett HTTP-anrop som skickar aktuell temperatur till ett annat Shelly-enhet där skriptet **shelly-elprisSE** körs tillsammans med H&T add-on.
@@ -43,7 +43,7 @@ där:
 - $temperature ersätts automatiskt med aktuell temperatur från sensorn.
 <br clear="all">
 
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htstatus.jpg?raw=true" width="750"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htstatus.jpg?raw=true" width="600"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
 För test kan följande URL öppnas manuellt i webbläsaren:
