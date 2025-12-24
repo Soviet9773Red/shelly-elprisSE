@@ -6,6 +6,8 @@
 
 Shelly H&T Gen 3 är en batteridriven temperatur- och fuktighetssensor för inomhusbruk med Wi-Fi-anslutning och lokalt HTTP-API. Enheten är kompakt, lätt att placera i vistelsezoner och visar aktuell temperatur och luftfuktighet på sin display. Ingen molnanslutning krävs för användning tillsammans med detta add-on.
 
+     
+Exempel:   
 I praktisk användning placeras sensorn i samma rum som kaminen. När kaminen används och temperaturen stiger registreras detta av H&T-sensorn och elvärmen kopplas bort automatiskt. Detta förhindrar att elradiatorer och kamin arbetar samtidigt och minskar därmed energiförbrukningen utan manuella ingrepp.
 Add-on är avsett som ett extra skyddslager ovanpå prisstyrningen och är optimerat för låg minnesförbrukning och lokal drift på Shelly-enheter.
 <br clear="all">
