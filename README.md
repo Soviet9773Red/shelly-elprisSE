@@ -125,8 +125,7 @@ inte publikt tillgängliga. Vid intresse för fork, anpassningar eller vidareutv
 Kontakta mig gärna via GitHub Issues eller via projektets kontaktytor.
 
 ## Stöd projektet
-Ditt stöd ger mig inte bara kaffe i koppen –  
-det hjälper också till att hålla [elpris.eu](https://elpris.eu) och dess proxy-tjänster online,  
+Ditt stöd ger mig inte bara kaffe i koppen – det hjälper också till att hålla [elpris.eu](https://elpris.eu) och dess proxy-tjänster online,  
 så att Shelly-skripten kan fortsätta få uppdaterade elprisdata.
 
 [![Support Project](https://img.shields.io/badge/Stöd%20projektet-%F0%9F%8D%94%20Buy%20Me%20a%20Coffee-yellow?style=for-the-badge)](https://buymeacoffee.com/soviet9773red)
