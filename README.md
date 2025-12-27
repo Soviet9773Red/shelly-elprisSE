@@ -43,7 +43,7 @@ Shelly Gen 3-4:
    
 4. Skapa ett nytt script i Shelly Web UI och klistra in den senaste [3.1.5 build 04] versionen [shelly-elprisSE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).  
 
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/console.jpg?raw=true" width="426"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/console.jpg?raw=true" width="426"
   align="right"
      style="margin-right:15px; margin-bottom:10px;">
 5. Starta scriptet och öppna konsolen för att se resultatet och HTTP-länken.  
@@ -71,7 +71,7 @@ Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom �
 ### Exempel på huvudgränssnitt
 Här är en illustration av UI (status):
 <table><tr>
-<td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/statp.jpg" width="515"></td>
+<td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/statp.jpg" width="515"></td>
 </tr></table>
 
 
