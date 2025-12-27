@@ -34,7 +34,7 @@ Shelly Gen 3-4:
 🧩 Buggrättningar: korrigerad logik vid dygnsbyte, momsberäkning, återställd override-persistens samt korrekt visning av aktuellt spotpris.   
 🌡️ Stöd för H&T-temperatursensor via addon-skript för dynamisk justering av billigaste timmar.
 
----
+
 
 ## Komma igång
 1. Anslut din Shelly-enhet till nätverket.  
@@ -85,34 +85,7 @@ Den inbyggda HTTP-servern på Shelly-enheten ger tillgång till fyra flikar:
 | **Setup** | Inställningar för zon, läge, moms, tariff och utgångar. |
 | **Help** | Kort dokumentation och tips direkt i webbläsaren. |
 
----
 
-### **Funktionalitet i version 3.1.5** [shelly-elprisSE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js)
-
--Förbättrad intern stabilitet genom flera riktade patchar i kärnlogiken<br>
--Utökad History-funktion med datumvisning för tydligare tidskontext<br>
--Förfinat användargränssnitt i samtliga flikar med fokus på läsbarhet och visuell konsekvens<br>
--Stabilare hantering av tillstånd och prisdata vid uppdateringar och dygnsövergångar<br>
--Förbättrad samverkan mellan Status- och Setup-vyer utan förändring av grundläggande beteende<br>
--Stöd för H&T-temperatursensor via addon-skript för dynamisk justering av billigaste timmar<br>
-
-I version 3.1.5 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
-Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
-Den första nyckeln `Elpris` har utökats med nya fält som lagrar operatörens helgtariffer.  
-Ett exempel på den nya strukturen:
-
-```javascript
-{
-  "g": "SE3",          // Elområde (SE1–SE4)
-  "vat": 0,            // Moms (0 = av)
-  "day": 0.536,        // Dagavgift (vardagar kl. 06–22).
-  "night": 0.214,      // Nattavgift (vardagar kl. 22–06).
-  "names": ["-", "-"], // Namn på konfigurationer 
-  "dayw": 0.214,       // Dagavgift för helg
-  "nightw": 0.214      // Nattavgift för helg
-}
-```
----
 
 ### H&T temperature sensor support
 
