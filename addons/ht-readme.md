@@ -62,3 +62,16 @@ Om länken är korrekt konfigurerad kommer add-on att ta emot temperaturvärdet 
 En och samma Shelly H&T-sensor kan användas för flera Shelly-enheter samtidigt. Detta görs genom att skapa flera Actions med samma trigger (Temperature), men med olika IP-adresser och eventuellt olika skriptnummer. På så sätt kan en sensor fungera som gemensam temperaturkälla för flera oberoende enheter och installationer.
 <br clear="all">
 Efter att SET-läget har avslutats fortsätter sensorn att fungera normalt. Actions triggas automatiskt vid temperaturförändringar och skickar uppdaterade värden till de konfigurerade Shelly-enheterna utan ytterligare manuell hantering.
+
+**Observera** att Shelly H&T Gen 3, när den drivs med batteri, ansluter till nätverket oberoende av sensorns tillstånd
+och uppdaterar data enligt följande beteende:
+
+- Enheten väcker sig och ansluter till WiFi ungefär en gång per timme (± någon minut), vilket kan ses i routerns loggar.
+- Temperatur- och fuktighetsdata rapporteras minst varannan timme.
+- Vid förändring av temperaturen skickas uppdaterad data omedelbart.
+  Som standard används ett tröskelvärde på ±0,5 °C för att undvika
+  onödig rapportering. Mindre temperaturförändringar rapporteras därför inte.
+
+Om Shelly H&T Gen 3 istället drivs via USB sker nätverksanslutningar och uppdateringar oftare,
+eftersom energisparläget då inte begränsar kommunikationsfrekvensen.
+
