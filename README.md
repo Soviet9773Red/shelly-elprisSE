@@ -103,15 +103,19 @@ Den nya versionen **shelly-elprisSE (3.1.5)** är anpassad till det nya formatet
 För att Shelly-enheter med begränsat minne ska kunna hantera informationen aggregerar API:t automatiskt 96 kvartstimmar till 24 hela timmar.  
 Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framtiden stödja 96-intervall mer direkt.
 
-## Huvudsakliga ändringar (se mer i [changelog](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md)):
+## Huvudsakliga ändringar:
 - **API-anrop:**  
   Ändrat från den estniska API-adressen i `.csv`-format ([Elering](https://elering.ee/)) till den svenska i JSON-format ([elpris.eu](https://elpris.eu/)).  
 - **Regioner:**  
   Stöd för svenska elområden SE1–SE4 har lagts till, medan Finland och Baltikum har tagits bort.  
 - **Design:**  
   Justeringar av färgscheman och rubriker i flikarna *Status* och *Settings* för att bättre passa den svenska marknaden.
+  
+Se detaljer i [CHANGELOG.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md)
+
 
 ---
+
 Skriptet utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för originalkoden och [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idéer kring JSON-optimering.
 
 ### Källkod och byggsystem
