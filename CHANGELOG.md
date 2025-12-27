@@ -67,7 +67,7 @@ Ett exempel på den nya strukturen:
 
 ---
 
-## Version [3.1.2SEg](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elpris3.1.2SEg.js) (2025-10-02)
+## Version [3.1.2SEg](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/arch/shelly-elpris3.1.2SEg.js) (2025-10-02)
 
 **Utökad version med fullt stöd för alla elområden SE1–SE4.**  
 Tidigare hämtades endast SE3 via aliasfiler `day0.json` / `day1.json`.  
