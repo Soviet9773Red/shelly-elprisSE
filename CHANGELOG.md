@@ -2,6 +2,47 @@
 
 Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE`, från release candidate till stabila utgåvor.
 
+## Version [3.1.5](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/arch/shelly-elprisSE3.1.3.js) (2025-12-23)
+
+**Shelly-elprisSE 3.1.5 Release Notes**
+
+**Höjdpunkter**  
+⚡ Stöd för 15-minutersdata - automatisk aggregering (96 → 24) för kompatibilitet med timbaserad logik.  
+⚙️ Förbättrade gränssnitt för Status, History och Setup.  
+💰 Modell för nätavgifter - tydlig vardag/helg-separation samt dynamisk avgiftsdetektering beroende på tid på dygnet, inklusive buggfixar.  
+🆘 Integrerad Help-flik med inbyggd dokumentation, direkt tillgänglig via webbgränssnittet.  
+🪄 Ombyggt användargränssnitt - tydligare tabeller, förbättrad layout och responsiv design för mobil användning.  
+🔧 Förbättrad prishantering - stabil tolkning av avg24-formatet med validering för sommar- och vintertid (23/25-timmarsdygn).  
+🧩 Buggrättningar: korrigerad logik vid dygnsbyte, momsberäkning, återställd override-persistens samt korrekt visning av aktuellt spotpris.   
+🌡️ Stöd för H&T-temperatursensor via addon-skript för dynamisk justering av billigaste timmar.
+
+### Funktionalitet i version 3.1.5 [shelly-elprisSE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js)
+
+-Förbättrad intern stabilitet genom flera riktade patchar i kärnlogiken<br>
+-Utökad History-funktion med datumvisning för tydligare tidskontext<br>
+-Förfinat användargränssnitt i samtliga flikar med fokus på läsbarhet och visuell konsekvens<br>
+-Stabilare hantering av tillstånd och prisdata vid uppdateringar och dygnsövergångar<br>
+-Förbättrad samverkan mellan Status- och Setup-vyer utan förändring av grundläggande beteende<br>
+-Stöd för H&T-temperatursensor via addon-skript för dynamisk justering av billigaste timmar<br>
+
+I version 3.1.5 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
+Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
+Den första nyckeln `Elpris` har utökats med nya fält som lagrar operatörens helgtariffer.  
+Ett exempel på den nya strukturen:
+
+```javascript
+{
+  "g": "SE3",          // Elområde (SE1–SE4)
+  "vat": 0,            // Moms (0 = av)
+  "day": 0.536,        // Dagavgift (vardagar kl. 06–22).
+  "night": 0.214,      // Nattavgift (vardagar kl. 22–06).
+  "names": ["-", "-"], // Namn på konfigurationer 
+  "dayw": 0.214,       // Dagavgift för helg
+  "nightw": 0.214      // Nattavgift för helg
+}
+```
+---
+
 ## Version [3.1.3](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/arch/shelly-elprisSE3.1.3.js) (2025-11-04)
 
 **Ny huvudversion med proxykälla, förbättrad tariffhantering och ny KVS-struktur.**
