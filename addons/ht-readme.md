@@ -40,12 +40,9 @@ Här konfigureras ett HTTP-anrop som skickar aktuell temperatur till ett annat S
   </tr>
 </table>
 
-Exempel på Action-URL:
+Exempel på Action-URL: http://ip/script/1/update-temp?temp=$temperature
 
-http://ip-address/script/1/update-temp?temp=$temperature
-
-där:
-- ip-address är IP-adressen till Shelly-enheten som kör skriptet,
+- ip är IP-adressen till Shelly-enheten som kör skriptet, t.ex. 192.168.10.117
 - /script/1 är skriptnumret för shelly-elprisSE på den enheten,
 - $temperature ersätts automatiskt med aktuell temperatur från sensorn.
 <br clear="all">
@@ -53,9 +50,10 @@ där:
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/actions.jpg?raw=true" width="600"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
-För test kan följande URL öppnas manuellt i webbläsaren:
+     
+För test av addon kan följande URL öppnas manuellt i webbläsaren ( för 18°C ):
 
-http://ip-address/script/1/update-temp?temp=18
+http://ip/script/1/update-temp?temp=18
 
 Om länken är korrekt konfigurerad kommer add-on att ta emot temperaturvärdet och uppdatera sitt interna tillstånd.
 
