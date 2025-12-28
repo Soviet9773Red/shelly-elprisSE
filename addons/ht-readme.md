@@ -71,5 +71,5 @@ och uppdaterar data enligt följande beteende:
   onödig rapportering. Mindre temperaturförändringar rapporteras därför inte.
 
 Om Shelly H&T Gen 3 istället drivs via USB sker nätverksanslutningar och uppdateringar oftare,
-eftersom energisparläget då inte begränsar kommunikationsfrekvensen. Läs mer på [support.shelly](https://support.shelly.cloud/en/support/solutions/articles/103000226308-wake-up-schemes-and-data-reporting-for-shelly-plus-h-t-and-shelly-gen3-h-t-devices) sidan.
+eftersom energisparläget då inte begränsar kommunikationsfrekvensen. Läs mer på [support.shelly.cloud](https://support.shelly.cloud/en/support/solutions/articles/103000226308-wake-up-schemes-and-data-reporting-for-shelly-plus-h-t-and-shelly-gen3-h-t-devices)
 
