@@ -23,7 +23,9 @@ Detta H&T add-on [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-el
 Add-on läser temperaturdata lokalt från Shelly H&T och justerar automatiskt huvudskriptets aktiva timmar och styrminuter. När temperaturen når ett fördefinierat tröskelvärde begränsas eller blockeras eluppvärmningen helt. När temperaturen sjunker återgår systemet automatiskt till normal prisstyrd drift. Add-on styr inte utgångar direkt utan påverkar endast parametrarna i huvudlogiken, vilket ger stabil och förutsägbar funktion.
 
 
-I add-on ingår ett exempel på enkel temperaturbaserad styrlogik som visar hur antal aktiva timmar och minuter kan justeras beroende på aktuell temperatur från H&T-sensorn. Denna logik är avsedd som ett referensexempel och kan fritt ändras eller anpassas efter egna behov. Användaren kan justera temperaturgränser, antal timmar och aktiva minuter för att skapa ett beteende som bättre motsvarar den egna installationen, värmesystemet eller personliga preferenser. Exempelkoden demonstrerar ett möjligt sätt att stegvis minska eluppvärmningens driftstid i takt med stigande temperatur, men add-onet ställer inga krav på att just denna logik används. Endast principen - att temperaturvärden påverkar huvudskriptets parametrar - är gemensam. 
+I add-on ingår ett exempel på enkel temperaturbaserad styrlogik som visar hur antal aktiva timmar och minuter kan justeras beroende på aktuell temperatur från H&T-sensorn. Denna logik är avsedd som ett referensexempel och kan fritt ändras eller anpassas efter egna behov. Användaren kan justera temperaturgränser, antal timmar och aktiva minuter för att skapa ett beteende som bättre motsvarar den egna installationen, värmesystemet eller personliga preferenser. 
+
+Exempelkoden demonstrerar ett möjligt sätt att stegvis minska eluppvärmningens driftstid i takt med stigande temperatur, men add-onet ställer inga krav på att just denna logik används. Endast principen - att temperaturvärden påverkar huvudskriptets parametrar - är gemensam. 
 <br clear="all">
 
 
