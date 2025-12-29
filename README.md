@@ -6,19 +6,19 @@
 
 ### **Version 3.1.5 primary supports Shelly platform Gen2**
 ```
-| Device   | Gen 2      | Gen 3:            |
-|----------|------------|-------------------|
-| Plus1    | OK         | Not tested        |
-| Plus1 PM | OK         | Not tested        |
-| Plus2 PM | OK         | Not tested        |
-| Pro 2    | OK         | Not tested        |
-| Pro 3    | OK         | Not tested        |
-| Plug S   | OK         | Shows instability |
-| Mini PM  | Not tested | Shows instability |
+| Device   | Gen 2 | Gen 3 | Gen 4 |
+|----------|-------|-------|-------|
+| Plus1    |  OK   |  NT   |  NT   |
+| Plus1 PM |  OK   |  NT   |  OK   |
+| Plus2 PM |  OK   |  NT   |  NT   |
+| Pro 2    |  OK   |  NT   |  NT   |
+| Pro 3    |  OK   |  NT   |  NT   |
+| Plug S   |  OK   |  SI   |  NT   |
+| Mini PM  |  NT   |  SI   |  NT   |
 
-Shelly Gen 3-4:
-- may work
-- not fully tested
+* NT = Not tested , ** SI = Shows instability
+
+Shelly Gen 3-4: - may work, - not fully tested
 - memory constraints may cause instability
 ```
 
