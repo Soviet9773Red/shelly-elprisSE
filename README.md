@@ -16,7 +16,7 @@
 | Plug S   |  OK   |  SI   |  --   |
 | Mini PM  |  --   |  SI   |  --   |
 
-* -- = Not tested , ** SI = Shows instability
+-- = Not tested , SI = Shows instability
 
 Shelly Gen 3-4: - may work, - not fully tested
 - memory constraints may cause instability
