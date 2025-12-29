@@ -8,15 +8,15 @@
 ```
 | Device   | Gen 2 | Gen 3 | Gen 4 |
 |----------|-------|-------|-------|
-| Plus1    |  OK   |  NT   |  NT   |
-| Plus1 PM |  OK   |  NT   |  OK   |
-| Plus2 PM |  OK   |  NT   |  NT   |
-| Pro 2    |  OK   |  NT   |  NT   |
-| Pro 3    |  OK   |  NT   |  NT   |
-| Plug S   |  OK   |  SI   |  NT   |
-| Mini PM  |  NT   |  SI   |  NT   |
+| Plus1    |  OK   |  --   |  --   |
+| Plus1 PM |  OK   |  --   |  OK   |
+| Plus2 PM |  OK   |  --   |  --   |
+| Pro 2    |  OK   |  --   |  --   |
+| Pro 3    |  OK   |  --   |  --   |
+| Plug S   |  OK   |  SI   |  --   |
+| Mini PM  |  --   |  SI   |  --   |
 
-* NT = Not tested , ** SI = Shows instability
+* -- = Not tested , ** SI = Shows instability
 
 Shelly Gen 3-4: - may work, - not fully tested
 - memory constraints may cause instability
