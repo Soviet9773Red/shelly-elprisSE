@@ -25,7 +25,7 @@ Shelly Gen 3-4: - may work, - not fully tested
 **Shelly-elprisSE 3.1.5 Release Notes**
 
 **Höjdpunkter**  
-⚡ Stöd för 15-minutersdata - automatisk aggregering (96 → 24) för kompatibilitet med timbaserad logik.  
+⚡ Stöd för 15-minuterspriser via API med timbaserad aggregering (96 → 24).    
 ⚙️ Förbättrade gränssnitt för Status, History och Setup.  
 💰 Modell för nätavgifter - tydlig vardag/helg-separation samt dynamisk avgiftsdetektering beroende på tid på dygnet, inklusive buggfixar.  
 🆘 Integrerad Help-flik med inbyggd dokumentation, direkt tillgänglig via webbgränssnittet.  
