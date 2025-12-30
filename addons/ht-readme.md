@@ -73,3 +73,15 @@ och uppdaterar data enligt följande beteende:
 Om Shelly H&T Gen 3 istället drivs via USB sker nätverksanslutningar och uppdateringar oftare,
 eftersom energisparläget då inte begränsar kommunikationsfrekvensen. Läs mer på [support.shelly.cloud](https://support.shelly.cloud/en/support/solutions/articles/103000226308-wake-up-schemes-and-data-reporting-for-shelly-plus-h-t-and-shelly-gen3-h-t-devices)
 
+
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/action-create.jpg?raw=true" width="300"
+     align="right"
+     style="margin-right:15px; margin-bottom:10px;">
+
+<br>     
+Actions-> Temperature
+     
+Then Do -> http://ip/script/1/update-temp?temp=$temperature
+
+Action Name -> Save
+<br clear="all">
