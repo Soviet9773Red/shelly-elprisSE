@@ -124,6 +124,20 @@ För närvarande är källkoden, relaterade projekt samt bygg- och npm-baserad a
 inte publikt tillgängliga. Vid intresse för fork, anpassningar eller vidareutveckling kan dessa göras tillgängliga vid behov.    
 Kontakta mig gärna via GitHub Issues eller via projektets kontaktytor.
 
+---
+
+### Visuell översikt [shelly-device-map](https://github.com/Soviet9773Red/shelly-device-map) (valfritt)
+
+Om detta skript används på flera Shelly-enheter kan det vara praktiskt att komplettera med en enkel visuell översikt.
+
+Projektet **Shelly Device Map** erbjuder en lättviktig, statisk HTML-sida där enheter kan placeras på en planritning och länkas via sina lokala IP-adresser. Det ger snabb och tydlig åtkomst till Shelly Web UI, körande skript och status-endpoints från en och samma vy.
+
+Shelly Device Map är helt statisk, kräver ingen backend och kan öppnas lokalt eller köras på till exempel en Raspberry Pi.
+  
+Projektlänk:  [shelly-device-map](https://github.com/Soviet9773Red/shelly-device-map) 
+
+---
+
 ## Stöd projektet
 Ditt stöd ger mig inte bara kaffe i koppen – det hjälper också till att hålla [elpris.eu](https://elpris.eu) och dess proxy-tjänster online,  
 så att Shelly-skripten kan fortsätta få uppdaterade elprisdata.
