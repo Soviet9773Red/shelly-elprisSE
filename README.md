@@ -132,7 +132,7 @@ Om detta skript används på flera Shelly-enheter kan det vara praktiskt att kom
 
 Projektet **[shelly-device-map](https://github.com/Soviet9773Red/shelly-device-map)** erbjuder en lättviktig, statisk HTML-sida där enheter kan placeras på en planritning och länkas via sina lokala IP-adresser. Det ger snabb och tydlig åtkomst till Shelly Web UI, körande skript och status-endpoints från en och samma vy.
 
-Shelly Device Map är helt statisk, kräver ingen backend och kan öppnas lokalt eller köras på till exempel en Raspberry Pi.
+Shelly Device Map ([demo](https://soviet9773red.github.io/shelly-device-map/)) är helt statisk, kräver ingen backend och kan öppnas lokalt eller köras på till exempel en Raspberry Pi.
 
 ---
 
