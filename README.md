@@ -13,16 +13,17 @@
 | Plus2 PM |  OK   |  --   |  --   |
 | Pro 2    |  OK   |  --   |  --   |
 | Pro 3    |  OK   |  --   |  --   |
-| Plug S   |  OK   |  SI   |  --   |
+| Plug S   |  OK   |  OK   |  --   |
 | Mini PM  |  --   |  SI   |  --   |
 
 -- = Not tested , SI = Shows instability
-
-Shelly Gen 3-4: - may work, - not fully tested
-- memory constraints may cause instability
 ```
 
-**Shelly-elprisSE 3.1.5 Release Notes**
+*Shelly Gen3, Gen4-enheter stöds, men kräver att **Matter är avstängt***.
+
+---
+
+## Shelly-elprisSE 3.1.5 Release Notes
 
 **Höjdpunkter**  
 ⚡ Stöd för 15-minuterspriser via API med timbaserad aggregering (96 → 24).    
