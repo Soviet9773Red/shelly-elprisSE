@@ -78,10 +78,14 @@ eftersom energisparläget då inte begränsar kommunikationsfrekvensen. Läs mer
      align="right"
      style="margin-right:15px; margin-bottom:10px;">
 
-<br>     
-Actions-> Temperature
-     
-Then Do -> http://ip/script/1/update-temp?temp=$temperature
+<br><br>
 
+ **H&T Gen1:** Settings, add  http://ip/script/1/update-temp to "Actions > Sensor reports.
+ <br>
+ Remember to enable the "sensor reports" feature
+<br><br>
+ **H&T Gen2-3:**
+Actions-> Temperature ->
+Then Do -> http://ip/script/1/update-temp?temp=$temperature
 Action Name -> Save
 <br clear="all">
