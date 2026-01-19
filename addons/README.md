@@ -7,6 +7,8 @@ Kan används ihop med [Shelly Wi-Fi H&T Gen 3](https://kb.shelly.cloud/knowledge
 /** ver. 1.0.4 H&T addon must be placed after
  * the main script // end of shelly-elpris
  * Controls cheap hours and ON-time based on temperature
+ * H&T Gen1: Settings, add  http://ip/script/1/update-temp to "Actions > Sensor reports
+ * Remember to enable the "sensor reports" feature
  * H&T Gen2-3: Settings -> Actions -> Temperature -> Then do:
  * http://ip/script/1/update-temp?temp=$temperature
  * where: ip = device IP, /script/1 = shelly-elprisSE script number
