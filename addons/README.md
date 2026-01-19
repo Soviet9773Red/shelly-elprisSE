@@ -36,12 +36,13 @@ All ändring av denna logik sker på användarens eget ansvar och förutsätter 
 ```
 // Change the number of heating hours and minutes (min) based on t°C from H&T
 // Example logic for 2x12 hours periods
-	(data.temp <= 18 ) ? (hours = 11, min = 60) :
-	(data.temp <  19 ) ? (hours = 10, min = 60) :
-	(data.temp <  20 ) ? (hours = 9,  min = 60) :
-	(data.temp <  21 ) ? (hours = 8,  min = 45) :
-	(data.temp < 21.5) ? (hours = 7,  min = 45) :
-	(data.temp < 22.5) ? (hours = 4,  min = 45) :
-	(data.temp >=22.5) ? (hours = 1,  min = 30) : null; // almost OFF
+		(data.temp <= 18 ) ? (hours = 11, min = 60) :
+		(data.temp <  19 ) ? (hours = 10, min = 60) :
+		(data.temp <  20 ) ? (hours = 9,  min = 60) :
+		(data.temp <  21 ) ? (hours = 8,  min = 60) :
+		(data.temp < 21.5) ? (hours = 7,  min = 60) :
+		(data.temp < 22.5) ? (hours = 4,  min = 60) :
+		(data.temp < 23.5) ? (hours = 1,  min = 60) :       // almost OFF
+		(data.temp >=23.5) ? (hours = 0,  min = 60) : null; // OFF
 // End of custom logic
 ```
