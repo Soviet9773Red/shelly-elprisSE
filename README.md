@@ -38,26 +38,26 @@
 
 
 ## Komma igång
-1. Anslut din Shelly-enhet till nätverket.  
+1. Anslut din Shelly-enhet till ditt nätverk och kontrollera att den är åtkomlig via Shelly Web UI.
 2. Uppgradera firmware till senaste **stable** version ≥ 1.7.1.  
 3. Välj tidszon: **Europe/Stockholm** (viktigt för korrekt prislogik).
    
-4. Skapa ett nytt script i Shelly Web UI och klistra in den senaste [3.1.5 build 04] versionen [shelly-elprisSE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).  
+4. Öppna Scripts i Shelly Web UI, skapa ett nytt script och klistra in den senaste [3.1.5 build 04] versionen av [shelly-elprisSE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).  
 
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/console.jpg?raw=true" width="426"
   align="right"
      style="margin-right:15px; margin-bottom:10px;">
-5. Starta scriptet och öppna konsolen för att se resultatet och HTTP-länken.  
-6. Öppna länken från konsolen. Du ser något i stil med:  
+5. Spara scriptet och starta det. 
+6. I konsolen (Console) visas informationsmeddelanden samt skriptets HTTP-adress, till exempel: 
 
 ```
 elpris-SE: v.3.1.5_04
 elpris-SE: URL http://192.168.8.119/script/1
 ```
 
-7. Öppna skriptets HTTP-endpoint.  
-Kopiera HTTP-adressen från konsolen och öppna länken i en ny flik i din webbläsare.  
-Adressen kan skilja sig – se den exakta adressen i konsolen.
+7. Markera och kopiera HTTP-adressen från konsolen. HTTP-adressen är inte klickbar i konsolen.
+Öppna en ny flik i din webbläsare (Chrome, Firefox, Edge osv.), klistra in adressen i adressfältet och öppna den. 
+Adressen kan skilja sig – använd alltid den exakta adress som visas i konsolen.
 
 Observera att siffran efter script/ visar skriptnumret och kan variera, till exempel /script/2 eller /script/3 osv. Se aktuellt nummer för ditt skript.
 <br clear="all">
