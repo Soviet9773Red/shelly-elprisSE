@@ -47,7 +47,9 @@
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/console.jpg?raw=true" width="426"
   align="right"
      style="margin-right:15px; margin-bottom:10px;">
-5. Spara scriptet och starta det. 
+
+5. Spara scriptet och starta det. <br>
+
 6. I konsolen (Console) visas informationsmeddelanden samt skriptets HTTP-adress, till exempel: 
 
 ```
@@ -58,7 +60,7 @@ elpris-SE: URL http://192.168.8.119/script/1
 7. Markera och kopiera HTTP-adressen från konsolen. HTTP-adressen är inte klickbar i konsolen.
 Öppna en ny flik i din webbläsare (Chrome, Firefox, Edge osv.), klistra in adressen i adressfältet och öppna den. 
 Adressen kan skilja sig – använd alltid den exakta adress som visas i konsolen.
-
+<br>
 Observera att siffran efter script/ visar skriptnumret och kan variera, till exempel /script/2 eller /script/3 osv. Se aktuellt nummer för ditt skript.
 <br clear="all">
 
