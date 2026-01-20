@@ -80,7 +80,7 @@ Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom �
 ### Exempel på huvudgränssnitt
 Här är en illustration av UI (status):
 <table><tr>
-<td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/statp.jpg" width="515"></td>
+<td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/statp.jpg" width="521"></td>
 </tr></table>
 
 
