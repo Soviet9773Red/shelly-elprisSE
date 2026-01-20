@@ -9,23 +9,27 @@ Om du upplever problem med att spara, starta eller köra skriptet korrekt, följ
     - Gå till "Scripts" och klicka på "Stop" för varje aktivt skript.
 
 2. **Inaktivera "Run on startup"**
-    - Avmarkera rutan **Run on startup** för samtliga skript.
+    - Avmarkera rutan *Run on startup* för samtliga skript.
 
-3. **Starta om enheten**
-    - Gå till **Settings → Reboot Device**.
+3. **Kontrollera Matter (Gen 3 / Gen 4)**
+- På Shelly Gen 3 och Gen 4-enheter **måste Matter vara inaktiverat**.
+- Matter och skript delar samma minnesresurser, vilket kan förhindra att skriptet startar eller körs korrekt.
 
-4. **Aktivera "Run on startup" igen**
-    - Efter omstart, markera **Run on startup** endast för det skript du vill köra ( shelly-elprisSE ). Undvik att aktivera denna inställning för andra skript samtidigt.
+4. **Starta om enheten**
+    - Gå till *Settings → Reboot Device*.
 
-5. **Rensa upp gamla skript och data**
+5. **Aktivera "Run on startup" igen**
+    - Efter omstart, markera *Run on startup* endast för det skript du vill köra ( shelly-elprisSE ). Undvik att aktivera denna inställning för andra skript samtidigt.
+
+6. **Rensa upp gamla skript och data**
     - Radera skript som inte längre används.
     - Ta bort eventuella stora skript som tar upp för mycket minne.
 
-6. **Töm KVS-lagringen**
+7. **Töm KVS-lagringen**
     - Gå till KVS i Shelly GUI
     - Ta bort onödiga/gamla nycklar manuellt.
 
-7. **Starta skriptet på nytt**
+8. **Starta skriptet på nytt**
     - Gå till "Scripts" → klicka på "Start" vid ditt aktiva skript.
 
 ---
