@@ -57,17 +57,23 @@ elpris-SE: v.3.1.5_04
 elpris-SE: URL http://192.168.8.119/script/1
 ```
 
-7. Markera och kopiera HTTP-adressen från konsolen. HTTP-adressen är inte klickbar i konsolen.
-Öppna en ny flik i din webbläsare (Chrome, Firefox, Edge osv.), klistra in adressen i adressfältet och öppna den. 
+7. Markera och kopiera HTTP-adressen från konsolen.<br>
+Adressen är inte klickbar i konsolen.<br>
+Öppna en ny flik i din webbläsare (Chrome, Firefox, Edge osv.), klistra in adressen i adressfältet och öppna den.
+
+
 Adressen kan skilja sig – använd alltid den exakta adress som visas i konsolen.
 <br>
 Observera att siffran efter script/ visar skriptnumret och kan variera, till exempel /script/2 eller /script/3 osv. Se aktuellt nummer för ditt skript.
 <br clear="all">
+<br>
 
 **Viktigt:** I version 3.1.5 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
 Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
 
-8. Konfigurera skriptets parametrar. Konfigurationshjälp finns inne i skriptet.
+8. Konfigurera skriptets parametrar. Konfigurationshjälp finns inne i skriptet (flik Help).
+
+<br>
 
 ### 🔧 → [Felsökning](./Felsokning.md)
 
