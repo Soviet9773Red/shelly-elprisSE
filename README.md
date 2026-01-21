@@ -48,7 +48,7 @@
   align="right"
      style="margin-right:15px; margin-bottom:10px;">
 
-5. Namnge skriptet till shelly-elprisSE och klicka på Save → Start.
+5. Namnge skriptet till *shelly-elprisSE* och klicka på Save → Start.
    
 
 6. I konsolen (Console) visas informationsmeddelanden samt skriptets HTTP-adress, till exempel: 
