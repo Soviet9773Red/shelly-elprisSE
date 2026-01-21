@@ -16,7 +16,7 @@ Kan används ihop med [Shelly Wi-Fi H&T Gen 3](https://kb.shelly.cloud/knowledge
 */
 ```
 
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/scriptaddon.jpg?raw=true" width="500"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/scriptaddon.jpg" width="500"
      align="right"
      style="margin-right:15px; margin-bottom:10px;">
 
