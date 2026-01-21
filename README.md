@@ -69,12 +69,21 @@ Observera att siffran efter script/ visar skriptnumret och kan variera, till exe
 <br clear="all">
 <br>
 
+8. Konfigurera skriptets parametrar via webbgränssnittet.
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/configEnable.jpg" width="398"
+  align="right"
+     style="margin-right:10px; margin-bottom:10px;">
+
+   Observera att konfigurationen är inaktiverad som standard vid första uppstart.
+   För att aktivera den, gå till Setup, markera Enabled och klicka på Save.
+   Ytterligare konfigurationshjälp finns i fliken Help.
+   
+<br clear="all">
+
 **Viktigt:** I version 3.1.5 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
 Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
 
-8. Konfigurera skriptets parametrar. Konfigurationshjälp finns inne i skriptet (flik Help).
-
-<br>
+---
 
 ### 🔧 → [Felsökning](./Felsokning.md)
 
