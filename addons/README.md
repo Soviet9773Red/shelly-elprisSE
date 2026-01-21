@@ -42,7 +42,7 @@ All ändring av denna logik sker på användarens eget ansvar och förutsätter 
 		(data.temp <  21 ) ? (hours = 8,  min = 60) :
 		(data.temp < 21.5) ? (hours = 7,  min = 60) :
 		(data.temp < 22.5) ? (hours = 4,  min = 60) :
-		(data.temp < 23.5) ? (hours = 1,  min = 60) :       // almost OFF
-		(data.temp >=23.5) ? (hours = 0,  min = 60) : null; // OFF
+		(data.temp < 23.5) ? (hours = 1,  min = 60) : // almost OFF
+		(data.temp >=23.5) ? (hours = 0,  min = 60) : void 0; // OFF
 // End of custom logic
 ```
