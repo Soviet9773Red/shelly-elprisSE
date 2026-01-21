@@ -1,7 +1,9 @@
 # Add-ons
 Optional extension scripts for shelly-elprisSE.
 ### 1. [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js)
-Kan används ihop med [Shelly Wi-Fi H&T Gen 3](https://kb.shelly.cloud/knowledge-base/shelly-h-t-gen3) , läs mer i [ht-readme.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-readme.md) 
+
+Används tillsammans med [Shelly Wi-Fi H&T Gen 3](https://kb.shelly.cloud/knowledge-base/shelly-h-t-gen3) och kräver en separat Shelly enhet (Plus 1, Pro 2/3 osv.) där huvudskriptet *shelly-elprisSE.js* körs. Temperatursensorn (H&T) skickar endast temperaturdata via Actions; själva add-on-logiken körs på huvudenheten.
+<br>Sensorn konfigureras enligt beskrivningen i [ht-readme.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-readme.md).
 
 ```
 /** ver. 1.0.4 H&T addon must be placed after
