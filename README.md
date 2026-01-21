@@ -85,7 +85,6 @@ Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom �
 
 ---
 
-### 🔧 → [Felsökning](./Felsokning.md)
 
 ### Exempel på huvudgränssnitt
 Här är en illustration av UI (status):
@@ -154,6 +153,7 @@ Projektet **[shelly-device-map](https://github.com/Soviet9773Red/shelly-device-m
 Shelly Device Map ([demo](https://soviet9773red.github.io/shelly-device-map/)) är helt statisk, kräver ingen backend och kan öppnas lokalt eller köras på till exempel en Raspberry Pi.
 
 ---
+### 🔧 → [Felsökning](./Felsokning.md)
 
 ## Stöd projektet
 Ditt stöd ger mig inte bara kaffe i koppen – det hjälper också till att hålla [elpris.eu](https://elpris.eu) och dess proxy-tjänster online,  
