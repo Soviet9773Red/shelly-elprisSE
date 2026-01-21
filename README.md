@@ -70,7 +70,7 @@ Observera att siffran efter script/ visar skriptnumret och kan variera, till exe
 <br>
 
 8. Konfigurera skriptets parametrar via webbgränssnittet.
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/configEnable.jpg" width="398"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/configEnable.jpg" width="353"
   align="right"
      style="margin-right:10px; margin-bottom:10px;">
 
