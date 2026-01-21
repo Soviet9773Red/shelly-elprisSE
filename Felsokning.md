@@ -12,8 +12,8 @@ Om du upplever problem med att spara, starta eller köra skriptet korrekt, följ
     Avmarkera rutan *Run on startup* för samtliga skript.
 
 **3)** Kontrollera Matter (Gen 3 / Gen 4)<br>
-- På Shelly Gen 3 och Gen 4-enheter **måste Matter vara inaktiverat**.
-- Matter och skript delar samma minnesresurser, vilket kan förhindra att skriptet startar eller körs korrekt.
+- På Shelly Gen 3 och Gen 4-enheter **måste Matter vara inaktiverat**.<br>
+Matter och skript delar samma minnesresurser, vilket kan förhindra att skriptet startar eller körs korrekt.
 
 **4)** Starta om enheten <br>
 - Gå till *Settings → Reboot Device*.
