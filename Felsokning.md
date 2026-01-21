@@ -1,5 +1,5 @@
 
-## Felsökning (Troubleshooting)
+## 🔧 Felsökning (Troubleshooting)
 
 Om du upplever problem med att spara, starta eller köra skriptet korrekt, följ stegen nedan för att återställa stabil funktion:
 
