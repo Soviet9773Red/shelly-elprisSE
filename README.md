@@ -106,7 +106,7 @@ Den inbyggda HTTP-servern på Shelly-enheten ger tillgång till fyra flikar:
 
 
 
-### H&T temperature sensor support
+### 🌡️ H&T temperature sensor support
 
 Ett tillval i form av ett addon-skript kan användas tillsammans med *shelly-elprisSE*.
 Addon-skriptet laddas efter huvudskriptet och använder temperaturdata från en Shelly H&T-sensor
