@@ -69,6 +69,8 @@ och uppdaterar data enligt följande beteende:
 - Vid förändring av temperaturen skickas uppdaterad data omedelbart.
   Som standard används ett tröskelvärde på ±0,5 °C för att undvika
   onödig rapportering. Mindre temperaturförändringar rapporteras därför inte.
+ 
+> För luftfuktighet används som standard ett minsta ändringströskelvärde på 5 %, vilket kan justeras ned till 1 %. Vid lägre tröskelvärden finns en ökad sannolikhet att även små förändringar i temperatur eller luftfuktighet leder till att en Action triggas och HTTP-länken anropas.
 
 Om Shelly H&T Gen 3 istället drivs via USB sker nätverksanslutningar och uppdateringar oftare,
 eftersom energisparläget då inte begränsar kommunikationsfrekvensen. Läs mer på [support.shelly.cloud](https://support.shelly.cloud/en/support/solutions/articles/103000226308-wake-up-schemes-and-data-reporting-for-shelly-plus-h-t-and-shelly-gen3-h-t-devices)
