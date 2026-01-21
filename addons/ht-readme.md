@@ -3,7 +3,7 @@
 Detta H&T add-on [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js) kompletterar huvudskriptet *shelly-elprisSE.js* genom att lägga till temperaturbaserad styrning med hjälp av Shelly H&T Gen 3.   
 
 Syftet är att undvika onödig elförbrukning när rumstemperaturen redan stiger av andra värmekällor, till exempel en kamin.
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/ht01.jpg?raw=true" width="350"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/ht01.jpg" width="350"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
 
@@ -15,7 +15,7 @@ Add-on är avsett som ett extra skyddslager ovanpå prisstyrningen och är optim
 <br clear="all">
 
 ## Konfiguration av Shelly H&T Gen 3 och H&T add-on
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htstate.jpg?raw=true" width="175"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htstate.jpg" width="175"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
 För att konfigurera Shelly H&T Gen 3 krävs först fysisk åtkomst till enheten. Ta bort bakstycket enligt bilden och tryck kort på knappen på kretskortet. När knappen trycks visas texten **SET** på displayen. Detta innebär att sensorn har gått in i ett tillfälligt konfigurationsläge.
@@ -32,10 +32,10 @@ Här konfigureras ett HTTP-anrop som skickar aktuell temperatur till ett annat S
 <table width="360">
   <tr>
     <td>
-      <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htback.jpg?raw=true" width="175">
+      <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htback.jpg" width="175">
     </td>
     <td>
-      <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htsetup.jpg?raw=true" width="175">
+      <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htsetup.jpg" width="175">
     </td>
   </tr>
 </table>
@@ -47,7 +47,7 @@ Exempel på Action-URL: http://ip/script/1/update-temp?temp=$temperature
 - $temperature ersätts automatiskt med aktuell temperatur från sensorn.
 <br clear="all">
 
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/actions.jpg?raw=true" width="600"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/actions.jpg" width="600"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
      
@@ -74,7 +74,7 @@ Om Shelly H&T Gen 3 istället drivs via USB sker nätverksanslutningar och uppda
 eftersom energisparläget då inte begränsar kommunikationsfrekvensen. Läs mer på [support.shelly.cloud](https://support.shelly.cloud/en/support/solutions/articles/103000226308-wake-up-schemes-and-data-reporting-for-shelly-plus-h-t-and-shelly-gen3-h-t-devices)
 
 
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/action-create.jpg?raw=true" width="300"
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/action-create.jpg" width="300"
      align="right"
      style="margin-right:15px; margin-bottom:10px;">
 
