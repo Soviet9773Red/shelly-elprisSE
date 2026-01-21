@@ -25,17 +25,19 @@ function fTime(ts){let d=new Date(ts);let h=d.getHours();let m=d.getMinutes();le
 	
 // Change the number of heating hours and minutes (min) based on t°C from H&T
 // Example logic for 2x12 hours periods
-	(data.temp <= 18 ) ? (hours = 11, min = 60) :
-	(data.temp <  19 ) ? (hours = 10, min = 60) :
-	(data.temp <  20 ) ? (hours = 9,  min = 60) :
-	(data.temp <  21 ) ? (hours = 8,  min = 45) :
-	(data.temp < 21.5) ? (hours = 7,  min = 45) :
-	(data.temp < 22.5) ? (hours = 4,  min = 45) :
-	(data.temp >=22.5) ? (hours = 1,  min = 30) : null; // almost OFF
+		(data.temp <= 18 ) ? (hours = 11, min = 60) :
+		(data.temp <  19 ) ? (hours = 10, min = 60) :
+		(data.temp <  20 ) ? (hours = 9,  min = 60) :
+		(data.temp <  21 ) ? (hours = 8,  min = 60) :
+		(data.temp < 21.5) ? (hours = 7,  min = 60) :
+		(data.temp < 22.5) ? (hours = 4,  min = 60) :
+		(data.temp < 23.5) ? (hours = 1,  min = 60) :       // almost OFF
+		(data.temp >=23.5) ? (hours = 0,  min = 60) : null; // OFF
 // End of custom logic
 	
 let htMsg=mode===2?"H&T event updated @ "+fTime(data.ts)+" | "+tStr+"°C<br>"+"Cheapest time tuned: "+hours+"h, ON-time: "+min+" min":"H&T active ("+tStr+"°C), no effect in this mode";if(mode===2){alwaysOffOverride?htMsg+=", but overridden by Always OFF price value":alwaysOnOverride?htMsg+=", but overridden by Always ON price value":void 0}state.si[inst].str=htMsg;print("[H&T] Changed number of cheapest hours:",hours,"h and ON-time:",min,"min")}else{print("Outdated °C data -> Last Setup values applied");data.valid=false;data.temp=null;data.ts=Date.now();state.si[inst].str="Outdated °C data ("+age.toFixed(1)+" h)<br>"+"Using saved config: "+hours+" h, ON-time: "+min+" min"}}}catch(err){state.si[inst].str="Error in temp. control:"+err;print("[H&T] An error occurred in the USER_CONFIG function:",err)}config.m2.c=hours;config.m=min;RANGES&&Number(config.m2.p)===-2?config.m2.c2=hours:void 0}function parseParams(params){let res={};let splitted=params.split("&");for(let i=0;i<splitted.length;i++){let pair=splitted[i].split("=");res[pair[0]]=pair[1]}return res}function onHttpReq(req,resp){try{let params=parseParams(req.query);req=null;if(params.temp!=undefined){data={temp:Number(params.temp),ts:Date.now(),valid:true};_.si[INST].chkTs=0;resp.code=200}else{print("[H&T] Failed to update temp. data, 'temp' is missing from parameters:",params);resp.code=400}resp.send()}catch(err){print("[H&T] Error:",err)}}HTTPServer.registerEndpoint("update-temp",onHttpReq);
 //end of addon
+
 
 
 
