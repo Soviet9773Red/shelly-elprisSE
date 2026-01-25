@@ -11,7 +11,7 @@
 | Plus 1   |  OK   |  --   |  --   |
 | Plus 1PM |  OK   |  --   |  OK   |
 | Plus 2PM |  OK   |  --   |  --   |
-| Pro1 V1  |  OK   |  --   |  --   |
+| Pro 1 V1 |  OK   |  --   |  --   |
 | Pro 2    |  OK   |  --   |  --   |
 | Pro 3    |  OK   |  --   |  --   |
 | Plug S   |  OK   |  OK   |  --   |
