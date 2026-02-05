@@ -15,7 +15,7 @@
 | Pro 2    |  OK   |  --   |  --   |
 | Pro 3    |  OK   |  --   |  --   |
 | Plug S   |  OK   |  OK   |  --   |
-| Plug M   |  --   |  --   |  --   |
+| Plug M   |  --   |  OK   |  --   |
 | Mini PM  |  --   |  SI   |  --   |
 
 -- = Not tested , SI = Shows instability
