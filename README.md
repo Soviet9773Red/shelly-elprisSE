@@ -28,7 +28,7 @@
 
 Två stabila versioner finns tillgängliga:
 
--   [**shelly-elpris 3.1.7**](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE-3.1.5.js) -- (senaste) utökad funktionalitet och uppdaterad KVS-struktur
+-   [**shelly-elpris 3.1.7**](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js) -- (senaste) utökad funktionalitet och uppdaterad KVS-struktur
 -   [**shelly-elpris 3.1.5**](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE-3.1.5.js) -- tidigare stabil version, fullt fungerande
 
 Version 3.1.5 behöver inte uppgraderas om befintlig installation
