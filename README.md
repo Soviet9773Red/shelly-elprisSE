@@ -20,23 +20,62 @@
 
 -- = Not tested , SI = Shows instability
 ```
-
 *Shelly Gen3, Gen4-enheter stöds, men kräver att **Matter är avstängt***.
 
----
+-----------------------------------------------------------------------
 
-## Shelly-elprisSE 3.1.5 Release Notes
+### **Versioner**
 
-**Höjdpunkter**  
-⚡ Stöd för 15-minuterspriser via API med timbaserad aggregering (96 → 24).    
-⚙️ Förbättrade gränssnitt för Status, History och Setup.  
-💰 Modell för nätavgifter - tydlig vardag/helg-separation samt dynamisk avgiftsdetektering beroende på tid på dygnet, inklusive buggfixar.  
-🆘 Integrerad Help-flik med inbyggd dokumentation, direkt tillgänglig via webbgränssnittet.  
-🪄 Ombyggt användargränssnitt - tydligare tabeller, förbättrad layout och responsiv design för mobil användning.  
-🔧 Förbättrad prishantering - stabil tolkning av avg24-formatet med validering för sommar- och vintertid (23/25-timmarsdygn).  
-🧩 Buggrättningar: korrigerad logik vid dygnsbyte, momsberäkning, återställd override-persistens samt korrekt visning av aktuellt spotpris.   
-🌡️ Stöd för H&T-temperatursensor via addon-skript för dynamisk justering av billigaste timmar.
+Två stabila versioner finns tillgängliga:
 
+-   **3.1.7 (senaste)** -- utökad funktionalitet och uppdaterad KVS-struktur
+-   **3.1.5** -- tidigare stabil version, fullt fungerande
+
+Version 3.1.5 behöver inte uppgraderas om befintlig installation
+fungerar som önskat.<br>
+Version 3.1.7 är avsedd för användare som vill
+använda den nya funktionaliteten.<br>
+Observera att versionerna använder olika KVS-strukturer.
+
+Vad är nytt i 3.1.7 jämfört med 3.1.5 :
+
+-   Möjlighet att specificera dagtimmar för nätavgift (tf)
+-   Möjlighet att aktivera / inaktivera konfigurationer beroende på veckodag
+-   Färgkodad visualisering av elpriser för tydligare översikt
+
+Övrig funktionalitet är oförändrad och bygger på 3.1.5.
+Fullständig ändringshistorik finns i CHANGELOG.md.
+
+### Parallell användning av versioner
+
+Det är möjligt att köra 3.1.5 och 3.1.7 parallellt på olika enheter.
+
+------------------------------------------------------------------------
+
+### **Viktigt** - KVS-struktur i 3.1.7
+
+Version 3.1.7 använder en uppdaterad KVS-struktur. Versionerna bör därför inte köras samtidigt på samma enhet. På separata Shelly-enheter är detta däremot inget problem.
+
+Rekommenderat: clean start<br>
+Detta är det säkraste och renaste alternativet.
+
+1.  Ta bort gamla KVS-nycklar.
+2.  Installera 3.1.7.
+3.  Konfigurera om via Setup.
+
+
+Alternativ -- Migreringsscript<br>
+Om befintliga KVS inställningar ska bevaras kan migreringsscriptet användas.
+
+Scriptet [migrate_315_to_317.js] :
+
+1.   Byter namn på äldre fält (t.ex. day → d, night → n).
+2.   Lägger till nya strukturer (m0, m1, m2).
+3.  Behåller befintliga värden där möjligt.
+
+Migreringsscriptet körs en gång och kan därefter tas bort.
+
+------------------------------------------------------------------------
 
 
 ## Komma igång
@@ -44,7 +83,7 @@
 2. Uppgradera firmware till senaste **stable** version ≥ 1.7.1.  
 3. Välj tidszon: **Europe/Stockholm** (viktigt för korrekt prislogik).
    
-4. Öppna Scripts i Shelly Web UI, skapa ett nytt script och klistra in den senaste [3.1.5 build 04] versionen av [shelly-elprisSE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).  
+4. Öppna Scripts i Shelly Web UI, skapa ett nytt script och klistra in den senaste [3.1.7] versionen av [shelly-elprisSE.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js).  
 
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/console.jpg?raw=true" width="426"
   align="right"
@@ -56,7 +95,7 @@
 6. I konsolen (Console) visas informationsmeddelanden samt skriptets HTTP-adress, till exempel: 
 
 ```
-elpris-SE: v.3.1.5_04
+elpris-SE: v.3.1.7
 elpris-SE: URL http://192.168.8.119/script/1
 ```
 
@@ -71,7 +110,7 @@ Observera att siffran efter script/ visar skriptnumret och kan variera, till exe
 <br clear="all">
 <br>
 
-8. Konfigurera skriptets parametrar via webbgränssnittet.
+8. Konfigurera skriptets parametrar via Setup i webbgränssnittet.
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/configEnable.jpg" width="353"
   align="right"
      style="margin-right:10px; margin-bottom:10px;">
@@ -82,8 +121,7 @@ Observera att siffran efter script/ visar skriptnumret och kan variera, till exe
    
 <br clear="all">
 
-**Viktigt:** I version 3.1.5 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort.  
-Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
+**Viktigt:** I version 3.1.7 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort. Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
 
 ---
 
