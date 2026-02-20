@@ -67,7 +67,7 @@ Detta är det säkraste och renaste alternativet.
 Alternativ -- Migreringsscript<br>
 Om befintliga KVS inställningar ska bevaras kan migreringsscriptet användas.
 
-Scriptet [migrate_315_to_317.js] :
+Scriptet [migrate_315_to_317.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/migrate_315_to_317.js) :
 
 1.   Byter namn på äldre fält (t.ex. day → d, night → n).
 2.   Lägger till nya strukturer (m0, m1, m2).
