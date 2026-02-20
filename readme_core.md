@@ -6,20 +6,22 @@ value represents a single, exclusive state.
 
 | Code | Meaning |
 | ---- | ------- |
-| 0 | Disabled (configuration disabled by user) |
-| 1 | Manual ON |
+| 0 | Config disabled in Setup |
+| 1 | Manual command |
 | 2 | Price below limit |
 | 3 | Price above limit |
-| 4 | Cheapest OFF |
-| 5 | Cheapest ON |
-| 6 | Forced ON (cheap) |
-| 7 | Waiting for price data |
-| 8 | Emergency mode |
-| 9 | Forced override |
-| 10 | Forced hour |
-| 11 | Max price exceeded |
-| 12 | Command changed |
-| 13 | Max minutes reached |
-| 14 | Inactive today (schedule restriction) |
+| 4 | High-price |
+| 5 | Low-price |
+| 6 | Price below always-ON limit |
+| 7 | Safe mode, no prices |
+| 8 | Emergency mode, no time |
+| 9 | Manual override active until %s |
+| 10 | Hourly override active |
+| 11 | Price above always-OFF limit |
+| 12 | Logic control lost |
+| 13 | ON-time expired |
+| 14 | ON-time delay active |
+| 15 | Disabled Mon-Fri in Setup |
+| 16 | Disabled Sat-Sun in Setup |
 
 > NOTE: These are enum-like values, not bitmasks.
