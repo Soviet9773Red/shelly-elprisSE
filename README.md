@@ -4,7 +4,7 @@
 
 **shelly-elprisSE** är ett script för Shelly-enheter Gen 2 (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1-SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko v3.1.1](https://github.com/jisotalo/shelly-porssisahko-en/releases/tag/v.3.1.1)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från elprisetjustnu.se via deras öppna JSON-API, men ny används en proxykälla [elpris.eu](https://elpris.eu) - för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
 
-### **Version 3.1.5 primary supports Shelly platform Gen2**
+### **shelly-elpris primary supports Shelly platform Gen2**
 ```
 | Device   | Gen 2 | Gen 3 | Gen 4 |
 |----------|-------|-------|-------|
@@ -69,7 +69,7 @@ Det är möjligt att köra 3.1.5 och 3.1.7 parallellt på olika enheter.
 ```
 elpris-SE: Starting...
 elpris-SE: Core v.3.1.7 | API: 15:25 (random minute)
-elpris-SE: http://192.168.8.164/script/2
+elpris-SE: http://192.168.8.164/script/1
 elpris-SE: Time synced, updating prices
 elpris-SE: API returned 24×1h averaged intervals, day 20.02.2026
 ```
