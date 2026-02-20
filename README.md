@@ -67,8 +67,11 @@ Det är möjligt att köra 3.1.5 och 3.1.7 parallellt på olika enheter.
 6. I konsolen (Console) visas informationsmeddelanden samt skriptets HTTP-adress, till exempel: 
 
 ```
-elpris-SE: v.3.1.7
-elpris-SE: URL http://192.168.8.119/script/1
+elpris-SE: Starting...
+elpris-SE: Core v.3.1.7 | API: 15:25 (random minute)
+elpris-SE: http://192.168.8.164/script/2
+elpris-SE: Time synced, updating prices
+elpris-SE: API returned 24×1h averaged intervals, day 20.02.2026
 ```
 
 7. Markera och kopiera HTTP-adressen från konsolen.<br>
