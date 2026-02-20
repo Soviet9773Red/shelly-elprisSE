@@ -38,45 +38,17 @@ använda den nya funktionaliteten.<br>
 Observera att versionerna använder olika KVS-strukturer.
 
 Vad är nytt i 3.1.7 jämfört med 3.1.5 :
-
--   Möjlighet att specificera dagtimmar för nätavgift (tf)
--   Möjlighet att aktivera / inaktivera konfigurationer beroende på veckodag
--   Färgkodad visualisering av elpriser för tydligare översikt
-
+- Möjlighet att specificera dagtimmar för nätavgift (tf)
+- Möjlighet att aktivera / inaktivera konfigurationer beroende på veckodag
+- Färgkodad visualisering av elpriser för tydligare översikt
+- Utökad on-time-logik med stöd för expired och delayed
+  
 Övrig funktionalitet är oförändrad och bygger på 3.1.5.
 Fullständig ändringshistorik finns i CHANGELOG.md.
-
-### Parallell användning av versioner
 
 Det är möjligt att köra 3.1.5 och 3.1.7 parallellt på olika enheter.
 
 ------------------------------------------------------------------------
-
-### **Viktigt** - KVS-struktur i 3.1.7
-
-Version 3.1.7 använder en uppdaterad KVS-struktur. Versionerna bör därför inte köras samtidigt på samma enhet. På separata Shelly-enheter är detta däremot inget problem.
-
-Rekommenderat: clean start<br>
-Detta är det säkraste och renaste alternativet.
-
-1.  Ta bort gamla KVS-nycklar.
-2.  Installera 3.1.7.
-3.  Konfigurera om via Setup.
-
-
-Alternativ -- Migreringsscript<br>
-Om befintliga KVS inställningar ska bevaras kan migreringsscriptet användas.
-
-Scriptet [migrate_315_to_317.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/migrate_315_to_317.js) :
-
-1.   Byter namn på äldre fält (t.ex. day → d, night → n).
-2.   Lägger till nya strukturer (m0, m1, m2).
-3.  Behåller befintliga värden där möjligt.
-
-Migreringsscriptet körs en gång och kan därefter tas bort.
-
-------------------------------------------------------------------------
-
 
 ## Komma igång
 1. Anslut din Shelly-enhet till ditt nätverk och kontrollera att den är åtkomlig via Shelly Web UI.
@@ -121,9 +93,32 @@ Observera att siffran efter script/ visar skriptnumret och kan variera, till exe
    
 <br clear="all">
 
-**Viktigt:** I version 3.1.7 har strukturen för KVS-nycklar ändrats och konfiguration **#3** har tagits bort. Innan du startar den nya versionen bör du ta bort gamla KVS-nycklar, eftersom även deras interna struktur har uppdaterats.  
+**Viktigt - KVS**
 
----
+KVS-strukturen har ändrats i version 3.1.7 och konfiguration **#3** har tagits bort.  
+Gamla KVS-nycklar från 3.1.5 är inte kompatibla och bör tas bort innan den nya versionen startas.
+
+Version 3.1.5 och 3.1.7 ska inte köras samtidigt på samma enhet, eftersom de använder olika KVS-strukturer.  
+På separata Shelly-enheter är detta inget problem.
+
+Rekommenderat - Clean start. Detta är det säkraste alternativet:
+
+1. Ta bort gamla KVS-nycklar.
+2. Installera 3.1.7.
+3. Konfigurera om via Setup.
+
+Alternativ - migreringsscript [migrate_315_to_317.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/migrate_315_to_317.js) <br>
+Om befintliga inställningar ska bevaras kan scriptet användas.
+
+Scriptet:
+
+1. Byter namn på äldre fält (t.ex. day → d, night → n).
+2. Lägger till nya strukturer (m0, m1, m2).
+3. Behåller befintliga värden där möjligt.
+
+Migreringsscriptet körs en gång och kan därefter tas bort.
+
+------------------------------------------------------------------------
 
 
 ### Exempel på huvudgränssnitt
@@ -131,7 +126,6 @@ Här är en illustration av UI (status):
 <table><tr>
 <td><img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/statp.jpg" width="521"></td>
 </tr></table>
-
 
 ### **Gränssnitt och flikar**
 Den inbyggda HTTP-servern på Shelly-enheten ger tillgång till fyra flikar:
@@ -171,16 +165,15 @@ Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framti
   
 Se detaljer i [CHANGELOG.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/CHANGELOG.md)
 
-
----
-
-Skriptet utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för originalkoden och [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idéer kring JSON-optimering.
+------------------------------------------------------------------------
 
 ### Källkod och byggsystem
 
 För närvarande är källkoden, relaterade projekt samt bygg- och npm-baserad arbetsmiljö
 inte publikt tillgängliga. Vid intresse för fork, anpassningar eller vidareutveckling kan dessa göras tillgängliga vid behov.    
 Kontakta mig gärna via GitHub Issues eller via projektets kontaktytor.
+
+Skriptet utvecklat av [@Soviet9773Red](https://github.com/Soviet9773Red) med stort tack till [Jussi Isotalo](https://github.com/jisotalo) för originalkoden och [Mikael Ulvesjo](https://github.com/MikaelUlvesjo) för idéer kring JSON-optimering.
 
 ---
 
