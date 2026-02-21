@@ -74,7 +74,7 @@ elpris-SE: Time synced, updating prices
 elpris-SE: API returned 24×1h averaged intervals, day 20.02.2026
 ```
 
-7. Markera och kopiera HTTP-adressen från konsolen.<br>
+7. Markera och kopiera http-adressen från konsolen.<br>
 Adressen är inte klickbar i konsolen.<br>
 Öppna en ny flik i din webbläsare (Chrome, Firefox, Edge osv.), klistra in adressen i adressfältet och öppna den.
 
