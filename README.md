@@ -91,7 +91,7 @@ Observera att siffran efter script/ visar skriptnumret och kan variera, till exe
      style="margin-right:10px; margin-bottom:10px;">
 
    Observera att konfigurationen är inaktiverad som standard vid första uppstart.
-   För att aktivera den, gå till Setup, markera Enabled och klicka på Save.
+   För att aktivera den, välj ett aktiveringsläge i Setup (ON eller ett schemalagt läge) och klicka på Save.
    Ytterligare konfigurationshjälp finns i fliken Help.
    
 <br clear="all">
