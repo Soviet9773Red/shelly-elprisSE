@@ -25,7 +25,7 @@ Sensor configuration is described in [ht-readme.md](https://github.com/Soviet977
      style="margin-right:15px; margin-bottom:10px;">
 
 This H&T add-on [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js) 
-extends the main script*shelly-elprisSE.js* by adding temperature-based control using a Shelly H&T sensor. 
+extends the main script *shelly-elpris.js* by adding temperature-based control using a Shelly H&T sensor. 
 
 The purpose is to prevent unnecessary electricity consumption when the room 
 temperature is already rising due to other heat sources, for example a fireplace.
