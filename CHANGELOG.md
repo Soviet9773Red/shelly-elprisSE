@@ -2,7 +2,28 @@
 
 Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE`, från release candidate till stabila utgåvor.
 
-## Version [3.1.5](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/arch/shelly-elprisSE3.1.3.js) (2025-12-23)
+## Version [3.1.7](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js) (2026-02-20)
+
+**Shelly-elprisSE 3.1.7 Release Notes**
+
+**Höjdpunkter**  
+⚙️ Möjlighet att specificera dagtimmar för nätavgift (tf).<br>
+📅 Möjlighet att aktivera eller inaktivera konfigurationer beroende på veckodag.<br>
+🎛 Utökad on-time-logik med val mellan expired och delayed.<br>
+🎨 Färgkodad visualisering av elpriser för tydligare översikt.<br>
+
+### Funktionalitet i version 3.1.7
+- Flexiblare styrning av nätavgifter genom konfigurerbara dagtimmar
+- Individuell aktivering per instans beroende på veckodag
+- Förbättrad on-time-hantering med tydligare beteende vid tidsutgång
+- Visuell förbättring av prisöversikt genom färgkodning
+
+I version 3.1.7 har KVS-strukturen uppdaterats jämfört med 3.1.5.
+Versionerna är inte kompatibla på samma enhet.<br>
+Gamla KVS-nycklar bör tas bort innan uppgradering, alternativt kan scriptet **migrate_315_to_317.js** användas.
+
+
+## Version [3.1.5](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE-3.1.5.js) (2025-12-23)
 
 **Shelly-elprisSE 3.1.5 Release Notes**
 
@@ -16,7 +37,7 @@ Här dokumenteras ändringar mellan olika versioner av skriptet `shelly-elprisSE
 🧩 Buggrättningar: korrigerad logik vid dygnsbyte, momsberäkning, återställd override-persistens samt korrekt visning av aktuellt spotpris.   
 🌡️ Stöd för H&T-temperatursensor via addon-skript för dynamisk justering av billigaste timmar.
 
-### Funktionalitet i version 3.1.5 [shelly-elprisSE](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE.js)
+### Funktionalitet i version 3.1.5
 
 -Förbättrad intern stabilitet genom flera riktade patchar i kärnlogiken<br>
 -Utökad History-funktion med datumvisning för tydligare tidskontext<br>
