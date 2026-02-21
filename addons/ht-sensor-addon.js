@@ -4,7 +4,7 @@
  * H&T addon must be placed after the main script // end of shelly-elpris
  * 
  * Controls cheap hours and ON-time based on temperature
- * H&T Gen2-3: Settings -> Actions -> Temperature -> Then do:
+ * H&T Gen2-3: Settings-> Actions-> Temperature-> Then do:
  * http://ip/script/1/update-temp?temp=$temperature
  * where: ip = device IP, /script/1 = shelly-elprisSE script number
  * Test: http://ip/script/1/update-temp?temp=18
@@ -37,3 +37,4 @@ function fTime(ts,mode){let d=new Date(ts),Y=d.getFullYear(),M=d.getMonth()+1,D=
 	
 let htMsg=mode===2?"H&T event updated @ "+fTime(data.ts)+" | "+tStr+"°C<br>"+"Cheapest time tuned: "+hours+"h, ON-time: "+min+" min":"H&T active ("+tStr+"°C), but no effect in this logic mode";if(mode===2){alwaysOffOverride?htMsg+=", Always OFF limit applied":alwaysOnOverride?htMsg+=", Always ON limit applied":void 0}state.si[inst].str=isActive?htMsg:"H&T: Config inactive - no t°C control applied";print("[H&T] Config#"+(inst+1)+" Tuned: "+hours+"h / "+min+"min")}else{print("Outdated °C data -> Last Setup values applied");data.valid=false;data.temp=null;data.ts=Date.now();state.si[inst].str="Outdated °C data ("+age.toFixed(1)+" h)"+(isActive?"<br>Using saved config: "+hours+" h, ON-time: "+min+" min":"<br>Config inactive - control suspended")}}}catch(err){state.si[inst].str="Error in temp. control:"+err;print("[H&T] Error in the USER_CONFIG function:",err)}if(isActive){config.m2.c=hours;config.m=min;RANGES&&Number(config.m2.p)===-2?config.m2.c2=hours:void 0}}function parseParams(params){let res={};let splitted=params.split("&");for(let i=0;i<splitted.length;i++){let pair=splitted[i].split("=");res[pair[0]]=pair[1]}return res}function onHttpReq(req,resp){try{let params=parseParams(req.query);req=null;if(params.temp!=undefined){data={temp:Number(params.temp),ts:Date.now(),valid:true};for(let i=0;i<_.si.length;i++){if(HNT_MODE===2||i===HNT_MODE){_.si[i].chkTs=0}}resp.code=200}else{print("[H&T] Failed to update temp. data, 'temp' is missing from parameters:",params);resp.code=400}resp.send()}catch(err){print("[H&T] Error:",err)}}HTTPServer.registerEndpoint("update-temp",onHttpReq);
 //end of addon
+
