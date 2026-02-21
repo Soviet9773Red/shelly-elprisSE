@@ -22,7 +22,22 @@ I version 3.1.7 har KVS-strukturen uppdaterats jämfört med 3.1.5.
 Versionerna är inte kompatibla på samma enhet.<br>
 Gamla KVS-nycklar bör tas bort innan uppgradering, alternativt kan scriptet **migrate_315_to_317.js** användas.
 
+I version 3.1.7 har strukturen för huvudnyckeln `elpris` uppdaterats och fältnamn har förenklats.<br>
+Exempel på ny struktur:
 
+```javascript
+{
+  "g": "SE3",          // Elområde (SE1–SE4)
+  "vat": 0,            // Moms (0 = av)
+  "d": 0.536,          // Dagavgift (vardag)
+  "n": 0.214,          // Nattavgift (vardag)
+  "dw": 0.214,         // Dagavgift (helg)
+  "nw": 0.214,         // Nattavgift (helg)
+  "tf": [6, 22],       // Dagtimmar för nätavgift
+  "ot": 0,             // On-time-läge
+  "names": ["-", "-"]  // Namn på konfigurationer
+}
+```
 ## Version [3.1.5](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/shelly-elprisSE-3.1.5.js) (2025-12-23)
 
 **Shelly-elprisSE 3.1.5 Release Notes**
