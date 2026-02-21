@@ -92,19 +92,14 @@ Actions are automatically triggered when the temperature changes and updated val
 If Shelly H&T Gen 3 is powered via USB instead, network connections and updates occur more frequently, since power-saving mode no longer limits the communication frequency. Read more at
 [support.shelly.cloud](https://support.shelly.cloud/en/support/solutions/articles/103000226308-wake-up-schemes-and-data-reporting-for-shelly-plus-h-t-and-shelly-gen3-h-t-devices)
 
-
-<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/action-create.jpg" width="300"
-     align="right"
-     style="margin-right:15px; margin-bottom:10px;">
-
-<br><br>
-
  **H&T Gen1:** Settings, add  http://ip/script/1/update-temp to "Actions > Sensor reports.
  <br>
  Remember to enable the "sensor reports" feature
-<br><br>
+<br>
  **H&T Gen2-3:**
 Actions-> Temperature ->
 Then Do -> http://ip/script/1/update-temp?temp=$temperature
 Action Name -> Save
-<br clear="all">
+
+<img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/action-create.jpg" width="300">
+
