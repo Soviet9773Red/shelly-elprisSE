@@ -1,31 +1,40 @@
 ### Shelly H&T WiFi Gen 3 sensor
 
-Detta H&T add-on [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js) kompletterar huvudskriptet *shelly-elprisSE.js* genom att lägga till temperaturbaserad styrning med hjälp av Shelly H&T Gen 3.   
+This H&T add-on [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js) extends the main script *shelly-elpris.js* by adding temperature-based control using Shelly H&T Gen 3.
 
-Syftet är att undvika onödig elförbrukning när rumstemperaturen redan stiger av andra värmekällor, till exempel en kamin.
+The purpose is to prevent unnecessary electricity consumption when the room temperature is already increasing due to other heat sources, for example a fireplace.
+
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/ht01.jpg" width="350"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
 
-Shelly H&T Gen 3 är en batteridriven temperatur- och fuktighetssensor för inomhusbruk med Wi-Fi-anslutning och lokalt HTTP-API. Enheten är kompakt, lätt att placera i vistelsezoner och visar aktuell temperatur och luftfuktighet på sin display. Ingen molnanslutning krävs för användning tillsammans med detta add-on.
+Shelly H&T Gen 3 is a battery-powered indoor temperature and humidity sensor with Wi-Fi connectivity and a local HTTP API.  
+The device is compact, easy to place in living areas, and displays current temperature and humidity on its built-in screen. No cloud connection is required when used with this add-on.
 
-Exempel:   
-I praktisk användning placeras sensorn i samma rum som kaminen. När kaminen används och temperaturen stiger registreras detta av H&T-sensorn och elvärmen kopplas bort automatiskt. Detta förhindrar att elradiatorer och kamin arbetar samtidigt och minskar därmed energiförbrukningen utan manuella ingrepp.
-Add-on är avsett som ett extra skyddslager ovanpå prisstyrningen och är optimerat för låg minnesförbrukning och lokal drift på Shelly-enheter.
+**Example:**  
+In a typical installation, the sensor is placed in the same room as a fireplace.  
+When the fireplace is in use and the room temperature rises, the H&T sensor detects the change and electric heating is automatically disabled.  
+
+This prevents electric radiators and the fireplace from operating simultaneously and reduces overall energy consumption without manual intervention.
+
+The add-on is designed as an additional safety layer on top of price-based control and is optimized for low memory usage and fully local operation on Shelly devices.
 <br clear="all">
 
-## Konfiguration av Shelly H&T Gen 3 och H&T add-on
+## Configuration of Shelly H&T Gen 3 and H&T add-on
+
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/htstate.jpg" width="175"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
-För att konfigurera Shelly H&T Gen 3 krävs först fysisk åtkomst till enheten. Ta bort bakstycket enligt bilden och tryck kort på knappen på kretskortet. När knappen trycks visas texten **SET** på displayen. Detta innebär att sensorn har gått in i ett tillfälligt konfigurationsläge.
 
-SET-läget är endast aktivt i cirka en-två minut. Därefter avslutas det automatiskt och webbgränssnittet blir otillgängligt. Konfigurationen måste därför genomföras utan onödiga pauser.
+To configure Shelly H&T Gen 3, physical access to the device is required.  
+Remove the back cover as shown in the image and briefly press the button on the circuit board. When the button is pressed, the text **SET** appears on the display. This indicates that the sensor has entered temporary configuration mode.
 
-När SET-läget är aktivt, öppna en webbläsare och anslut till sensorns IP-adress.   
-I wewbUI, gå till:  Settings -> Actions -> Temperature
+The SET mode remains active for approximately one to two minutes. After that, it automatically exits and the web interface becomes inaccessible. The configuration must therefore be completed without unnecessary delays.
 
-Här konfigureras ett HTTP-anrop som skickar aktuell temperatur till ett annat Shelly-enhet där skriptet **shelly-elprisSE** körs tillsammans med H&T add-on.
+While SET mode is active, open a web browser and connect to the sensor’s IP address.  
+In the web UI, navigate to: **Settings -> Actions -> Temperature**
+
+Here you configure an HTTP request that sends the current temperature to another Shelly device where the **shelly-elprisSE** script is running together with the H&T add-on.
 <br clear="all">
 <br>
 
@@ -40,40 +49,48 @@ Här konfigureras ett HTTP-anrop som skickar aktuell temperatur till ett annat S
   </tr>
 </table>
 
-Exempel på Action-URL: http://ip/script/1/update-temp?temp=$temperature
+Example Action URL:  
+http://ip/script/1/update-temp?temp=$temperature
 
-- ip är IP-adressen till Shelly-enheten som kör skriptet, t.ex. 192.168.10.117
-- /script/1 är skriptnumret för shelly-elprisSE på den enheten,
-- $temperature ersätts automatiskt med aktuell temperatur från sensorn.
+- `ip` is the IP address of the Shelly device running the script, e.g. 192.168.10.117  
+- `/script/1` is the script number of shelly-elprisSE on that device  
+- `$temperature` is automatically replaced with the current temperature from the sensor  
+
 <br clear="all">
 
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/actions.jpg" width="600"
      align="left"
      style="margin-right:15px; margin-bottom:10px;">
-     
-För test av addon kan följande URL öppnas manuellt i webbläsaren ( för 18°C ):
+
+To test the add-on, the following URL can be opened manually in a browser (for 18°C):
 
 http://ip/script/1/update-temp?temp=18
 
-Om länken är korrekt konfigurerad kommer add-on att ta emot temperaturvärdet och uppdatera sitt interna tillstånd.
+If the link is configured correctly, the add-on will receive the temperature value and update its internal state.
 
-En och samma Shelly H&T-sensor kan användas för flera Shelly-enheter samtidigt. Detta görs genom att skapa flera Actions med samma trigger (Temperature), men med olika IP-adresser och eventuellt olika skriptnummer. På så sätt kan en sensor fungera som gemensam temperaturkälla för flera oberoende enheter och installationer.
+A single Shelly H&T sensor can be used simultaneously for multiple Shelly devices.  
+This is done by creating multiple Actions with the same trigger (Temperature), but with different IP addresses and optionally different script numbers.
+
+In this way, one sensor can function as a shared temperature source for multiple independent devices and installations.
+
 <br clear="all">
-Efter att SET-läget har avslutats fortsätter sensorn att fungera normalt. Actions triggas automatiskt vid temperaturförändringar och skickar uppdaterade värden till de konfigurerade Shelly-enheterna utan ytterligare manuell hantering.
 
-**Observera** att Shelly H&T Gen 3, när den drivs med batteri, ansluter till nätverket oberoende av sensorns tillstånd
-och uppdaterar data enligt följande beteende:
+After the SET mode has ended, the sensor continues normal operation.  
+Actions are automatically triggered when the temperature changes and updated values are sent to the configured Shelly devices without further manual intervention.
 
-- Enheten väcker sig och ansluter till WiFi ungefär en gång per timme (± någon minut), vilket kan ses i routerns loggar.
-- Temperatur- och fuktighetsdata rapporteras minst varannan timme.
-- Vid förändring av temperaturen skickas uppdaterad data omedelbart.
-  Som standard används ett tröskelvärde på ±0,5 °C för att undvika
-  onödig rapportering. Mindre temperaturförändringar rapporteras därför inte.
- 
-> För luftfuktighet används som standard ett minsta ändringströskelvärde på 5 %, vilket kan justeras ned till 1 %. Vid lägre tröskelvärden finns en ökad sannolikhet att även små förändringar i temperatur eller luftfuktighet leder till att en Action triggas och HTTP-länken anropas.
+**Note** that when Shelly H&T Gen 3 is battery-powered, it connects to the network independently of the sensor state and updates data according to the following behavior:
 
-Om Shelly H&T Gen 3 istället drivs via USB sker nätverksanslutningar och uppdateringar oftare,
-eftersom energisparläget då inte begränsar kommunikationsfrekvensen. Läs mer på [support.shelly.cloud](https://support.shelly.cloud/en/support/solutions/articles/103000226308-wake-up-schemes-and-data-reporting-for-shelly-plus-h-t-and-shelly-gen3-h-t-devices)
+- The device wakes up and connects to WiFi approximately once per hour (± a few minutes), which can be seen in the router logs.  
+- Temperature and humidity data are reported at least every two hours.  
+- When the temperature changes, updated data is sent immediately.  
+  By default, a threshold of ±0.5 °C is used to avoid unnecessary reporting.  
+  Smaller temperature changes are therefore not reported.
+
+> For humidity, the default minimum change threshold is 5 %, which can be adjusted down to 1 %.  
+> At lower thresholds, even small changes in temperature or humidity may trigger an Action and call the HTTP link more frequently.
+
+If Shelly H&T Gen 3 is powered via USB instead, network connections and updates occur more frequently, since power-saving mode no longer limits the communication frequency. Read more at
+[support.shelly.cloud](https://support.shelly.cloud/en/support/solutions/articles/103000226308-wake-up-schemes-and-data-reporting-for-shelly-plus-h-t-and-shelly-gen3-h-t-devices)
 
 
 <img src="https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/img/action-create.jpg" width="300"
