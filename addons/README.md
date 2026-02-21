@@ -1,6 +1,25 @@
 # Add-ons
 Optional extension scripts for shelly-elpris.
-### 1. [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js)
+
+## Version compatibility
+
+Two versions of the H&T add-on are available.  
+Choose the version that matches your shelly-elpris core script.
+
+| Add-on version | Compatible core version | Notes |
+|---------------|------------------------|-------|
+| [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js) | shelly-elpris **3.1.7** | Recommended for core 3.1.7. <br>Supports new internal functions and improved config handling. |
+| [ht-sensor-addon1.0.5.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon1.0.5.js) | shelly-elpris **3.1.5** | Legacy version. Required for core 3.1.5. |
+
+### Important
+
+- Core **3.1.7** works with both add-on versions (1.0.5 and 1.0.7).
+- Core **3.1.5** works only with add-on **1.0.5**.
+- Add-on **1.0.7** uses internal functions that do not exist in core 3.1.5.
+
+If you are unsure which version you are running, check the version number at the top of your main script.
+
+### 1. [ht-sensor-addon.js]
 
 This add-on is used together with [Shelly Wi-Fi H&T Gen 3](https://kb.shelly.cloud/knowledge-base/shelly-h-t-gen3) 
 and requires a separate Shelly device (Plus 1, Pro 2/3, etc.) where the main script *shelly-elprisSE.js* is running. 
@@ -8,9 +27,8 @@ The H&T sensor sends only temperature data via Actions. The actual add-on logic 
 Sensor configuration is described in [ht-readme.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-readme.md).
 
 ```
-/** ver. 1.0.4 H&T addon must be placed after
- * the main script // end of shelly-elpris
- * Controls cheap hours and ON-time based on temperature
+/* ver. 1.0.7 works with shelly-elpris 3.1.7
+ * H&T addon must be placed after the main script // end of shelly-elpris
  * H&T Gen1: Settings, add  http://ip/script/1/update-temp to "Actions > Sensor reports
  * Remember to enable the "sensor reports" feature
  * H&T Gen2-3: Settings -> Actions -> Temperature -> Then do:
