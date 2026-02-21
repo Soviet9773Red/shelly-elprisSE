@@ -1,9 +1,11 @@
 # Add-ons
-Optional extension scripts for shelly-elprisSE.
+Optional extension scripts for shelly-elpris.
 ### 1. [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js)
 
-Används tillsammans med [Shelly Wi-Fi H&T Gen 3](https://kb.shelly.cloud/knowledge-base/shelly-h-t-gen3) och kräver en separat Shelly enhet (Plus 1, Pro 2/3 osv.) där huvudskriptet *shelly-elprisSE.js* körs. Temperatursensorn (H&T) skickar endast temperaturdata via Actions; själva add-on-logiken körs på huvudenheten.
-<br>Sensorn konfigureras enligt beskrivningen i [ht-readme.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-readme.md).
+This add-on is used together with [Shelly Wi-Fi H&T Gen 3](https://kb.shelly.cloud/knowledge-base/shelly-h-t-gen3) 
+and requires a separate Shelly device (Plus 1, Pro 2/3, etc.) where the main script *shelly-elprisSE.js* is running. 
+The H&T sensor sends only temperature data via Actions. The actual add-on logic runs on the main device. 
+Sensor configuration is described in [ht-readme.md](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-readme.md).
 
 ```
 /** ver. 1.0.4 H&T addon must be placed after
@@ -22,29 +24,60 @@ Används tillsammans med [Shelly Wi-Fi H&T Gen 3](https://kb.shelly.cloud/knowle
      align="right"
      style="margin-right:15px; margin-bottom:10px;">
 
-Detta H&T add-on [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js) kompletterar huvudskriptet *shelly-elprisSE.js* genom att lägga till temperaturbaserad styrning med hjälp av Shelly H&T Gen 3. Syftet är att undvika onödig elförbrukning när rumstemperaturen redan stiger av andra värmekällor, till exempel en kamin.
+This H&T add-on [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js) 
+extends the main script*shelly-elprisSE.js* by adding temperature-based control using a Shelly H&T sensor. 
 
-Add-on läser temperaturdata lokalt från Shelly H&T och justerar automatiskt huvudskriptets aktiva timmar och styrminuter. När temperaturen når ett fördefinierat tröskelvärde begränsas eller blockeras eluppvärmningen helt. När temperaturen sjunker återgår systemet automatiskt till normal prisstyrd drift. Add-on styr inte utgångar direkt utan påverkar endast parametrarna i huvudlogiken, vilket ger stabil och förutsägbar funktion.
+The purpose is to prevent unnecessary electricity consumption when the room 
+temperature is already rising due to other heat sources, for example a fireplace.
 
+The add-on reads temperature data locally from the H&T sensor and
+automatically adjusts the active hours and control minutes of the main script.
 
-I add-on ingår ett exempel på enkel temperaturbaserad styrlogik som visar hur antal aktiva timmar och minuter kan justeras beroende på aktuell temperatur från H&T-sensorn. Denna logik är avsedd som ett referensexempel och kan fritt ändras eller anpassas efter egna behov. Användaren kan justera temperaturgränser, antal timmar och aktiva minuter för att skapa ett beteende som bättre motsvarar den egna installationen, värmesystemet eller personliga preferenser. 
+When the temperature reaches a predefined threshold, electric heating
+can be limited or completely blocked. When the temperature drops again,
+the system automatically returns to normal price-based operation.
 
-Exempelkoden demonstrerar ett möjligt sätt att stegvis minska eluppvärmningens driftstid i takt med stigande temperatur, men add-onet ställer inga krav på att just denna logik används. Endast principen - att temperaturvärden påverkar huvudskriptets parametrar - är gemensam. 
+The add-on does not control outputs directly. It only modifies
+parameters used by the main control logic. This ensures stable and
+predictable behaviour.
+
+------------------------------------------------------------------------
+
+### Custom temperature logic
+
+The add-on includes an example of simple temperature-based control logic
+demonstrating how the number of active heating hours and minutes can be
+adjusted depending on the current temperature from the H&T sensor.
+
+This logic is provided as a reference example only. It can be freely
+modified to match specific installations, heating systems or personal
+preferences.
+
+Users may adjust: - temperature thresholds - number of active hours -
+active minutes
+
+The example code demonstrates a gradual reduction of heating time as
+temperature increases. However, the add-on does not require this exact
+logic to be used. The only common principle is that temperature values
+influence the main script parameters.
 <br clear="all">
 
-
-All ändring av denna logik sker på användarens eget ansvar och förutsätter grundläggande förståelse för JavaScript och skriptets struktur.
+All modifications of this logic are performed at the user's own
+responsibility and require basic understanding of JavaScript and the
+script structure.
 
 ```
 // Change the number of heating hours and minutes (min) based on t°C from H&T
 // Example logic for 2x12 hours periods
+
 		(data.temp <= 18 ) ? (hours = 11, min = 60) :
 		(data.temp <  19 ) ? (hours = 10, min = 60) :
 		(data.temp <  20 ) ? (hours = 9,  min = 60) :
 		(data.temp <  21 ) ? (hours = 8,  min = 60) :
 		(data.temp < 21.5) ? (hours = 7,  min = 60) :
-		(data.temp < 22.5) ? (hours = 4,  min = 60) :
-		(data.temp < 23.5) ? (hours = 1,  min = 60) : // almost OFF
-		(data.temp >=23.5) ? (hours = 0,  min = 60) : void 0; // OFF
+		(data.temp <  22 ) ? (hours = 4,  min = 60) :
+		(data.temp < 22.5) ? (hours = 2,  min = 60) : // almost OFF
+		(data.temp >=22.5) ? (hours = 0,  min = 60) : void 0; // OFF
+		
 // End of custom logic
 ```
