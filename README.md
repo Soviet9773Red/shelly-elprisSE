@@ -1,8 +1,8 @@
-# SE1-4 Nordpool elbörspris (spotpris) för Shelly-enheter: **shelly-elprisSE**
+# SE1-4 Nordpool elbörspris (spotpris) för Shelly-enheter: **shelly-elpris-se**
 
 [![Licens: AGPL v3](https://img.shields.io/badge/Licens-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-**shelly-elprisSE** är ett script för Shelly-enheter Gen 2 (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1-SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko v3.1.1](https://github.com/jisotalo/shelly-porssisahko-en/releases/tag/v.3.1.1)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från elprisetjustnu.se via deras öppna JSON-API, men ny används en proxykälla [elpris.eu](https://elpris.eu) - för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
+**shelly-elpris-se** är ett script för Shelly-enheter Gen 2 (Plus/Pro/Plug S) som styr utgångar baserat på Nordpools spotpriser i svenska elområden SE1-SE4. Projektet är en svensk vidareutveckling av det finska **[shelly Porssisahko v3.1.1](https://github.com/jisotalo/shelly-porssisahko-en/releases/tag/v.3.1.1)**, ursprungligen skapat för Finland och Baltikum.  I tidigare versioner hämtades priserna från elprisetjustnu.se via deras öppna JSON-API, men ny används en proxykälla [elpris.eu](https://elpris.eu) - för stabil och effektiv hämtning av elpriser i det kompakta `avg24`-formatet.
 
 ### **shelly-elpris primary supports Shelly platform Gen2**
 ```
@@ -145,14 +145,14 @@ Den inbyggda HTTP-servern på Shelly-enheten ger tillgång till fyra flikar:
 
 ### 🌡️ H&T temperature sensor support
 
-Ett tillval i form av ett addon-skript kan användas tillsammans med *shelly-elprisSE*.
+Ett tillval i form av ett addon-skript kan användas tillsammans med *shelly-elpris-se*.
 Addon-skriptet laddas efter huvudskriptet och använder temperaturdata från en Shelly H&T-sensor
 för att dynamiskt justera antalet billigaste timmar.
 
 Addonet finns i katalogen: /addons/[ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/README.md)
 
 ## 📢 Kvartspriser från API
-Från och med **1 oktober 2025** levererar [elprisetjustnu.se](https://www.elprisetjustnu.se/) priser i **15-minutersintervall** (96 datapunkter per dygn) i stället för 24 timpriser. Det innebär att de tidigare versionerna inte längre fungerar. Den nya versionen **shelly-elprisSE** är anpassad till det nya formatet.  
+Från och med **1 oktober 2025** levererar [elprisetjustnu.se](https://www.elprisetjustnu.se/) priser i **15-minutersintervall** (96 datapunkter per dygn) i stället för 24 timpriser. Det innebär att de tidigare versionerna inte längre fungerar. Den nya versionen **shelly-elpris-se** är anpassad till det nya formatet.  
 För att Shelly-enheter med begränsat minne ska kunna hantera informationen aggregerar API:t automatiskt 96 kvarts till 24 hela timmar.  
 Detta är en **övergångslösning**. Utvecklingen fortsätter för att i framtiden stödja 96-intervall mer direkt.
 
