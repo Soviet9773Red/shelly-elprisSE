@@ -8,12 +8,12 @@ Choose the version that matches your shelly-elpris core script.
 
 | Add-on version | Compatible core version | Notes |
 |---------------|------------------------|-------|
-| [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js) | shelly-elpris **3.1.7** | Recommended for core 3.1.7. <br>Supports new internal functions and improved config handling. |
+| [ht-sensor-addon.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon.js) | shelly-elpris **3.1.7+** | Recommended for core 3.1.7+. <br>Supports new internal functions and improved config handling. |
 | [ht-sensor-addon1.0.5.js](https://github.com/Soviet9773Red/shelly-elprisSE/blob/main/addons/ht-sensor-addon1.0.5.js) | shelly-elpris **3.1.5** | Legacy version. Required for core 3.1.5. |
 
 ### Important
 
-- Core **3.1.7** works with both add-on versions (1.0.5 and 1.0.7).
+- Core **3.1.7+** works with both add-on versions (1.0.5 and 1.0.7).
 - Core **3.1.5** works only with add-on **1.0.5**.
 - Add-on **1.0.7** uses internal functions that do not exist in core 3.1.5.
 
